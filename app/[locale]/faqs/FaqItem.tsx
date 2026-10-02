@@ -19,26 +19,34 @@ const FaqItem = ({ data }: FaqItemProps) => {
   }, []);
 
   return (
-    <div className="flex w-full flex-col gap-y-5 rounded-md border-custom2 border px-4 py-2">
+    <div className="w-full rounded-xl border-custom2 px-4 py-3">
       <button
         type="button"
         onClick={handleOpen}
         aria-expanded={open}
         className="flex w-full items-center justify-between gap-4 text-left"
       >
-        <span className="block text-sm text-secondary-foreground">
+        <span className="text-sm font-medium leading-5 text-secondary-foreground">
           {data.title}
         </span>
 
         {open ? (
-          <AiOutlineMinus size={19} className="shrink-0 text-primary" />
+          <AiOutlineMinus
+            size={16}
+            className="shrink-0 text-primary"
+            aria-hidden="true"
+          />
         ) : (
-          <FiPlus size={19} className="shrink-0 text-primary" />
+          <FiPlus
+            size={16}
+            className="shrink-0 text-primary"
+            aria-hidden="true"
+          />
         )}
       </button>
 
       {open && (
-        <p className="text-sm leading-6 text-muted-foreground">
+        <p className="mt-3 pr-6 text-xs leading-5 text-muted-foreground sm:text-sm sm:leading-6">
           {data.description}
         </p>
       )}

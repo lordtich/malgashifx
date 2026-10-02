@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
+  <title id="title">InvestorHub</title>
+
+  <desc id="desc">
+    InvestorHub — Your investments. One place.
+  </desc>
+
+  <!-- Brand icon -->
+  <rect x="45" y="45" width="210" height="210" rx="55" fill="#0AAE6A"></rect>
+
+  <g transform="translate(45 45)">
+    <g fill="none" stroke="#fff" stroke-width="11" stroke-linecap="round">
+      <path d="M105 105 L105 50"></path>
+      <path d="M105 105 L151 78"></path>
+      <path d="M105 105 L151 132"></path>
+      <path d="M105 105 L105 160"></path>
+      <path d="M105 105 L59 132"></path>
+      <path d="M105 105 L59 78"></path>
+    </g>
+
+    <g fill="#fff">
+      <circle cx="105" cy="105" r="22"></circle>
+      <circle cx="105" cy="38" r="15"></circle>
+      <circle cx="160" cy="70" r="15"></circle>
+      <circle cx="160" cy="140" r="15"></circle>
+      <circle cx="105" cy="172" r="15"></circle>
+      <circle cx="50" cy="140" r="15"></circle>
+      <circle cx="50" cy="70" r="15"></circle>
+    </g>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="310" y="145" font-family="Inter, Arial, Helvetica, sans-serif" font-size="98" font-weight="700" letter-spacing="-3" fill="#F4FAF7">
+    InvestorHub
+  </text>
+
+  <!-- Tagline -->
+  <text x="312" y="210" font-family="Inter, Arial, Helvetica, sans-serif" font-size="44" font-weight="500" letter-spacing="0.2" fill="#A8D5BF">
+    Your investments. One place.
+  </text>
+</svg>

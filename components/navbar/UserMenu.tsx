@@ -1,9 +1,11 @@
 "use client";
 
 import { useCallback, useState } from "react";
+
 import { Link } from "@/i18n/navigation";
 import { signOut } from "next-auth/react";
 import { useTranslations } from "next-intl";
+
 import { IoChevronDown } from "react-icons/io5";
 import { TbLogout2 } from "react-icons/tb";
 import { MdOutlineSupervisorAccount } from "react-icons/md";
@@ -47,23 +49,34 @@ const UserMenu = ({ currentUser }: UserMenuProps) => {
 
   return (
     <div className="relative">
+      {/* User Trigger */}
       {currentUser && (
-        <div className="flex cursor-pointer items-center gap-1">
+        <button
+          type="button"
+          onClick={toggleOpen}
+          aria-label={t("account")}
+          aria-expanded={isOpen}
+          className="flex items-center gap-1 rounded-full transition-colors hover:bg-muted/60"
+        >
           <Avatar src={currentUser.image} />
 
           <IoChevronDown
-            size={24}
-            onClick={toggleOpen}
-            className="hidden md:flex"
+            size={17}
+            className={`hidden text-muted-foreground transition-transform duration-200 md:flex ${
+              isOpen ? "rotate-180" : ""
+            }`}
+            aria-hidden="true"
           />
-        </div>
+        </button>
       )}
 
+      {/* Dropdown */}
       {isOpen && (
-        <div className="absolute right-0 top-[72px] z-30 flex w-[250px] flex-col overflow-hidden border border-border bg-background">
+        <div className="absolute right-0 top-[52px] z-30 w-[220px] overflow-hidden rounded-xl border border-border bg-background shadow-sm">
           {currentUser ? (
-            <div className="px-1 py-2 text-sm">
-              <Link href="/account">
+            <div className="p-1.5">
+              {/* Account */}
+              <Link href="/account" onClick={closeMenu}>
                 <MenuItem
                   url="account"
                   onClick={closeMenu}
@@ -73,33 +86,36 @@ const UserMenu = ({ currentUser }: UserMenuProps) => {
                 </MenuItem>
               </Link>
 
+              {/* Admin */}
               {currentUser.role === "ADMIN" && (
                 <div>
                   <button
                     type="button"
                     onClick={toggleAdmin}
                     aria-expanded={adminOpen}
-                    className="group flex w-full items-center justify-between rounded-xl px-4 py-3 text-sm font-medium text-secondary-foreground transition-all hover:bg-muted hover:text-foreground"
+                    className="flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-xs font-medium text-secondary-foreground transition-colors hover:bg-muted hover:text-foreground sm:text-sm"
                   >
-                    <span className="flex items-center gap-3">
+                    <span className="flex items-center gap-2.5">
                       <MdAdminPanelSettings
-                        size={21}
-                        className="shrink-0 transition-transform duration-200 group-hover:scale-105"
+                        size={19}
+                        className="shrink-0"
+                        aria-hidden="true"
                       />
 
                       <span>{t("adminPanel")}</span>
                     </span>
 
                     <IoChevronDown
-                      size={18}
+                      size={16}
                       className={`transition-transform duration-200 ${
                         adminOpen ? "rotate-180" : ""
                       }`}
+                      aria-hidden="true"
                     />
                   </button>
 
                   {adminOpen && (
-                    <div className="mb-1 ml-9 border-l border-border pl-2">
+                    <div className="mb-1 ml-8 border-l border-border pl-1.5">
                       <Link href="/admin" onClick={closeMenu}>
                         <MenuItem url="admin" onClick={closeMenu}>
                           {t("dashboard")}
@@ -131,16 +147,19 @@ const UserMenu = ({ currentUser }: UserMenuProps) => {
                 </div>
               )}
 
-              <div className="my-1 h-px w-full bg-border" />
+              <div className="my-1.5 h-px bg-border" />
 
               <ThemeToggle />
 
-              <MenuItem icon={TbLogout2} onClick={handleSignOut}>
+              <MenuItem
+                icon={TbLogout2}
+                onClick={handleSignOut}
+              >
                 {t("signOut")}
               </MenuItem>
             </div>
           ) : (
-            <div className="text-sm">
+            <div className="p-1.5">
               <Link href="/sign-in" onClick={closeMenu}>
                 <MenuItem
                   onClick={closeMenu}
@@ -159,7 +178,7 @@ const UserMenu = ({ currentUser }: UserMenuProps) => {
                 </MenuItem>
               </Link>
 
-              <div className="my-1 h-px w-full bg-border" />
+              <div className="my-1.5 h-px bg-border" />
 
               <ThemeToggle />
             </div>

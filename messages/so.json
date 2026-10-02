@@ -1,294 +1,273 @@
 {
   "Navbar": {
-    "aboutCompany": "Ku Saabsan",
-    "faqs": "Su'aalo",
-    "notifications": "Ogeysiisyo",
+    "aboutCompany": "Nagu Saabsan",
+    "faqs": "Su'aalaha",
+    "notifications": "Ogeysiisyada",
     "signIn": "Soo Gal",
     "signUp": "Is Diiwaangeli",
     "signOut": "Ka Bax",
-    "account": "Akoon",
-    "adminPanel": "Maamul",
+    "account": "Akoonka",
+    "adminPanel": "Maamulka",
     "dashboard": "Guudmar",
-    "users": "Isticmaalayaal",
-    "withdrawals": "Lacag-bixin",
-    "openMenu": "Fur menu",
-    "closeMenu": "Xir menu"
+    "users": "Isticmaalayaasha",
+    "withdrawals": "Lacag-bixinnada",
+    "openMenu": "Fur menu-ga",
+    "closeMenu": "Xir menu-ga"
   },
-
   "Home": {
     "hero": {
-      "badge": "Maalgashi Dhab ah",
-      "titleLine1": "Ha sugin,",
-      "titleLine2": "bilow maalgelinta oo",
-      "titleHighlight": "kobci.",
-      "description": "Hel fursado maalgashi oo casri ah oo kaa caawinaya kobcinta hantidaada, kuwaas oo ku habboon maalgashadayaasha cusub iyo kuwa khibradda leh.",
-      "cta": "Bilow Hadda",
-      "imageAlt": "Tiknoolajiyada maalgashiga iyo ganacsiga"
+      "badge": "Madal Maalgashi",
+      "titleLine1": "Maamul",
+      "titleLine2": "maalgashigaaga",
+      "titleHighlight": "hal meel.",
+      "description": "La soco maalgashigaaga, maamul akoonkaaga, kana eeg xogtaada hal madal oo fudud.",
+      "cta": "Bilow",
+      "imageAlt": "Madal maalgashi"
     },
     "stats": {
       "investors": "Maalgashadayaal",
       "paidOut": "Lacag La Bixiyay",
       "successRate": "Heerka Guusha",
-      "customerSupport": "Taageerada Macaamiisha"
+      "customerSupport": "Taageero 24/7"
     },
     "about": {
       "label": "Nagu Saabsan",
-      "title": "Maxaa Noo Dooranaysaa?",
-      "description": "Waxaan bixinnaa madal hufan oo kharashkeedu macquul yahay, kuna shaqaysa tiknoolajiyad casri ah iyo taageero macaamiil oo joogto ah. Hadafkeennu waa inaan abuurno jawi lagu kalsoonaan karo oo ay maalgashadayaasha iyo ganacsatada heer kasta oo khibrad ah ku heli karaan fursado maaliyadeed oo casri ah.",
+      "title": "Wax Walba Hal Meel",
+      "description": "InvestorHub wuxuu kuu fududeeyaa maareynta akoonkaaga, la socodka maalgashiga, iyo helitaanka adeegyada jira.",
       "tradingProducts": "Alaabooyinka Ganacsiga",
-      "accountMaintenanceFees": "Kharashka Maamulka Akoonka",
+      "accountMaintenanceFees": "Kharashka Akoonka",
       "leverage": "Leverage",
-      "tradingPlatform": "Madasha Ganacsiga"
+      "tradingPlatform": "Madal Ganacsi"
     },
     "markets": {
       "label": "Suuqyada",
-      "title": "Lammaanayaasha Lacagaha"
+      "title": "Xogta Suuqa"
     },
     "accountOpening": {
       "label": "Bilow",
-      "title": "Aan Furanno Akoonkaaga",
-      "description": "Ku bilow dhowr daqiiqo gudahood adigoo adeegsanaya hab isdiiwaangelin fudud oo ammaan ah. Samee akoonkaaga, dooro qorshaha maalgashiga, oo qaad tallaabada ugu horreysa ee ku aaddan yoolalkaaga maaliyadeed.",
-      "stepOne": "Marka hore, samee akoonkaaga oo dooro qorshaha maalgashiga kugu habboon.",
-      "stepTwo": "Kadib, samee lacag-bixinta si aad u hawlgeliso maalgashigaaga.",
-      "stepThree": "Marka lacagtaada la xaqiijiyo, maalgashigaagu wuu bilaaban karaa.",
-      "imageAlt": "Samee akoon maalgashi"
+      "title": "Fur Akoon",
+      "description": "Samee akoonkaaga dhowr tallaabo oo fudud, kuna maamul maalgashigaaga hal madal.",
+      "stepOne": "Samee akoon oo buuxi xogtaada.",
+      "stepTwo": "Dooro adeeg ama maalgashi kuu bannaan.",
+      "stepThree": "Marka akoonkaagu diyaar noqdo, ka maamul hawlahaaga bogga akoonka.",
+      "imageAlt": "Fur akoon maalgashi"
     },
     "finalCta": {
       "label": "Bilow",
-      "title": "Diyaar Ma U Tahay Inaad Bilowdo Maalgashiga?",
-      "description": "Furitaanka akoonku wuxuu qaadanayaa wax ka yar 3 daqiiqo. Samee akoonkaaga maanta oo qaad tallaabada xigta ee safarkaaga maalgashi.",
+      "title": "Diyaar Ma U Tahay?",
+      "description": "Samee akoon oo maalgashigaaga ku maamul hal meel.",
       "button": "Samee Akoon",
-      "imageAlt": "Diyaar u noqo inaad bilowdo maalgashiga"
+      "imageAlt": "Maamul maalgashigaaga"
     }
   },
-
-  "AboutCompany": {
-    "about": {
-      "label": "Nagu Saabsan",
-      "description": "Waxaan diiradda saarnaa inaan maalgashiga iyo ganacsiga ka dhigno kuwo fudud, la heli karo, oo hufan. Madashayada waxaa loogu talagalay maalgashadayaasha cusub iyo kuwa khibradda leh, iyadoo siinaysa jawi sahlan oo lagu sahamin karo fursadaha maaliyadeed laguna kobcin karo kalsooni.",
-      "learnMore": "Wax Dheeraad Ah Baro",
-      "imageAlt": "Ku saabsan Somalia Malgashi"
-    },
-    "leadership": {
-      "label": "Hoggaanka",
-      "title": "Fariin ka timid Agaasimaha Guud",
-      "message": "Ha ka welwelin haddii aadan weli wax walba aqoon. Ka bilow meesha aad joogto, sii wad barashada, oo kobci aqoontaada intaad waddada ku jirto. Tallaabo kasta oo aad u qaaddo dhinaca maalgashigu waxay kaa caawin kartaa inaad dhisto aqoon, khibrad, iyo kalsooni safarkaaga maaliyadeed.",
-      "name": "Tebo",
-      "role": "Agaasime Guud & Aasaasaha",
-      "imageAlt": "Aasaasaha Somalia Malgashi"
-    }
-  },
-
-  "Faqs": {
-    "title": "Su'aalaha Inta Badan La Isweydiiyo",
-    "items": {
-      "whatIsInvesting": {
-        "title": "Waa maxay maalgashigu?",
-        "description": "Maalgashigu waa ficilka ah in lacag ama hanti lagu geliyo wax la filayo inuu faa'iido keeno ama qiimihiisu kordho waqti ka dib. Tani waxay ka mid noqon kartaa saamiyo, curaarta, guryaha, ama ganacsiyada si loo gaaro koboc maaliyadeed mustaqbalka."
-      },
-      "investmentTypes": {
-        "title": "Waa maxay noocyada kala duwan ee maalgashiga?",
-        "description": "Noocyada caadiga ah ee maalgashiga waxaa ka mid ah saamiyada, curaarta, sanduuqyada maalgashiga, hantida ma-guurtada ah, badeecooyinka, iyo maalgashiyo kale sida lacagaha dijitaalka ah. Nooc kasta wuxuu leeyahay heer khatar iyo fursad faa'iido oo u gaar ah, waxaana faylalka maalgashigu isku dari karaa dhowr nooc oo hanti ah."
-      },
-      "howToStart": {
-        "title": "Sideen u bilaabi karaa maalgashiga?",
-        "description": "Marka hore, samee akoon madasha. Kadib dooro qorshaha maalgashiga aad rabto oo samee lacag-bixinta si aad u bilowdo maalgashigaaga."
-      }
-    }
-  },
-
-  "Footer": {
-    "description": "Xalal maalgashi oo fudud oo la heli karo, loogu talagalay dadka doonaya inay dhistaan mustaqbalkooda maaliyadeed.",
-    "tagline": "Maanta maalgasho. Berri dhis.",
-    "company": "Shirkadda",
-    "terms": "Shuruudaha & Xaaladaha",
-    "privacy": "Siyaasadda Asturnaanta",
-    "contact": "Nala Soo Xiriir",
-    "contactDescription": "Ma qabtaa su'aal ama waxaad u baahan tahay caawimaad? Si toos ah ula xiriir kooxda taageerada.",
-    "telegramSupport": "Taageerada Telegram",
-    "homeAriaLabel": "Bogga hore ee Somalia Malgashi",
-    "logoAlt": "Somalia Malgashi",
-    "copyright": "Somalia Malgashi. All rights reserved.",
-    "riskNotice": "Maalgashigu wuxuu leeyahay khatar. Waxqabadkii hore ma dammaanad qaadayo natiijooyinka mustaqbalka."
-  },
-
-  "Notifications": {
-    "label": "Ogeysiisyada",
-    "title": "Wax ogeysiis cusub ah ma jiro",
-    "description": "Hadda ma jiraan ogeysiisyo cusub. Waan ku soo ogeysiin doonaa marka ay jiraan wax muhiim ah oo u baahan dareenkaaga.",
-    "accountLink": "Aad akoonkaaga"
-  },
-
   "Terms": {
     "legal": "Sharci",
-    "title": "Shuruudaha & Xaaladaha",
-    "intro": "Fadlan si taxaddar leh u akhri shuruudahan ka hor intaadan isticmaalin madasha Somalia Malgashi iyo adeegyada ay bixiso.",
-    "lastUpdated": "La cusbooneysiiyay: 14/09/2026",
+    "title": "Shuruudaha iyo Xeerarka",
+    "intro": "Akhri shuruudahan ka hor intaadan adeegsan InvestorHub iyo adeegyada uu bixiyo.",
+    "lastUpdated": "La cusboonaysiiyay: 14/09/2026",
     "terms": {
       "introduction": {
         "title": "1. Hordhac",
-        "content": "Ku soo dhawoow Somalia Malgashi. Markaad gasho ama isticmaasho boggayaga iyo adeegyadayada, waxaad oggolaanaysaa inaad u hoggaansanto Shuruudahan & Xaaladaha. Haddii aadan ku raacsanayn shuruudahan, fadlan ha isticmaalin adeegyadayada."
+        "content": "Ku soo dhowow InvestorHub. Markaad isticmaasho mareegtan ama adeegyadeeda, waxaad aqbashay shuruudahan. Haddii aadan aqbalin, ha isticmaalin adeegyada."
       },
       "accountRegistration": {
         "title": "2. Diiwaangelinta Akoonka",
-        "content": "Waxaa laga yaabaa inaad u baahato inaad samaysato akoon si aad u isticmaasho adeegyada qaarkood. Adiga ayaa mas'uul ka ah bixinta xog sax ah iyo ilaalinta xogta gelitaanka akoonkaaga."
+        "content": "Adeegyada qaarkood waxay u baahan yihiin akoon. Bixi xog sax ah oo ilaali xogta gelitaanka akoonkaaga."
       },
       "investmentTrading": {
-        "title": "3. Maalgashi & Ganacsi",
-        "content": "Dhammaan hawlaha maalgashiga iyo ganacsigu waxay leeyihiin khatar. Macluumaadka lagu soo bandhigo madashayada waxaa loogu talagalay ujeeddooyin guud oo xog-bixin ah, mana aha dammaanad faa'iido ama talo maaliyadeed."
+        "title": "3. Maalgashi iyo Ganacsi",
+        "content": "Maalgashiga iyo ganacsigu waxay leeyihiin khatar. Xogta madalku ma dammaanad qaaddo faa'iido ama natiijo maaliyadeed."
       },
       "paymentsWithdrawals": {
-        "title": "4. Lacag-bixinta & Lacag-la-bixidda",
-        "content": "Adiga ayaa mas'uul ka ah inaad hubiso in xogta lacag-bixinta iyo lacag-la-bixidda aad bixiso ay sax tahay. Waqtiga habaynta iyo shuruudaha lagu dabaqi karo way kala duwanaan karaan iyadoo ku xiran adeegga la isticmaalo."
+        "title": "4. Lacag-bixin iyo La-bixid",
+        "content": "Hubi in xogta lacag-bixinta iyo la-bixistu sax tahay. Waqtiga iyo shuruuduhu way ku kala duwanaan karaan adeegyada."
       },
       "userResponsibilities": {
-        "title": "5. Mas'uuliyadaha Isticmaalaha",
-        "content": "Waxaad oggolaanaysaa inaad madasha u isticmaasho si sharci ah oo masuuliyad leh. Waa inaadan isku dayin inaad carqalad ku samayso shaqada madasha, gasho akoonka isticmaale kale, ama adeegga u isticmaasho khiyaano ama hawlo aan la oggolayn."
+        "title": "5. Waajibaadka Isticmaalaha",
+        "content": "U adeegso madasha si sharci ah oo masuuliyad leh. Ha faragelin madasha, ha gelin akoon qof kale, hana samayn khiyaano ama hawl aan la oggolayn."
       },
       "limitationOfLiability": {
         "title": "6. Xaddidaadda Mas'uuliyadda",
-        "content": "Ilaa xadka uu sharcigu oggol yahay, Somalia Malgashi kama mas'uul noqon doonto khasaaraha ka dhasha xaaladaha suuqa, ciladaha farsamo, ama duruufo kale oo ka baxsan awooddayada macquulka ah."
+        "content": "Inta sharcigu oggol yahay, InvestorHub mas'uul kama aha khasaaraha ka dhasha isbeddelka suuqa, ciladaha farsamo, ama xaalado ka baxsan awooddayada macquulka ah."
       },
       "changesToTerms": {
-        "title": "7. Isbeddellada Shuruudahan",
-        "content": "Waxaan mararka qaarkood cusboonaysiin karnaa Shuruudahan & Xaaladaha. Isbeddel kasta wuxuu dhaqan gelayaa marka lagu daabaco boggan. Sii wadista isticmaalka madasha kadib marka isbeddellada la daabaco waxay ka dhigan tahay inaad aqbashay shuruudaha la cusbooneysiiyay."
+        "title": "7. Isbeddelka Shuruudaha",
+        "content": "Waxaan mararka qaarkood cusboonaysiin karnaa shuruudahan. Isbeddelladu waxay dhaqan gelayaan marka halkan lagu daabaco. Adeegsiga madasha ka dib waxay ka dhigan tahay inaad aqbashay shuruudaha cusub."
       }
     },
     "privacy": {
       "label": "Asturnaanta",
       "title": "Siyaasadda Asturnaanta",
-      "intro": "Qaybtani waxay sharxaysaa sida Somalia Malgashi u ururin karto, u isticmaali karto, una ilaalin karto macluumaadka lagu bixiyo madashayada.",
+      "intro": "Qaybtani waxay sharxaysaa sida InvestorHub u ururin karo, u adeegsan karo, una ilaalin karo xogtaada.",
       "informationWeCollect": {
-        "title": "1. Macluumaadka Aan Ururino",
-        "content": "Waxaan ururin karnaa macluumaadka aad bixiso markaad samaysanayso akoon, nala soo xiriirayso, ama isticmaalayso adeegyadayada. Tani waxay ku jiri kartaa magacaaga, macluumaadka xiriirka, xogta akoonka, iyo macluumaad kale oo lagama maarmaan u ah bixinta adeegyadayada."
+        "title": "1. Xogta Aan Ururinno",
+        "content": "Waxaan ururin karnaa xogta aad bixiso markaad samaysato akoon, nala soo xiriirto, ama isticmaasho adeegyadayada. Waxaa ka mid noqon kara magacaaga, xiriirkaaga, iyo xogta akoonka."
       },
       "howWeUseInformation": {
-        "title": "2. Sida Aan U Isticmaalno Macluumaadka",
-        "content": "Macluumaadka waxaa loo isticmaali karaa bixinta iyo horumarinta adeegyada, xiriirka isticmaalayaasha, ilaalinta amniga akoonnada, habaynta codsiyada, iyo buuxinta shuruudaha sharci ama hawleed ee lagu dabaqi karo."
+        "title": "2. Sida Aan Xogta U Adeegsanno",
+        "content": "Xogta waxaa loo adeegsan karaa bixinta iyo hagaajinta adeegyada, xiriirka isticmaalayaasha, ilaalinta akoonnada, fulinta codsiyada, iyo waajibaadka sharciga."
       },
       "informationProtection": {
-        "title": "3. Ilaalinta Macluumaadka",
-        "content": "Waxaan qaadnaa tallaabooyin macquul ah si aan u ilaalinno macluumaadka lagu ururiyo madashayada. Si kastaba ha ahaatee, ma jiro hab gudbin ama kaydin elektaroonig ah oo lagu dammaanad qaadi karo inuu gebi ahaanba ammaan yahay."
+        "title": "3. Ilaalinta Xogta",
+        "content": "Waxaan qaadnaa tallaabooyin macquul ah si aan u ilaalinno xogta. Si kastaba, ma jiro nidaam elektaroonig ah oo gebi ahaanba ammaan la dammaanad qaadi karo."
       },
       "cookies": {
         "title": "4. Cookies",
-        "content": "Boggeennu wuxuu isticmaali karaa cookies ama teknoolojiyado la mid ah si loo ilaaliyo fadhiyada isticmaalaha, loo hagaajiyo shaqaynta, loona fahmo sida isticmaalayaashu ula falgalaan madasha."
+        "content": "Mareegtu waxay adeegsan kartaa cookies si loo ilaaliyo gelitaanka, loo hagaajiyo shaqada, loona fahmo sida loo isticmaalo madasha."
       },
       "thirdPartyServices": {
-        "title": "5. Adeegyada Dhinacyada Saddexaad",
-        "content": "Madashayadu waxay isticmaali kartaa adeegyo dhinac saddexaad ah si ay u taageeraan lacag-bixinta, xaqiijinta, falanqaynta, martigelinta, ama hawlo kale. Adeegyadani waxay u habayn karaan macluumaadka si waafaqsan siyaasadaha asturnaanta ee iyaga u gaarka ah."
+        "title": "5. Adeegyada Qolada Saddexaad",
+        "content": "Madashu waxay adeegsan kartaa adeegyo kale oo lacag-bixin, gelitaan, falanqayn, ama martigelin ah. Adeegyadani waxay xogtaada u maamuli karaan si waafaqsan siyaasaddooda asturnaanta."
       },
       "yourRights": {
         "title": "6. Xuquuqdaada",
-        "content": "Iyadoo ku xiran sharciyada lagu dabaqi karo, waxaad yeelan kartaa xuquuq la xiriirta macluumaadka aan kaa hayno, oo ay ku jirto inaad codsato helitaan, sixid, ama tirtiridda macluumaad gaar ah."
+        "content": "Iyadoo ku xiran sharciga, waxaad xaq u yeelan kartaa inaad codsato helitaanka, sixidda, ama tirtiridda xog gaar ah oo aan kaa hayno."
       },
       "contact": {
         "title": "7. Xiriir",
-        "content": "Haddii aad qabto su'aalo ku saabsan Shuruudahan & Xaaladahan ama Siyaasaddan Asturnaanta, fadlan la xiriir kooxda taageeradayada."
+        "content": "Haddii aad su'aalo ka qabto shuruudahan ama siyaasadda asturnaanta, la xiriir kooxda taageerada."
       }
     }
   },
-
+  "AboutCompany": {
+    "about": {
+      "label": "Nagu Saabsan",
+      "description": "InvestorHub waa madal dijitaal ah oo fududaysa maareynta maalgashiga. Hal meel ayaad ka maamuli kartaa akoonkaaga, ka eegi kartaa xogta maalgashiga, kana la socon kartaa hawlahaaga.",
+      "learnMore": "Wax Dheeraad ah",
+      "imageAlt": "InvestorHub"
+    },
+    "leadership": {
+      "label": "Habkayaga",
+      "title": "Maamul Maalgashigaaga Si Fudud",
+      "message": "Maalgashigu wuu adkaan karaa. Waxaan fududaynaynaa maaraynta akoonka, la socodka maalgashiga, iyo helitaanka xogta muhiimka ah.",
+      "name": "InvestorHub",
+      "role": "Madal Maalgashi",
+      "imageAlt": "Madal InvestorHub"
+    }
+  },
+  "Faqs": {
+    "title": "Su'aalaha Badanaa La Isweydiiyo",
+    "items": {
+      "whatIsInvesting": {
+        "title": "Waa maxay maalgashi?",
+        "description": "Maalgashi waa inaad lacag geliso hanti ama fursad adigoo rajaynaya faa'iido mustaqbalka. Waxaa ka mid noqon kara saamiyo, curaarta, hanti ma-guurto ah, ganacsiyo, iyo hanti kale."
+      },
+      "investmentTypes": {
+        "title": "Maalgashi noocee ah ayaa jira?",
+        "description": "Fursadaha waxaa ka mid noqon kara saamiyo, curaarta, sanduuqyo maalgashi, hanti ma-guurto ah, badeecooyin, hanti dijitaal ah, iyo fursado kale. Waxay ku xiran yihiin adeegyada la bixiyo."
+      },
+      "howToStart": {
+        "title": "Sideen ku bilaabaa?",
+        "description": "Samee akoon, buuxi xogtaada, kadibna eeg adeegyada maalgashi ee kuu bannaan. Waxaad hawlahaaga ka maamuli kartaa akoonkaaga."
+      }
+    }
+  },
+  "Footer": {
+    "description": "Madal fudud oo lagu maamulo maalgashiga, laguna la socdo dhaqdhaqaaqaaga.",
+    "tagline": "Maamul. La Soco. Kobci.",
+    "company": "Shirkadda",
+    "terms": "Shuruudaha",
+    "privacy": "Asturnaanta",
+    "contact": "Nala Soo Xiriir",
+    "contactDescription": "Su'aal ma qabtaa ama caawimo ma u baahan tahay? La xiriir taageerada.",
+    "telegramSupport": "Taageerada Telegram",
+    "homeAriaLabel": "Bogga hore ee InvestorHub",
+    "logoAlt": "InvestorHub",
+    "copyright": "InvestorHub. Xuquuqdu way dhawran tahay.",
+    "riskNotice": "Maalgashigu khatar ayuu leeyahay. Natiijooyinkii hore ma dammaanad qaadaan kuwa mustaqbalka."
+  },
+  "Notifications": {
+    "label": "Ogeysiisyada",
+    "title": "Wax cusub ma jiro",
+    "description": "Hadda ma jiraan ogeysiisyo cusub. Waxaan ku soo ogeysiin doonnaa marka ay jiraan wax muhiim ah.",
+    "accountLink": "Tag akoonkaaga"
+  },
   "Account": {
-    "welcome": "Soo Dhawoow 😎",
-    "goodToSeeYou": "Waa ku faraxsanahay inaan ku arko, {name}.",
-
+    "welcome": "Soo dhowow 😎",
+    "goodToSeeYou": "Waa ku faraxsanahay inaan ku aragno, {name}.",
     "balance": {
-      "total": "Hadhaaga Guud",
+      "total": "Wadarta Hadhaaga",
       "leverage": "Leverage",
       "investedValue": "Lacagta La Maalgashaday",
       "targetProfit": "Faa'iidada La Beegsanayo"
     },
     "wallets": {
-      "EVC": "Mobile-Wallet",
-      "Telesom": "Card",
-      "Golis": "cryptocurrency"
+      "EVC": "Boorsada Moobilka",
+      "Telesom": "Habka Lacag-bixinta",
+      "Golis": "Boorsada Dijitaalka ah"
     },
-
     "withdrawal": {
-      "title": "Lacag La Bax",
-      "description": "Lacagta aad heli karto si toos ah ugu dir boorsadaada moobilka.",
-
-      "unavailable": "Lacag-bixintu ma diyaar aha",
-      "clearanceRestriction": "Akoonkaagu hadda wuxuu leeyahay xannibaad lacag-bixin. Lacag-bixintu waxay diyaar noqon doontaa marka akoonkaaga la ansixiyo.",
-
-      "noBalance": "Hadhaag la heli karo ma jiro",
-      "noBalanceDescription": "Waxaad u baahan tahay hadhaag la heli karo si aad lacag ula baxdo.",
-
+      "title": "La Bax Lacag",
+      "description": "La bax lacagta kuu bannaan adigoo adeegsanaya hab lacag-bixin oo la heli karo.",
+      "unavailable": "La-bixiddu ma bannaana",
+      "clearanceRestriction": "Akoonkaagu weli ma helin oggolaanshaha loo baahan yahay. La-bixiddu waxay furmaysaa marka la ansixiyo.",
+      "noBalance": "Hadhaag ma jiro",
+      "noBalanceDescription": "Waxaad u baahan tahay hadhaag kuu bannaan si aad lacag ula baxdo.",
       "amount": "Qadarka Lacagta",
-      "available": "La heli karo: {amount}",
+      "available": "Lacagta kuu bannaan: {amount}",
       "placeholder": "0.00",
       "minimum": "Ugu yaraan $5",
       "maximum": "Ugu badnaan $600",
-
-      "mobileNumber": "Lambarka Moobilka",
-      "mobilePlaceholder": "Geli lambarka",
-      "walletDetected": "Boorsada {network} ayaa la aqoonsaday",
-      "supportedWallets": "Lambarada EVC, Telesom iyo Golis waa la taageeraa.",
-
-      "button": "Lacag La Bax",
-
+      "mobileNumber": "Lambarka Lacag-bixinta",
+      "mobilePlaceholder": "Geli lambarka lacag-bixinta",
+      "walletDetected": "Habka lacag-bixinta ee {network} waa la aqoonsaday",
+      "supportedWallets": "Hababka la heli karo ayaa halkan lagu muujinayaa.",
+      "button": "La Bax Lacag",
       "information": {
-        "title": "Macluumaadka Lacag-bixinta",
-        "description": "Hubi in xogta lacag-bixintu sax tahay si looga fogaado dib-u-dhac.",
+        "title": "Xogta La-bixidda",
+        "description": "Hubi in xogtaadu sax tahay si looga fogaado dib u dhac.",
         "availableBalance": "Hadhaaga La Heli Karo",
         "minimum": "Ugu Yar",
         "maximum": "Ugu Badan",
-        "supportedWallets": "Boorsooyinka La Taageero"
+        "supportedWallets": "Hababka La Heli Karo"
       },
-
       "validation": {
         "invalidAmount": "Geli qadar sax ah",
-        "minimum": "Lacagta ugu yar ee la bixi karo waa $5",
-        "maximum": "Lacagta ugu badan ee la bixi karo waa $600",
-        "exceedsBalance": "Qadarku wuxuu ka badan yahay hadhaagaaga",
-        "invalidPhone": "Geli lambar EVC, Telesom ama Golis oo sax ah"
+        "minimum": "Ugu yaraan waa $5",
+        "maximum": "Ugu badnaan waa $600",
+        "exceedsBalance": "Qadarku wuu ka badan yahay hadhaagaaga",
+        "invalidPhone": "Geli lambar sax ah"
       },
-
       "confirmation": {
-        "title": "Xaqiiji Lacag-bixinta",
-        "description": "Fadlan hubi faahfaahinta lacag-bixinta ka hor intaadan xaqiijin.",
-        "amount": "Qadar",
-        "mobileNumber": "Lambarka Moobilka",
-        "wallet": "Boorsada",
-        "warning": "Hubi in lambarka moobilku yahay lambarka boorsadaada ka hor intaadan xaqiijin.",
+        "title": "Xaqiiji La-bixidda",
+        "description": "Hubi xogta ka hor intaadan xaqiijin.",
+        "amount": "Qadarka",
+        "mobileNumber": "Lambarka",
+        "wallet": "Habka Lacag-bixinta",
+        "warning": "Hubi in xogta lacag-bixintu sax tahay ka hor xaqiijinta.",
         "cancel": "Jooji",
-        "processing": "Waa la farsamaynayaa...",
+        "processing": "Waa la fulinayaa...",
         "confirm": "Xaqiiji"
       },
-
       "success": {
-        "title": "Lacag-bixinta Waa La Diray",
-        "description": "Codsigaaga lacag-bixinta si guul leh ayaa loo diray.",
-        "amount": "Qadarka Lacagta",
+        "title": "Codsiga Waa La Diray",
+        "description": "Codsigaaga la-bixidda si guul leh ayaa loo diray.",
+        "amount": "Qadarka La-bixidda",
         "remainingBalance": "Hadhaaga Haray",
         "done": "Dhammaystir"
       },
-
       "errors": {
-        "generic": "Waxbaa khaldamay. Fadlan isku day mar kale."
+        "generic": "Waxbaa khaldamay. Fadlan mar kale isku day."
       }
     },
-
     "overview": {
       "title": "Guudmarka Akoonka",
-      "description": "Xaaladda akoonkaaga iyo ganacsigaaga",
+      "description": "Xaaladda akoonkaaga iyo maalgashiga",
       "tradingStatus": "Xaaladda Ganacsiga",
       "active": "Firfircoon",
       "inactive": "Aan Firfircoonayn",
-      "email": "Email",
-      "phoneNumber": "Lambarka Moobilka",
-      "clearanceStatus": "Xaaladda Ansixinta",
+      "email": "Iimayl",
+      "phoneNumber": "Lambarka Taleefanka",
+      "clearanceStatus": "Xaaladda Oggolaanshaha",
       "approved": "La Ansixiyay",
       "notApproved": "Lama Ansixin",
       "notProvided": "Lama Bixin"
     },
-
     "history": {
-      "title": "Taariikhda Lacag-bixinta",
-      "description": "Eeg codsiyadaadii lacag-bixinta ee dhowaan iyo xaaladdooda.",
-      "emptyTitle": "Weli lacag lama bixin",
-      "emptyDescription": "Codsiyada lacag-bixintaadu waxay halkan ka soo muuqan doonaan markaad lacag bixiso.",
+      "title": "Taariikhda La-bixidda",
+      "description": "Eeg codsiyadii lacag-bixidda iyo xaaladdooda.",
+      "emptyTitle": "Weli wax la-bixid ah ma jiro",
+      "emptyDescription": "Codsiyadaadu halkan ayay ka muuqan doonaan markaad lacag la baxdo.",
       "status": {
         "pending": "Sugaya",
         "approved": "La Ansixiyay",
@@ -296,98 +275,96 @@
       }
     }
   },
-
   "SignIn": {
     "title": "Soo Gal Akoonkaaga",
-    "description": "Hoos geli iimaylkaaga iyo eraygaaga sirta ah si aad u gasho akoonkaaga.",
-    "continueWithGoogle": "Ku sii wad Google",
+    "description": "Geli iimaylkaaga iyo erayga sirta ah.",
+    "continueWithGoogle": "Ku Sii Wad Google",
     "email": "Geli iimaylkaaga",
-    "password": "Geli eraygaaga sirta ah",
+    "password": "Geli erayga sirta ah",
     "noAccount": "Akoon ma lihid?",
-    "signUp": "Isdiiwaangeli",
-    "signingIn": "Waa la soo gelayaa...",
+    "signUp": "Is Diiwaangeli",
+    "signingIn": "Waa la gelayaa...",
     "signIn": "Soo Gal",
-    "forgotPassword": "Ma illoowday erayga sirta ah?",
-    "welcomeBack": "Ku soo dhawoow mar kale! ☺️",
-    "somethingWentWrong": "Wax khalad ah ayaa dhacay. Fadlan mar kale isku day.",
+    "welcomeBack": "Ku soo dhowow mar kale! ☺️",
+    "forgotPassword": "Ma illowday erayga sirta ah?",
+    "somethingWentWrong": "Waxbaa khaldamay. Fadlan mar kale isku day.",
     "validation": {
-      "invalidEmail": "Fadlan geli iimayl sax ah",
+      "invalidEmail": "Geli iimayl sax ah",
       "passwordRequired": "Erayga sirta ah waa loo baahan yahay"
     }
   },
-
   "SignUp": {
-    "title": "Samee Akoonkaaga",
-    "description": "Hoos geli faahfaahintaada si aad u samaysato akoonkaaga.",
-    "continueWithGoogle": "Ku sii wad Google",
+    "title": "Samee Akoon",
+    "description": "Geli xogtaada si aad akoon u samaysato.",
+    "continueWithGoogle": "Ku Sii Wad Google",
     "name": "Geli magacaaga",
     "email": "Geli iimaylkaaga",
-    "password": "Geli eraygaaga sirta ah",
+    "password": "Geli erayga sirta ah",
     "country": "Dalka",
-    "number": "Lambarka telefoonka",
-    "alreadyHaveAccount": "Akoon hore ma u leedahay?",
+    "number": "Lambarka Taleefanka",
+    "alreadyHaveAccount": "Akoon ma leedahay?",
     "signIn": "Soo Gal",
     "creatingAccount": "Akoonka waa la samaynayaa...",
     "createAccount": "Samee Akoon",
-    "accountCreated": "Akoonka si guul leh ayaa loo sameeyay",
-    "welcome": "Ku soo dhawoow! ☺️",
-    "somethingWentWrong": "Wax khalad ah ayaa dhacay. Fadlan mar kale isku day.",
+    "accountCreated": "Akoonka waa la sameeyay",
+    "welcome": "Soo dhowow! ☺️",
+    "somethingWentWrong": "Waxbaa khaldamay. Fadlan mar kale isku day.",
     "validation": {
       "nameTooShort": "Magacu aad buu u gaaban yahay",
       "nameTooLong": "Magacu aad buu u dheer yahay",
-      "nameLettersOnly": "Magacu waa inuu ka koobnaadaa xarfo oo keliya",
-      "invalidEmail": "Fadlan geli cinwaan email oo sax ah",
-      "passwordTooShort": "Furaha sirta ah waa inuu ka koobnaadaa ugu yaraan 6 xaraf",
-      "countryRequired": "Fadlan dooro dalkaaga",
-      "numberRequired": "Fadlan geli lambar telefoon oo sax ah"
+      "nameLettersOnly": "Magacu waa inuu ka koobnaadaa xarfo",
+      "invalidEmail": "Geli iimayl sax ah",
+      "passwordTooShort": "Erayga sirta ahi ha ahaado ugu yaraan 6 xaraf",
+      "countryRequired": "Dooro dalkaaga",
+      "numberRequired": "Geli lambar taleefan oo sax ah"
     }
   },
   "ForgotPassword": {
-    "title": "Ma ilowday eraygaaga sirta ah?",
-    "description": "Geli iimaylkaaga, waxaana kuu soo diri doonaa xiriir aad ku cusboonaysiin karto eraygaaga sirta ah.",
+    "title": "Ma Illowday Erayga Sirta ah?",
+    "description": "Geli iimaylkaaga si aan kuugu dirno xiriir aad ku cusboonaysiiso erayga sirta ah.",
     "email": "Geli iimaylkaaga",
-    "sendResetLink": "Dir Xiriirka Dib-u-dejinta",
+    "sendResetLink": "Dir Xiriirka Cusboonaysiinta",
     "sending": "Waa la dirayaa...",
-    "success": "Haddii akoon ku jiro iimaylkan, waxaa laguu soo diray xiriir dib loogu dejinayo eraygaaga sirta ah.",
-    "rememberPassword": "Ma xasuusataa eraygaaga sirta ah?",
+    "success": "Haddii akoonku ku jiro iimaylkan, xiriirka cusboonaysiinta waa la diray.",
+    "rememberPassword": "Ma xasuusataa erayga sirta ah?",
     "signIn": "Soo Gal",
     "somethingWentWrong": "Waxbaa khaldamay. Fadlan mar kale isku day."
   },
   "ResetPassword": {
-    "title": "Dib u deji eraygaaga sirta ah",
-    "description": "U samee akoonkaaga eray sir ah oo cusub.",
-    "password": "Geli eraygaaga sirta ah ee cusub",
-    "confirmPassword": "Xaqiiji eraygaaga sirta ah ee cusub",
-    "resetPassword": "Dib u deji erayga sirta ah",
-    "resetting": "Waa la dib u dejinayaa...",
-    "success": "Eraygaaga sirta ah si guul leh ayaa dib loogu dejiyay.",
-    "invalidLink": "Xiriirkan dib-u-dejinta erayga sirta ah ma shaqaynayo ama wuu dhacay.",
-    "passwordTooShort": "Erayga sirta ah waa inuu ahaadaa ugu yaraan 6 xaraf",
-    "passwordsDoNotMatch": "Erayada sirta ahi isma waafaqayaan",
+    "title": "Cusboonaysii Erayga Sirta ah",
+    "description": "Samee eray sir ah oo cusub.",
+    "password": "Geli erayga sirta ah ee cusub",
+    "confirmPassword": "Xaqiiji erayga sirta ah",
+    "resetPassword": "Cusboonaysii",
+    "resetting": "Waa la cusboonaysiinayaa...",
+    "success": "Erayga sirta ah waa la cusboonaysiiyay.",
+    "invalidLink": "Xiriirkani ma shaqaynayo ama waqtigiisu wuu dhammaaday.",
+    "passwordTooShort": "Erayga sirta ahi ha ahaado ugu yaraan 6 xaraf",
+    "passwordsDoNotMatch": "Erayada sirta ahi isma waafaqaan",
     "somethingWentWrong": "Waxbaa khaldamay. Fadlan mar kale isku day."
   },
   "VerifyEmail": {
-    "title": "Xaqiiji iimaylkaaga",
-    "checkEmail": "Waxaan kuu soo dirnay xiriir xaqiijin ah cinwaankaaga iimaylka. Fadlan hubi sanduuqaaga iimaylka. Haddii aadan ka helin, hubi galka Spam ama Junk.",
-    "success": "Iimaylkaaga si guul leh ayaa loo xaqiijiyay. Hadda waad gali kartaa.",
-    "invalidLink": "Xiriirkan xaqiijinta waa khalad ama wuu dhacay. Fadlan codso iimayl xaqiijin cusub.",
-    "alreadyVerified": "Iimaylkaaga hore ayaa loo xaqiijiyay. Waad gali kartaa akoonkaaga.",
-    "somethingWentWrong": "Waxbaa khaldamay intii lagu jiray xaqiijinta iimaylkaaga. Fadlan mar kale isku day.",
-    "signIn": "Gal",
-    "didntReceive": "Ma aadan helin iimaylka?",
+    "title": "Xaqiiji Iimaylkaaga",
+    "checkEmail": "Waxaan kuu dirnay xiriirka xaqiijinta. Eeg sanduuqa iimaylkaaga. Haddii aadan helin, eeg Spam ama Junk.",
+    "success": "Iimaylkaaga waa la xaqiijiyay. Hadda waad soo geli kartaa.",
+    "invalidLink": "Xiriirka xaqiijintu ma shaqaynayo ama wuu dhacay. Codso mid cusub.",
+    "alreadyVerified": "Iimaylkaaga hore ayaa loo xaqiijiyay. Waad soo geli kartaa.",
+    "somethingWentWrong": "Xaqiijintu way fashilantay. Fadlan mar kale isku day.",
+    "signIn": "Soo Gal",
+    "didntReceive": "Iimaylka ma helin?",
     "email": "Iimayl",
-    "emailPlaceholder": "Geli cinwaankaaga iimaylka",
-    "emailRequired": "Fadlan geli cinwaankaaga iimaylka.",
-    "resend": "Dib u dir iimaylka xaqiijinta",
+    "emailPlaceholder": "Geli iimaylkaaga",
+    "emailRequired": "Geli iimaylkaaga.",
+    "resend": "Dib u Dir Xaqiijinta",
     "sending": "Waa la dirayaa..."
   },
   "ThemeToggle": {
-    "darkMode": "Habka mugdiga",
-    "lightMode": "Habka iftiinka",
-    "dark": "Mugdi",
+    "darkMode": "Muuqaal Madow",
+    "lightMode": "Muuqaal Iftiin",
+    "dark": "Madow",
     "light": "Iftiin",
-    "switchToDark": "U beddel habka mugdiga",
-    "switchToLight": "U beddel habka iftiinka",
-    "theme": "Habka"
+    "switchToDark": "U beddel muuqaal madow",
+    "switchToLight": "U beddel muuqaal iftiin",
+    "theme": "Muuqaalka"
   }
 }

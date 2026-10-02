@@ -2,15 +2,23 @@
 
 import { useState } from "react";
 import { z } from "zod";
-import { useForm, type FieldErrors, type SubmitHandler } from "react-hook-form";
+
+import {
+  useForm,
+  type FieldErrors,
+  type SubmitHandler,
+} from "react-hook-form";
+
 import { zodResolver } from "@hookform/resolvers/zod";
 import { signIn } from "next-auth/react";
 import { useTranslations } from "next-intl";
 import { useRouter } from "@/i18n/navigation";
 import toast from "react-hot-toast";
+
 import { FcGoogle } from "react-icons/fc";
 
 import { createLoginSchema } from "@/lib/loginSchema";
+
 import Input from "@/components/inputs/Input";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
@@ -93,49 +101,53 @@ const LoginForm = () => {
   };
 
   return (
-    <>
+    <div className="flex flex-col gap-4">
       <Button
         type="button"
         variant="outline"
         onClick={handleGoogleSignIn}
         disabled={isLoading}
-        className="flex w-full items-center gap-x-3 border-custom2"
+        className="h-10 w-full border-border text-sm font-medium"
       >
-        <FcGoogle size={18} />
+        <FcGoogle size={18} aria-hidden="true" />
         {t("continueWithGoogle")}
       </Button>
 
-      <Input
-        id="email"
-        label={t("email")}
-        type="email"
-        disabled={isLoading}
-        register={register}
-        errors={errors}
-      />
+      <div className="flex flex-col gap-3">
+        <Input
+          id="email"
+          label={t("email")}
+          type="email"
+          disabled={isLoading}
+          register={register}
+          errors={errors}
+        />
 
-      <Input
-        id="password"
-        label={t("password")}
-        type="password"
-        disabled={isLoading}
-        register={register}
-        errors={errors}
-      />
+        <Input
+          id="password"
+          label={t("password")}
+          type="password"
+          disabled={isLoading}
+          register={register}
+          errors={errors}
+        />
+      </div>
 
-      <div className="flex justify-end">
+      <div className="-mt-1 flex justify-end">
         <Link
           href="/forgot-password"
-          className="text-sm text-muted-foreground underline underline-offset-4 transition-colors hover:text-foreground"
+          className="text-xs font-medium text-muted-foreground underline underline-offset-4 transition-colors hover:text-foreground sm:text-sm"
         >
           {t("forgotPassword")}
         </Link>
       </div>
 
-      <p className="mr-auto text-sm text-muted-foreground">
+      <p className="text-xs leading-5 text-muted-foreground sm:text-sm">
         {t("noAccount")}
-
-        <Link href="/sign-up" className="ml-1 underline underline-offset-4">
+        <Link
+          href="/sign-up"
+          className="ml-1 font-medium text-foreground underline underline-offset-4 transition-colors hover:text-primary"
+        >
           {t("signUp")}
         </Link>
       </p>
@@ -144,11 +156,11 @@ const LoginForm = () => {
         type="button"
         onClick={handleSubmit(onSubmit, onInvalid)}
         disabled={isLoading}
-        className="w-full border-custom"
+        className="h-10 w-full border-custom text-sm font-medium"
       >
         {isLoading ? t("signingIn") : t("signIn")}
       </Button>
-    </>
+    </div>
   );
 };
 

@@ -1,17 +1,19 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
+
 import "./globals.css";
+import { siteConfig } from "@/config/config";
+
 
 const inter = Inter({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
 });
 
-export const metadata: Metadata = {
-  title: "SOMALIA MALGASHI",
-  description:
-    "Somalia Malgashi is an online investment platform designed to provide accessible investment opportunities and trading solutions for individuals looking to grow their finances.",
+export const metadata = {
+  title: siteConfig.name,
+  description: siteConfig.description,
 };
 
 export default function RootLayout({

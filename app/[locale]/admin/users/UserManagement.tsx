@@ -1,7 +1,9 @@
 "use client";
 
 import { useMemo, useState } from "react";
+
 import { FiEdit3, FiSearch, FiTrash2 } from "react-icons/fi";
+
 import toast from "react-hot-toast";
 
 import {
@@ -9,6 +11,7 @@ import {
   updateUserFinancials,
   updateUserStatus,
 } from "@/actions/AdminUsers";
+
 import { Button } from "@/components/ui/button";
 
 interface User {
@@ -28,10 +31,16 @@ interface UserManagementProps {
   users: User[];
 }
 
-const UserManagement = ({ users }: UserManagementProps) => {
+const UserManagement = ({
+  users,
+}: UserManagementProps) => {
   const [search, setSearch] = useState("");
-  const [loadingUserId, setLoadingUserId] = useState<string | null>(null);
-  const [editingUserId, setEditingUserId] = useState<string | null>(null);
+  const [loadingUserId, setLoadingUserId] = useState<
+    string | null
+  >(null);
+  const [editingUserId, setEditingUserId] = useState<
+    string | null
+  >(null);
 
   const [financialValues, setFinancialValues] = useState({
     TotalBalance: "",
@@ -57,7 +66,7 @@ const UserManagement = ({ users }: UserManagementProps) => {
   const handleStatusChange = async (
     userId: string,
     field: "tradingstatus" | "clearancestatus",
-    value: boolean
+    value: boolean,
   ) => {
     setLoadingUserId(userId);
 
@@ -104,7 +113,7 @@ const UserManagement = ({ users }: UserManagementProps) => {
 
   const handleFinancialChange = (
     field: "TotalBalance" | "Deposit" | "Profit",
-    value: string
+    value: string,
   ) => {
     setFinancialValues((current) => ({
       ...current,
@@ -117,9 +126,17 @@ const UserManagement = ({ users }: UserManagementProps) => {
       return;
     }
 
-    const TotalBalance = Number(financialValues.TotalBalance);
-    const Deposit = Number(financialValues.Deposit);
-    const Profit = Number(financialValues.Profit);
+    const TotalBalance = Number(
+      financialValues.TotalBalance,
+    );
+
+    const Deposit = Number(
+      financialValues.Deposit,
+    );
+
+    const Profit = Number(
+      financialValues.Profit,
+    );
 
     if (
       !Number.isFinite(TotalBalance) ||
@@ -139,7 +156,11 @@ const UserManagement = ({ users }: UserManagementProps) => {
       return;
     }
 
-    if (TotalBalance < 0 || Deposit < 0 || Profit < 0) {
+    if (
+      TotalBalance < 0 ||
+      Deposit < 0 ||
+      Profit < 0
+    ) {
       toast.error("Financial values cannot be negative.");
       return;
     }
@@ -169,10 +190,11 @@ const UserManagement = ({ users }: UserManagementProps) => {
   };
 
   const handleDeleteUser = async (user: User) => {
-    const userName = user.name || user.email || "this user";
+    const userName =
+      user.name || user.email || "this user";
 
     const confirmed = window.confirm(
-      `Are you sure you want to permanently delete ${userName}?\n\nThis will remove the user account and all related withdrawal and authentication records. This action cannot be undone.`
+      `Are you sure you want to permanently delete ${userName}?\n\nThis will remove the user account and all related withdrawal and authentication records. This action cannot be undone.`,
     );
 
     if (!confirmed) {
@@ -200,72 +222,83 @@ const UserManagement = ({ users }: UserManagementProps) => {
 
   return (
     <div>
-      <div className="mb-8">
-        <p className="text-sm font-semibold uppercase tracking-wide text-primary">
+      {/* Header */}
+      <div className="mb-6">
+        <p className="text-xs font-medium text-primary">
           Administration
         </p>
 
-        <h1 className="mt-2 text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
+        <h1 className="mt-1.5 text-xl font-semibold leading-tight tracking-tight text-foreground sm:text-2xl">
           User Management
         </h1>
 
-        <p className="mt-2 text-sm leading-6 text-muted-foreground">
-          Manage user accounts, trading access, clearance status, and
-          financial information.
+        <p className="mt-1.5 max-w-2xl text-sm leading-6 text-muted-foreground">
+          Manage user accounts, trading access, clearance status,
+          and financial information.
         </p>
       </div>
 
-      <div className="relative mb-6">
+      {/* Search */}
+      <div className="relative mb-4">
         <FiSearch
-          size={18}
-          className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground"
+          size={17}
+          className="absolute left-3.5 top-1/2 -translate-y-1/2 text-muted-foreground"
+          aria-hidden="true"
         />
 
         <input
           type="search"
           value={search}
-          onChange={(event) => setSearch(event.target.value)}
+          onChange={(event) =>
+            setSearch(event.target.value)
+          }
           placeholder="Search by name or email..."
-          className="h-12 w-full rounded-xl border border-border bg-background pl-11 pr-4 text-sm text-foreground outline-none transition focus:border-primary"
+          className="h-10 w-full rounded-xl border border-border bg-background pl-10 pr-4 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/10"
         />
       </div>
 
-      <div className="mb-4 text-sm text-muted-foreground">
+      {/* Result Count */}
+      <div className="mb-4 text-xs text-muted-foreground">
         {filteredUsers.length}{" "}
         {filteredUsers.length === 1 ? "user" : "users"}
       </div>
 
+      {/* Empty State */}
       {filteredUsers.length === 0 ? (
-        <div className="rounded-2xl border-custom2 bg-card px-6 py-12 text-center">
+        <div className="rounded-xl border-custom2 bg-card px-5 py-10 text-center">
           <h2 className="text-sm font-semibold text-foreground">
             No users found
           </h2>
 
-          <p className="mt-2 text-sm text-muted-foreground">
+          <p className="mt-1.5 text-xs leading-5 text-muted-foreground">
             Try searching with a different name or email address.
           </p>
         </div>
       ) : (
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-4">
           {filteredUsers.map((user) => {
-            const isLoading = loadingUserId === user.id;
-            const isEditing = editingUserId === user.id;
+            const isLoading =
+              loadingUserId === user.id;
+
+            const isEditing =
+              editingUserId === user.id;
 
             return (
               <div
                 key={user.id}
-                className="rounded-2xl border-custom2 bg-card p-5 sm:p-6"
+                className="rounded-xl border-custom2 bg-card p-4 sm:p-5"
               >
-                <div className="flex flex-col gap-5">
-                  <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                <div className="flex flex-col gap-4">
+                  {/* User Header */}
+                  <div className="flex flex-col gap-2.5 sm:flex-row sm:items-start sm:justify-between">
                     <div className="min-w-0">
                       <div className="flex flex-wrap items-center gap-2">
-                        <h2 className="truncate text-base font-semibold text-foreground">
+                        <h2 className="truncate text-sm font-semibold text-foreground sm:text-base">
                           {user.name || "Unnamed User"}
                         </h2>
 
                         <span
-                          className={`rounded-full border px-2.5 py-1 text-[11px] font-medium ${
+                          className={`rounded-full border px-2 py-0.5 text-[10px] font-medium ${
                             user.role === "ADMIN"
                               ? "border-primary/20 bg-primary/10 text-primary"
                               : "border-border bg-muted text-muted-foreground"
@@ -275,59 +308,72 @@ const UserManagement = ({ users }: UserManagementProps) => {
                         </span>
                       </div>
 
-                      <p className="mt-1 break-all text-sm text-muted-foreground">
+                      <p className="mt-0.5 break-all text-xs text-muted-foreground">
                         {user.email || "No email address"}
                       </p>
                     </div>
 
-                    <span className="text-xs text-muted-foreground">
+                    <span className="text-[11px] text-muted-foreground sm:pt-0.5">
                       Joined{" "}
                       {new Intl.DateTimeFormat("en-US", {
                         dateStyle: "medium",
-                      }).format(new Date(user.createdAt))}
+                      }).format(
+                        new Date(user.createdAt),
+                      )}
                     </span>
                   </div>
 
-                  <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
-                    <div className="rounded-xl border border-border bg-background p-4">
-                      <span className="text-xs font-medium text-muted-foreground">
+                  {/* Financial Overview */}
+                  <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-3">
+                    <div className="rounded-lg border border-border bg-background p-3.5">
+                      <span className="text-[11px] font-medium text-muted-foreground">
                         Total Balance
                       </span>
 
-                      <p className="mt-1 text-lg font-semibold text-foreground">
-                        ${(user.TotalBalance ?? 0).toLocaleString()}
+                      <p className="mt-1 text-base font-semibold tracking-tight text-foreground">
+                        $
+                        {(
+                          user.TotalBalance ?? 0
+                        ).toLocaleString()}
                       </p>
                     </div>
 
-                    <div className="rounded-xl border border-border bg-background p-4">
-                      <span className="text-xs font-medium text-muted-foreground">
+                    <div className="rounded-lg border border-border bg-background p-3.5">
+                      <span className="text-[11px] font-medium text-muted-foreground">
                         Deposit
                       </span>
 
-                      <p className="mt-1 text-lg font-semibold text-foreground">
-                        ${(user.Deposit ?? 0).toLocaleString()}
+                      <p className="mt-1 text-base font-semibold tracking-tight text-foreground">
+                        $
+                        {(
+                          user.Deposit ?? 0
+                        ).toLocaleString()}
                       </p>
                     </div>
 
-                    <div className="rounded-xl border border-border bg-background p-4">
-                      <span className="text-xs font-medium text-muted-foreground">
+                    <div className="rounded-lg border border-border bg-background p-3.5">
+                      <span className="text-[11px] font-medium text-muted-foreground">
                         Profit
                       </span>
 
-                      <p className="mt-1 text-lg font-semibold text-primary">
-                        ${(user.Profit ?? 0).toLocaleString()}
+                      <p className="mt-1 text-base font-semibold tracking-tight text-primary">
+                        $
+                        {(
+                          user.Profit ?? 0
+                        ).toLocaleString()}
                       </p>
                     </div>
                   </div>
 
-                  <div className="grid gap-3 sm:grid-cols-2">
-                    <div className="flex items-center justify-between rounded-xl border border-border bg-background px-4 py-3">
-                      <div>
-                        <p className="text-sm font-medium text-foreground">
+                  {/* Account Status */}
+                  <div className="grid gap-2.5 sm:grid-cols-2">
+                    <div className="flex items-center justify-between gap-4 rounded-lg border border-border bg-background px-3.5 py-3">
+                      <div className="min-w-0">
+                        <p className="text-xs font-medium text-foreground">
                           Trading Status
                         </p>
 
-                        <p className="mt-1 text-xs text-muted-foreground">
+                        <p className="mt-0.5 text-[11px] leading-5 text-muted-foreground">
                           Allow this user to trade.
                         </p>
                       </div>
@@ -335,26 +381,30 @@ const UserManagement = ({ users }: UserManagementProps) => {
                       <button
                         type="button"
                         role="switch"
-                        aria-checked={user.tradingstatus}
+                        aria-checked={
+                          user.tradingstatus
+                        }
                         aria-label={`Trading status for ${
-                          user.name || user.email || "user"
+                          user.name ||
+                          user.email ||
+                          "user"
                         }`}
                         disabled={isLoading}
                         onClick={() =>
                           handleStatusChange(
                             user.id,
                             "tradingstatus",
-                            !user.tradingstatus
+                            !user.tradingstatus,
                           )
                         }
-                        className={`relative flex h-7 w-12 shrink-0 items-center rounded-full p-1 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary/30 disabled:cursor-not-allowed disabled:opacity-60 ${
+                        className={`relative flex h-6 w-11 shrink-0 items-center rounded-full p-1 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary/30 disabled:cursor-not-allowed disabled:opacity-60 ${
                           user.tradingstatus
                             ? "bg-primary"
                             : "bg-muted-foreground/30"
                         }`}
                       >
                         <span
-                          className={`h-5 w-5 rounded-full bg-white shadow-sm transition-transform duration-200 ${
+                          className={`h-4 w-4 rounded-full bg-white shadow-sm transition-transform duration-200 ${
                             user.tradingstatus
                               ? "translate-x-5"
                               : "translate-x-0"
@@ -363,13 +413,13 @@ const UserManagement = ({ users }: UserManagementProps) => {
                       </button>
                     </div>
 
-                    <div className="flex items-center justify-between rounded-xl border border-border bg-background px-4 py-3">
-                      <div>
-                        <p className="text-sm font-medium text-foreground">
+                    <div className="flex items-center justify-between gap-4 rounded-lg border border-border bg-background px-3.5 py-3">
+                      <div className="min-w-0">
+                        <p className="text-xs font-medium text-foreground">
                           Clearance Status
                         </p>
 
-                        <p className="mt-1 text-xs text-muted-foreground">
+                        <p className="mt-0.5 text-[11px] leading-5 text-muted-foreground">
                           Allow this user to make withdrawals.
                         </p>
                       </div>
@@ -377,26 +427,30 @@ const UserManagement = ({ users }: UserManagementProps) => {
                       <button
                         type="button"
                         role="switch"
-                        aria-checked={user.clearancestatus}
+                        aria-checked={
+                          user.clearancestatus
+                        }
                         aria-label={`Clearance status for ${
-                          user.name || user.email || "user"
+                          user.name ||
+                          user.email ||
+                          "user"
                         }`}
                         disabled={isLoading}
                         onClick={() =>
                           handleStatusChange(
                             user.id,
                             "clearancestatus",
-                            !user.clearancestatus
+                            !user.clearancestatus,
                           )
                         }
-                        className={`relative flex h-7 w-12 shrink-0 items-center rounded-full p-1 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary/30 disabled:cursor-not-allowed disabled:opacity-60 ${
+                        className={`relative flex h-6 w-11 shrink-0 items-center rounded-full p-1 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary/30 disabled:cursor-not-allowed disabled:opacity-60 ${
                           user.clearancestatus
                             ? "bg-primary"
                             : "bg-muted-foreground/30"
                         }`}
                       >
                         <span
-                          className={`h-5 w-5 rounded-full bg-white shadow-sm transition-transform duration-200 ${
+                          className={`h-4 w-4 rounded-full bg-white shadow-sm transition-transform duration-200 ${
                             user.clearancestatus
                               ? "translate-x-5"
                               : "translate-x-0"
@@ -406,11 +460,12 @@ const UserManagement = ({ users }: UserManagementProps) => {
                     </div>
                   </div>
 
+                  {/* Financial Editor */}
                   {isEditing ? (
-                    <div className="rounded-xl border border-border bg-background p-4 sm:p-5">
-                      <div className="grid gap-4 sm:grid-cols-3">
+                    <div className="rounded-lg border border-border bg-background p-3.5 sm:p-4">
+                      <div className="grid gap-3 sm:grid-cols-3">
                         <div>
-                          <label className="mb-2 block text-xs font-medium text-muted-foreground">
+                          <label className="mb-1.5 block text-[11px] font-medium text-muted-foreground">
                             Total Balance
                           </label>
 
@@ -418,19 +473,21 @@ const UserManagement = ({ users }: UserManagementProps) => {
                             type="number"
                             min="0"
                             step="1"
-                            value={financialValues.TotalBalance}
+                            value={
+                              financialValues.TotalBalance
+                            }
                             onChange={(event) =>
                               handleFinancialChange(
                                 "TotalBalance",
-                                event.target.value
+                                event.target.value,
                               )
                             }
-                            className="h-11 w-full rounded-lg border border-border bg-background px-3 text-sm text-foreground outline-none focus:border-primary"
+                            className="h-10 w-full rounded-lg border border-border bg-background px-3 text-sm text-foreground outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/10"
                           />
                         </div>
 
                         <div>
-                          <label className="mb-2 block text-xs font-medium text-muted-foreground">
+                          <label className="mb-1.5 block text-[11px] font-medium text-muted-foreground">
                             Deposit
                           </label>
 
@@ -438,19 +495,21 @@ const UserManagement = ({ users }: UserManagementProps) => {
                             type="number"
                             min="0"
                             step="1"
-                            value={financialValues.Deposit}
+                            value={
+                              financialValues.Deposit
+                            }
                             onChange={(event) =>
                               handleFinancialChange(
                                 "Deposit",
-                                event.target.value
+                                event.target.value,
                               )
                             }
-                            className="h-11 w-full rounded-lg border border-border bg-background px-3 text-sm text-foreground outline-none focus:border-primary"
+                            className="h-10 w-full rounded-lg border border-border bg-background px-3 text-sm text-foreground outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/10"
                           />
                         </div>
 
                         <div>
-                          <label className="mb-2 block text-xs font-medium text-muted-foreground">
+                          <label className="mb-1.5 block text-[11px] font-medium text-muted-foreground">
                             Profit
                           </label>
 
@@ -458,25 +517,27 @@ const UserManagement = ({ users }: UserManagementProps) => {
                             type="number"
                             min="0"
                             step="1"
-                            value={financialValues.Profit}
+                            value={
+                              financialValues.Profit
+                            }
                             onChange={(event) =>
                               handleFinancialChange(
                                 "Profit",
-                                event.target.value
+                                event.target.value,
                               )
                             }
-                            className="h-11 w-full rounded-lg border border-border bg-background px-3 text-sm text-foreground outline-none focus:border-primary"
+                            className="h-10 w-full rounded-lg border border-border bg-background px-3 text-sm text-foreground outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/10"
                           />
                         </div>
                       </div>
 
-                      <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:justify-end">
+                      <div className="mt-3 flex flex-col gap-2 sm:flex-row sm:justify-end">
                         <Button
                           type="button"
                           variant="outline"
                           onClick={closeFinancialEditor}
                           disabled={isLoading}
-                          className="h-11 border-custom2"
+                          className="h-10 border-custom2 text-sm font-medium"
                         >
                           Cancel
                         </Button>
@@ -485,34 +546,49 @@ const UserManagement = ({ users }: UserManagementProps) => {
                           type="button"
                           onClick={handleFinancialSave}
                           disabled={isLoading}
-                          className="h-11 border-custom"
+                          className="h-10 border-custom text-sm font-medium"
                         >
-                          {isLoading ? "Saving..." : "Save Changes"}
+                          {isLoading
+                            ? "Saving..."
+                            : "Save Changes"}
                         </Button>
                       </div>
                     </div>
                   ) : (
-                    <div className="flex flex-col gap-3 sm:flex-row sm:justify-end">
+                    /* Actions */
+                    <div className="flex flex-col gap-2 sm:flex-row sm:justify-end">
                       <Button
                         type="button"
                         variant="outline"
-                        onClick={() => openFinancialEditor(user)}
+                        onClick={() =>
+                          openFinancialEditor(user)
+                        }
                         disabled={isLoading}
-                        className="h-10 gap-2 border-custom2"
+                        className="h-10 gap-2 border-custom2 text-sm font-medium"
                       >
-                        <FiEdit3 size={16} />
+                        <FiEdit3
+                          size={15}
+                          aria-hidden="true"
+                        />
                         Edit Account
                       </Button>
 
                       <Button
                         type="button"
                         variant="destructive"
-                        onClick={() => handleDeleteUser(user)}
+                        onClick={() =>
+                          handleDeleteUser(user)
+                        }
                         disabled={isLoading}
-                        className="h-10 gap-2 border-custom3"
+                        className="h-10 gap-2 border-custom3 text-sm font-medium"
                       >
-                        <FiTrash2 size={16} />
-                        {isLoading ? "Deleting..." : "Delete User"}
+                        <FiTrash2
+                          size={15}
+                          aria-hidden="true"
+                        />
+                        {isLoading
+                          ? "Deleting..."
+                          : "Delete User"}
                       </Button>
                     </div>
                   )}

@@ -1,6 +1,7 @@
 import { redirect } from "next/navigation";
 
 import Container from "@/components/Container";
+
 import prisma from "@/lib/prismadb";
 
 import { requireAdmin } from "@/actions/Admin";
@@ -66,90 +67,93 @@ const AdminPage = async () => {
 
   return (
     <Container>
-      <main className="py-8 sm:py-10">
-        <div className="mb-8">
-          <p className="text-sm font-semibold uppercase tracking-wide text-primary">
+      <main className="py-7 sm:py-9 lg:py-10">
+        {/* Header */}
+        <div className="mb-6">
+          <p className="text-xs font-medium text-primary">
             Administration
           </p>
 
-          <h1 className="mt-2 text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
+          <h1 className="mt-1.5 text-xl font-semibold leading-tight tracking-tight text-foreground sm:text-2xl">
             Admin Dashboard
           </h1>
 
-          <p className="mt-2 text-sm leading-6 text-muted-foreground">
+          <p className="mt-1.5 max-w-2xl text-sm leading-6 text-muted-foreground">
             Manage users, accounts, balances, and withdrawal requests.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
-          <div className="rounded-2xl border-custom2 bg-card p-5">
+        {/* Withdrawal Overview */}
+        <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
+          <div className="rounded-xl border-custom2 bg-card p-4">
             <p className="text-xs font-medium text-muted-foreground">
               Total Users
             </p>
 
-            <p className="mt-2 text-2xl font-semibold text-foreground">
+            <p className="mt-2 text-xl font-semibold tracking-tight text-foreground">
               {totalUsers}
             </p>
           </div>
 
-          <div className="rounded-2xl border-custom2 bg-card p-5">
+          <div className="rounded-xl border-custom2 bg-card p-4">
             <p className="text-xs font-medium text-muted-foreground">
               Pending Withdrawals
             </p>
 
-            <p className="mt-2 text-2xl font-semibold text-foreground">
+            <p className="mt-2 text-xl font-semibold tracking-tight text-foreground">
               {pendingWithdrawals}
             </p>
           </div>
 
-          <div className="rounded-2xl border-custom2 bg-card p-5">
+          <div className="rounded-xl border-custom2 bg-card p-4">
             <p className="text-xs font-medium text-muted-foreground">
               Approved Withdrawals
             </p>
 
-            <p className="mt-2 text-2xl font-semibold text-foreground">
+            <p className="mt-2 text-xl font-semibold tracking-tight text-foreground">
               {approvedWithdrawals}
             </p>
           </div>
 
-          <div className="rounded-2xl border-custom2 bg-card p-5">
+          <div className="rounded-xl border-custom2 bg-card p-4">
             <p className="text-xs font-medium text-muted-foreground">
               Rejected Withdrawals
             </p>
 
-            <p className="mt-2 text-2xl font-semibold text-foreground">
+            <p className="mt-2 text-xl font-semibold tracking-tight text-foreground">
               {rejectedWithdrawals}
             </p>
           </div>
         </div>
 
-        <div className="mt-6 grid gap-4 sm:grid-cols-3">
-          <div className="rounded-2xl border-custom2 bg-card p-5">
+        {/* Financial Overview */}
+        <div className="mt-5 grid gap-3 sm:grid-cols-3">
+          <div className="rounded-xl border-custom2 bg-card p-4">
             <p className="text-xs font-medium text-muted-foreground">
               Total Balance
             </p>
 
-            <p className="mt-2 text-2xl font-semibold text-foreground">
+            <p className="mt-2 text-xl font-semibold tracking-tight text-foreground">
               ${totalBalance.toLocaleString()}
             </p>
           </div>
 
-          <div className="rounded-2xl border-custom2 bg-card p-5">
+          <div className="rounded-xl border-custom2 bg-card p-4">
             <p className="text-xs font-medium text-muted-foreground">
               Total Deposits
             </p>
 
-            <p className="mt-2 text-2xl font-semibold text-foreground">
+            <p className="mt-2 text-xl font-semibold tracking-tight text-foreground">
               ${totalDeposits.toLocaleString()}
             </p>
           </div>
 
-          <div className="rounded-2xl border-custom2 bg-card p-5">
+          <div className="rounded-xl border-custom2 bg-card p-4">
             <p className="text-xs font-medium text-muted-foreground">
               Total Profit
             </p>
 
-            <p className="mt-2 text-2xl font-semibold text-foreground">
+            <p className="mt-2 text-xl font-semibold tracking-tight text-foreground">
               ${totalProfit.toLocaleString()}
             </p>
           </div>

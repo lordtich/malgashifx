@@ -3,7 +3,6 @@
 import { useMemo, useState } from "react";
 
 import { useRouter } from "next/navigation";
-
 import { useTranslations } from "next-intl";
 
 import toast from "react-hot-toast";
@@ -13,12 +12,11 @@ import CurrencyDisplay from "@/components/currency/CurrencyDisplay";
 import {
   FiArrowRight,
   FiCheckCircle,
+  FiCreditCard,
   FiInfo,
   FiShield,
   FiTrendingUp,
-  FiCreditCard,
 } from "react-icons/fi";
-
 import { MdOutlineAccountBalanceWallet } from "react-icons/md";
 
 import { SafeUser } from "@/types";
@@ -30,9 +28,9 @@ import {
 
 import { withdrawalMethods } from "@/config/walletConfig";
 
-import WithdrawalHistory from "./WithdrawalHistory";
-
 import { formatPrice } from "@/utils/formatPrice";
+
+import WithdrawalHistory from "./WithdrawalHistory";
 
 interface Withdrawal {
   id: string;
@@ -62,22 +60,16 @@ const Account = ({
   const router = useRouter();
 
   const [amount, setAmount] = useState("");
-
   const [withdrawalMethod, setWithdrawalMethod] =
     useState<WithdrawalMethod | "">("");
-
   const [provider, setProvider] = useState("");
-
   const [network, setNetwork] = useState("");
-
   const [destination, setDestination] = useState("");
 
   const [showConfirmation, setShowConfirmation] =
     useState(false);
-
   const [withdrawalComplete, setWithdrawalComplete] =
     useState(false);
-
   const [isWithdrawing, setIsWithdrawing] =
     useState(false);
 
@@ -85,25 +77,19 @@ const Account = ({
     useState<Withdrawal | null>(null);
 
   const isTradingActive = Boolean(
-    currentUser?.tradingstatus,
+    currentUser?.tradingstatus
   );
 
   const isClearanceApproved = Boolean(
-    currentUser?.clearancestatus,
+    currentUser?.clearancestatus
   );
 
   const balance = Number(
-    currentUser?.TotalBalance ?? 0,
+    currentUser?.TotalBalance ?? 0
   );
 
   const withdrawalAmount = Number(amount);
 
-  /*
-   * Get providers available for the user's country.
-   *
-   * Providers without a country restriction are
-   * available to everyone.
-   */
   const availableProviders = useMemo(() => {
     if (!withdrawalMethod) return [];
 
@@ -124,7 +110,7 @@ const Account = ({
 
       return item.countries.some(
         (allowedCountry) =>
-          allowedCountry === country,
+          allowedCountry === country
       );
     });
   }, [
@@ -132,9 +118,6 @@ const Account = ({
     withdrawalMethod,
   ]);
 
-  /*
-   * Find the currently selected provider.
-   */
   const selectedProvider = useMemo(() => {
     if (!withdrawalMethod || !provider) {
       return null;
@@ -145,14 +128,11 @@ const Account = ({
 
     return (
       methodConfig.providers.find(
-        (item) => item.key === provider,
+        (item) => item.key === provider
       ) ?? null
     );
   }, [provider, withdrawalMethod]);
 
-  /*
-   * Crypto networks for the selected provider.
-   */
   const availableNetworks = useMemo(() => {
     if (
       !selectedProvider ||
@@ -164,9 +144,6 @@ const Account = ({
     return selectedProvider.networks;
   }, [selectedProvider]);
 
-  /*
-   * Withdrawal amount validation.
-   */
   const amountError = useMemo(() => {
     if (!amount) return null;
 
@@ -175,7 +152,7 @@ const Account = ({
       withdrawalAmount <= 0
     ) {
       return t(
-        "withdrawal.validation.invalidAmount",
+        "withdrawal.validation.invalidAmount"
       );
     }
 
@@ -189,7 +166,7 @@ const Account = ({
 
     if (withdrawalAmount > balance) {
       return t(
-        "withdrawal.validation.exceedsBalance",
+        "withdrawal.validation.exceedsBalance"
       );
     }
 
@@ -201,9 +178,6 @@ const Account = ({
     withdrawalAmount,
   ]);
 
-  /*
-   * Provider validation.
-   */
   const providerError = useMemo(() => {
     if (!withdrawalMethod) return null;
 
@@ -214,9 +188,6 @@ const Account = ({
     return null;
   }, [provider, withdrawalMethod]);
 
-  /*
-   * Crypto network validation.
-   */
   const networkError = useMemo(() => {
     if (withdrawalMethod !== "CRYPTO") {
       return null;
@@ -229,9 +200,6 @@ const Account = ({
     return null;
   }, [network, withdrawalMethod]);
 
-  /*
-   * Destination validation.
-   */
   const destinationError = useMemo(() => {
     if (!destination) return null;
 
@@ -242,10 +210,6 @@ const Account = ({
     return null;
   }, [destination]);
 
-  /*
-   * Everything required before the user can
-   * open the confirmation modal.
-   */
   const canWithdraw =
     balance > 0 &&
     isClearanceApproved &&
@@ -261,7 +225,7 @@ const Account = ({
     !destinationError;
 
   const handleAmountChange = (
-    event: React.ChangeEvent<HTMLInputElement>,
+    event: React.ChangeEvent<HTMLInputElement>
   ) => {
     const value = event.target.value;
 
@@ -271,7 +235,7 @@ const Account = ({
   };
 
   const handleMethodChange = (
-    event: React.ChangeEvent<HTMLSelectElement>,
+    event: React.ChangeEvent<HTMLSelectElement>
   ) => {
     const value =
       event.target.value as
@@ -279,30 +243,26 @@ const Account = ({
         | "";
 
     setWithdrawalMethod(value);
-
-    // Changing the method resets all dependent fields.
     setProvider("");
     setNetwork("");
     setDestination("");
   };
 
   const handleProviderChange = (
-    event: React.ChangeEvent<HTMLSelectElement>,
+    event: React.ChangeEvent<HTMLSelectElement>
   ) => {
     setProvider(event.target.value);
-
-    // Changing provider resets the network.
     setNetwork("");
   };
 
   const handleNetworkChange = (
-    event: React.ChangeEvent<HTMLSelectElement>,
+    event: React.ChangeEvent<HTMLSelectElement>
   ) => {
     setNetwork(event.target.value);
   };
 
   const handleDestinationChange = (
-    event: React.ChangeEvent<HTMLInputElement>,
+    event: React.ChangeEvent<HTMLInputElement>
   ) => {
     setDestination(event.target.value);
   };
@@ -339,47 +299,37 @@ const Account = ({
       if (!result?.success) {
         toast.error(
           result?.message ||
-            t("withdrawal.errors.generic"),
+            t("withdrawal.errors.generic")
         );
-
         return;
       }
 
       const newWithdrawal: Withdrawal = {
         id: result.withdrawalId,
         amount: withdrawalAmount,
-
         phoneNumber:
           withdrawalMethod === "MOBILE_MONEY"
             ? destination.trim()
             : null,
-
         method: withdrawalMethod,
-
         provider,
-
         destination: destination.trim(),
-
         network:
           withdrawalMethod === "CRYPTO"
             ? network
             : null,
-
         status: "PENDING",
-
         createdAt: new Date().toISOString(),
       };
 
       setCompletedWithdrawal(newWithdrawal);
-
       setShowConfirmation(false);
-
       setWithdrawalComplete(true);
 
       router.refresh();
     } catch {
       toast.error(
-        t("withdrawal.errors.generic"),
+        t("withdrawal.errors.generic")
       );
     } finally {
       setIsWithdrawing(false);
@@ -388,17 +338,11 @@ const Account = ({
 
   const handleCloseSuccess = () => {
     setWithdrawalComplete(false);
-
     setCompletedWithdrawal(null);
-
     setAmount("");
-
     setWithdrawalMethod("");
-
     setProvider("");
-
     setNetwork("");
-
     setDestination("");
   };
 
@@ -412,14 +356,13 @@ const Account = ({
   return (
     <main className="w-full py-8 sm:py-10 lg:py-12">
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8">
-
         {/* Header */}
-        <div className="mb-8">
-          <p className="text-sm font-medium text-primary">
+        <div className="mb-7 sm:mb-8">
+          <p className="text-xs font-medium text-primary sm:text-sm">
             {t("welcome")}
           </p>
 
-          <h1 className="mt-1 text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
+          <h1 className="mt-1 text-xl font-semibold leading-tight tracking-tight text-foreground sm:text-2xl lg:text-3xl">
             {t("goodToSeeYou", {
               name: currentUser?.name ?? "",
             })}
@@ -427,22 +370,21 @@ const Account = ({
         </div>
 
         {/* Balance Cards */}
-        <section className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-
+        <section className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {/* Total Balance */}
-          <div className="rounded-2xl border-custom2 bg-background p-5">
-            <div className="flex items-center justify-between">
-              <span className="text-sm text-muted-foreground">
+          <div className="rounded-xl border-custom2 bg-background p-4 sm:p-5">
+            <div className="flex items-center justify-between gap-3">
+              <span className="text-xs text-muted-foreground sm:text-sm">
                 {t("balance.total")}
               </span>
 
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                <FiCreditCard size={18} />
+              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <FiCreditCard size={17} aria-hidden="true" />
               </div>
             </div>
 
             <div className="mt-4">
-              <p className="text-2xl font-semibold tracking-tight text-foreground">
+              <p className="text-xl font-semibold tracking-tight text-foreground sm:text-2xl">
                 {formatPrice(balance)}
               </p>
 
@@ -454,42 +396,45 @@ const Account = ({
           </div>
 
           {/* Leverage */}
-          <div className="rounded-2xl border-custom2 bg-background p-5">
-            <div className="flex items-center justify-between">
-              <span className="text-sm text-muted-foreground">
+          <div className="rounded-xl border-custom2 bg-background p-4 sm:p-5">
+            <div className="flex items-center justify-between gap-3">
+              <span className="text-xs text-muted-foreground sm:text-sm">
                 {t("balance.leverage")}
               </span>
 
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                <FiTrendingUp size={18} />
+              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <FiTrendingUp size={17} aria-hidden="true" />
               </div>
             </div>
 
-            <p className="mt-4 text-2xl font-semibold tracking-tight text-foreground">
+            <p className="mt-4 text-xl font-semibold tracking-tight text-foreground sm:text-2xl">
               1:100 M
             </p>
           </div>
 
           {/* Invested Value */}
-          <div className="rounded-2xl border-custom2 bg-background p-5">
-            <div className="flex items-center justify-between">
-              <span className="text-sm text-muted-foreground">
+          <div className="rounded-xl border-custom2 bg-background p-4 sm:p-5">
+            <div className="flex items-center justify-between gap-3">
+              <span className="text-xs text-muted-foreground sm:text-sm">
                 {t("balance.investedValue")}
               </span>
 
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                <MdOutlineAccountBalanceWallet size={19} />
+              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <MdOutlineAccountBalanceWallet
+                  size={18}
+                  aria-hidden="true"
+                />
               </div>
             </div>
 
             <div className="mt-4">
-              <p className="text-2xl font-semibold tracking-tight text-foreground">
+              <p className="text-xl font-semibold tracking-tight text-foreground sm:text-2xl">
                 {formatPrice(currentUser?.Deposit)}
               </p>
 
               <CurrencyDisplay
                 amount={Number(
-                  currentUser?.Deposit ?? 0,
+                  currentUser?.Deposit ?? 0
                 )}
                 country={currentUser?.country}
               />
@@ -497,25 +442,25 @@ const Account = ({
           </div>
 
           {/* Target Profit */}
-          <div className="rounded-2xl border-custom2 bg-background p-5">
-            <div className="flex items-center justify-between">
-              <span className="text-sm text-muted-foreground">
+          <div className="rounded-xl border-custom2 bg-background p-4 sm:p-5">
+            <div className="flex items-center justify-between gap-3">
+              <span className="text-xs text-muted-foreground sm:text-sm">
                 {t("balance.targetProfit")}
               </span>
 
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                <FiTrendingUp size={18} />
+              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <FiTrendingUp size={17} aria-hidden="true" />
               </div>
             </div>
 
             <div className="mt-4">
-              <p className="text-2xl font-semibold tracking-tight text-foreground">
+              <p className="text-xl font-semibold tracking-tight text-foreground sm:text-2xl">
                 {formatPrice(currentUser?.Profit)}
               </p>
 
               <CurrencyDisplay
                 amount={Number(
-                  currentUser?.Profit ?? 0,
+                  currentUser?.Profit ?? 0
                 )}
                 country={currentUser?.country}
               />
@@ -524,33 +469,35 @@ const Account = ({
         </section>
 
         {/* Withdrawal Section */}
-        <section className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-[1.4fr_0.6fr]">
-
+        <section className="mt-7 grid grid-cols-1 gap-5 lg:grid-cols-[1.4fr_0.6fr]">
           {/* Withdrawal Form */}
-          <div className="rounded-2xl border-custom2 bg-background p-5 sm:p-6">
-
+          <div className="rounded-xl border-custom2 bg-background p-5 sm:p-6">
             <div className="flex items-start justify-between gap-4">
               <div>
-                <h2 className="text-xl font-semibold tracking-tight text-foreground">
+                <h2 className="text-lg font-semibold tracking-tight text-foreground sm:text-xl">
                   {t("withdrawal.title")}
                 </h2>
 
-                <p className="mt-1 text-sm leading-6 text-muted-foreground">
+                <p className="mt-1 text-xs leading-5 text-muted-foreground sm:text-sm sm:leading-6">
                   {t("withdrawal.description")}
                 </p>
               </div>
 
-              <div className="hidden h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary sm:flex">
-                <FiCreditCard size={21} />
+              <div className="hidden h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary sm:flex">
+                <FiCreditCard
+                  size={18}
+                  aria-hidden="true"
+                />
               </div>
             </div>
 
             {!isClearanceApproved ? (
-              <div className="mt-6 rounded-xl border border-border bg-muted/30 p-4">
+              <div className="mt-5 rounded-lg border border-border bg-muted/30 p-3.5">
                 <div className="flex items-start gap-3">
                   <FiShield
-                    size={19}
+                    size={18}
                     className="mt-0.5 shrink-0 text-primary"
+                    aria-hidden="true"
                   />
 
                   <div>
@@ -558,20 +505,21 @@ const Account = ({
                       {t("withdrawal.unavailable")}
                     </p>
 
-                    <p className="mt-1 text-sm leading-6 text-muted-foreground">
+                    <p className="mt-1 text-xs leading-5 text-muted-foreground sm:text-sm sm:leading-6">
                       {t(
-                        "withdrawal.clearanceRestriction",
+                        "withdrawal.clearanceRestriction"
                       )}
                     </p>
                   </div>
                 </div>
               </div>
             ) : balance <= 0 ? (
-              <div className="mt-6 rounded-xl border border-border bg-muted/30 p-4">
+              <div className="mt-5 rounded-lg border border-border bg-muted/30 p-3.5">
                 <div className="flex items-start gap-3">
                   <FiInfo
-                    size={19}
+                    size={18}
                     className="mt-0.5 shrink-0 text-primary"
+                    aria-hidden="true"
                   />
 
                   <div>
@@ -579,28 +527,27 @@ const Account = ({
                       {t("withdrawal.noBalance")}
                     </p>
 
-                    <p className="mt-1 text-sm leading-6 text-muted-foreground">
+                    <p className="mt-1 text-xs leading-5 text-muted-foreground sm:text-sm sm:leading-6">
                       {t(
-                        "withdrawal.noBalanceDescription",
+                        "withdrawal.noBalanceDescription"
                       )}
                     </p>
                   </div>
                 </div>
               </div>
             ) : (
-              <div className="mt-6 space-y-5">
-
+              <div className="mt-5 space-y-4">
                 {/* Amount */}
                 <div>
                   <div className="mb-2 flex items-center justify-between gap-3">
                     <label
                       htmlFor="withdrawal-amount"
-                      className="text-sm font-medium text-foreground"
+                      className="text-xs font-medium text-foreground sm:text-sm"
                     >
                       {t("withdrawal.amount")}
                     </label>
 
-                    <span className="text-xs text-muted-foreground">
+                    <span className="text-[11px] text-muted-foreground sm:text-xs">
                       {t("withdrawal.available", {
                         amount: formatPrice(balance),
                       })}
@@ -608,7 +555,7 @@ const Account = ({
                   </div>
 
                   <div className="relative">
-                    <span className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-sm font-medium text-muted-foreground">
+                    <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-sm font-medium text-muted-foreground">
                       $
                     </span>
 
@@ -619,9 +566,9 @@ const Account = ({
                       value={amount}
                       onChange={handleAmountChange}
                       placeholder={t(
-                        "withdrawal.placeholder",
+                        "withdrawal.placeholder"
                       )}
-                      className={`h-12 w-full rounded-xl border-custom bg-background pl-8 pr-4 text-sm text-foreground outline-none transition-all placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/10 ${
+                      className={`h-11 w-full rounded-lg border-custom bg-background pl-8 pr-4 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/10 ${
                         amountError
                           ? "border-destructive"
                           : ""
@@ -629,18 +576,17 @@ const Account = ({
                     />
                   </div>
 
-                  <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs text-muted-foreground">
+                  <div className="mt-1.5 flex flex-wrap gap-x-4 gap-y-1 text-[11px] text-muted-foreground sm:text-xs">
                     <span>
                       {t("withdrawal.minimum")}
                     </span>
-
                     <span>
                       {t("withdrawal.maximum")}
                     </span>
                   </div>
 
                   {amountError && (
-                    <p className="mt-2 text-xs text-destructive">
+                    <p className="mt-1.5 text-xs text-destructive">
                       {amountError}
                     </p>
                   )}
@@ -650,7 +596,7 @@ const Account = ({
                 <div>
                   <label
                     htmlFor="withdrawal-method"
-                    className="mb-2 block text-sm font-medium text-foreground"
+                    className="mb-2 block text-xs font-medium text-foreground sm:text-sm"
                   >
                     Withdrawal Method
                   </label>
@@ -659,7 +605,7 @@ const Account = ({
                     id="withdrawal-method"
                     value={withdrawalMethod}
                     onChange={handleMethodChange}
-                    className="h-12 w-full rounded-xl border-custom bg-background px-4 text-sm text-foreground outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/10"
+                    className="h-11 w-full rounded-lg border-custom bg-background px-3.5 text-sm text-foreground outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/10"
                   >
                     <option value="">
                       Select withdrawal method
@@ -667,21 +613,19 @@ const Account = ({
 
                     {(
                       Object.entries(
-                        withdrawalMethods,
+                        withdrawalMethods
                       ) as [
                         WithdrawalMethod,
-                        (typeof withdrawalMethods)[WithdrawalMethod],
+                        (typeof withdrawalMethods)[WithdrawalMethod]
                       ][]
-                    ).map(
-                      ([key, method]) => (
-                        <option
-                          key={key}
-                          value={key}
-                        >
-                          {method.label}
-                        </option>
-                      ),
-                    )}
+                    ).map(([key, method]) => (
+                      <option
+                        key={key}
+                        value={key}
+                      >
+                        {method.label}
+                      </option>
+                    ))}
                   </select>
                 </div>
 
@@ -690,7 +634,7 @@ const Account = ({
                   <div>
                     <label
                       htmlFor="withdrawal-provider"
-                      className="mb-2 block text-sm font-medium text-foreground"
+                      className="mb-2 block text-xs font-medium text-foreground sm:text-sm"
                     >
                       Provider
                     </label>
@@ -698,10 +642,8 @@ const Account = ({
                     <select
                       id="withdrawal-provider"
                       value={provider}
-                      onChange={
-                        handleProviderChange
-                      }
-                      className={`h-12 w-full rounded-xl border-custom bg-background px-4 text-sm text-foreground outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/10 ${
+                      onChange={handleProviderChange}
+                      className={`h-11 w-full rounded-lg border-custom bg-background px-3.5 text-sm text-foreground outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/10 ${
                         providerError
                           ? "border-destructive"
                           : ""
@@ -719,20 +661,20 @@ const Account = ({
                           >
                             {item.label}
                           </option>
-                        ),
+                        )
                       )}
                     </select>
 
                     {availableProviders.length ===
                       0 && (
-                      <p className="mt-2 text-xs text-muted-foreground">
+                      <p className="mt-1.5 text-xs text-muted-foreground">
                         No providers are currently
                         available for your country.
                       </p>
                     )}
 
                     {providerError && (
-                      <p className="mt-2 text-xs text-destructive">
+                      <p className="mt-1.5 text-xs text-destructive">
                         {providerError}
                       </p>
                     )}
@@ -746,7 +688,7 @@ const Account = ({
                     <div>
                       <label
                         htmlFor="withdrawal-network"
-                        className="mb-2 block text-sm font-medium text-foreground"
+                        className="mb-2 block text-xs font-medium text-foreground sm:text-sm"
                       >
                         Network
                       </label>
@@ -754,10 +696,8 @@ const Account = ({
                       <select
                         id="withdrawal-network"
                         value={network}
-                        onChange={
-                          handleNetworkChange
-                        }
-                        className={`h-12 w-full rounded-xl border-custom bg-background px-4 text-sm text-foreground outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/10 ${
+                        onChange={handleNetworkChange}
+                        className={`h-11 w-full rounded-lg border-custom bg-background px-3.5 text-sm text-foreground outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/10 ${
                           networkError
                             ? "border-destructive"
                             : ""
@@ -775,12 +715,12 @@ const Account = ({
                             >
                               {networkOption}
                             </option>
-                          ),
+                          )
                         )}
                       </select>
 
                       {networkError && (
-                        <p className="mt-2 text-xs text-destructive">
+                        <p className="mt-1.5 text-xs text-destructive">
                           {networkError}
                         </p>
                       )}
@@ -793,7 +733,7 @@ const Account = ({
                     <div>
                       <label
                         htmlFor="withdrawal-destination"
-                        className="mb-2 block text-sm font-medium text-foreground"
+                        className="mb-2 block text-xs font-medium text-foreground sm:text-sm"
                       >
                         {withdrawalMethod ===
                         "MOBILE_MONEY"
@@ -826,7 +766,7 @@ const Account = ({
                                 ? "Enter wallet or account number"
                                 : "Enter your payout reference"
                         }
-                        className={`h-12 w-full rounded-xl border-custom bg-background px-4 text-sm text-foreground outline-none transition-all placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/10 ${
+                        className={`h-11 w-full rounded-lg border-custom bg-background px-3.5 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/10 ${
                           destinationError
                             ? "border-destructive"
                             : ""
@@ -834,7 +774,7 @@ const Account = ({
                       />
 
                       {destinationError && (
-                        <p className="mt-2 text-xs text-destructive">
+                        <p className="mt-1.5 text-xs text-destructive">
                           {destinationError}
                         </p>
                       )}
@@ -842,8 +782,11 @@ const Account = ({
                       {/* Crypto Warning */}
                       {withdrawalMethod ===
                         "CRYPTO" && (
-                        <div className="mt-3 flex gap-2 rounded-xl border border-amber-200 bg-amber-50 p-3 text-xs text-amber-800">
-                          <FiInfo className="mt-0.5 shrink-0" />
+                        <div className="mt-3 flex gap-2 rounded-lg border border-amber-200 bg-amber-50 p-3 text-xs leading-5 text-amber-800">
+                          <FiInfo
+                            className="mt-0.5 shrink-0"
+                            aria-hidden="true"
+                          />
 
                           <p>
                             Make sure the wallet
@@ -858,8 +801,11 @@ const Account = ({
                       {/* Card Warning */}
                       {withdrawalMethod ===
                         "CARD" && (
-                        <div className="mt-3 flex gap-2 rounded-xl border border-amber-200 bg-amber-50 p-3 text-xs text-amber-800">
-                          <FiCreditCard className="mt-0.5 shrink-0" />
+                        <div className="mt-3 flex gap-2 rounded-lg border border-amber-200 bg-amber-50 p-3 text-xs leading-5 text-amber-800">
+                          <FiCreditCard
+                            className="mt-0.5 shrink-0"
+                            aria-hidden="true"
+                          />
 
                           <p>
                             Do not enter your full
@@ -879,46 +825,49 @@ const Account = ({
                   type="button"
                   onClick={handleWithdraw}
                   disabled={!canWithdraw}
-                  className="flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 text-sm font-medium text-primary-foreground transition-all hover:bg-primary/90 active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-50"
+                  className="flex h-11 w-full items-center justify-center gap-2 rounded-lg bg-primary px-5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   {t("withdrawal.button")}
-
-                  <FiArrowRight size={17} />
+                  <FiArrowRight
+                    size={16}
+                    aria-hidden="true"
+                  />
                 </button>
               </div>
             )}
           </div>
 
           {/* Withdrawal Information */}
-          <div className="rounded-2xl border-custom2 bg-background p-5 sm:p-6">
-
+          <div className="rounded-xl border-custom2 bg-background p-5 sm:p-6">
             <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                <FiInfo size={19} />
+              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <FiInfo
+                  size={18}
+                  aria-hidden="true"
+                />
               </div>
 
               <div>
-                <h2 className="text-base font-semibold text-foreground">
+                <h2 className="text-sm font-semibold text-foreground sm:text-base">
                   {t(
-                    "withdrawal.information.title",
+                    "withdrawal.information.title"
                   )}
                 </h2>
 
-                <p className="mt-0.5 text-xs text-muted-foreground">
+                <p className="mt-0.5 text-[11px] text-muted-foreground sm:text-xs">
                   {t(
-                    "withdrawal.information.description",
+                    "withdrawal.information.description"
                   )}
                 </p>
               </div>
             </div>
 
-            <div className="mt-6 divide-y divide-border">
-
+            <div className="mt-5 divide-y divide-border">
               {/* Available Balance */}
-              <div className="flex items-center justify-between gap-4 py-4 first:pt-0">
-                <span className="text-sm text-muted-foreground">
+              <div className="flex items-center justify-between gap-4 py-3.5 first:pt-0">
+                <span className="text-xs text-muted-foreground sm:text-sm">
                   {t(
-                    "withdrawal.information.availableBalance",
+                    "withdrawal.information.availableBalance"
                   )}
                 </span>
 
@@ -935,10 +884,10 @@ const Account = ({
               </div>
 
               {/* Minimum */}
-              <div className="flex items-center justify-between gap-4 py-4">
-                <span className="text-sm text-muted-foreground">
+              <div className="flex items-center justify-between gap-4 py-3.5">
+                <span className="text-xs text-muted-foreground sm:text-sm">
                   {t(
-                    "withdrawal.information.minimum",
+                    "withdrawal.information.minimum"
                   )}
                 </span>
 
@@ -955,10 +904,10 @@ const Account = ({
               </div>
 
               {/* Maximum */}
-              <div className="flex items-center justify-between gap-4 py-4">
-                <span className="text-sm text-muted-foreground">
+              <div className="flex items-center justify-between gap-4 py-3.5">
+                <span className="text-xs text-muted-foreground sm:text-sm">
                   {t(
-                    "withdrawal.information.maximum",
+                    "withdrawal.information.maximum"
                   )}
                 </span>
 
@@ -975,39 +924,36 @@ const Account = ({
               </div>
 
               {/* Available Methods */}
-              <div className="py-4 last:pb-0">
-                <span className="text-sm text-muted-foreground">
+              <div className="py-3.5 last:pb-0">
+                <span className="text-xs text-muted-foreground sm:text-sm">
                   Available Methods
                 </span>
 
-                <div className="mt-3 space-y-2">
+                <div className="mt-2.5 space-y-1.5">
                   {(
                     Object.entries(
-                      withdrawalMethods,
+                      withdrawalMethods
                     ) as [
                       WithdrawalMethod,
-                      (typeof withdrawalMethods)[WithdrawalMethod],
+                      (typeof withdrawalMethods)[WithdrawalMethod]
                     ][]
-                  ).map(
-                    ([key, method]) => (
-                      <div
-                        key={key}
-                        className="flex items-center justify-between rounded-lg bg-muted/30 px-3 py-2"
-                      >
-                        <span className="text-xs font-medium text-foreground">
-                          {method.label}
-                        </span>
+                  ).map(([key, method]) => (
+                    <div
+                      key={key}
+                      className="flex items-center justify-between rounded-lg bg-muted/30 px-3 py-2"
+                    >
+                      <span className="text-xs font-medium text-foreground">
+                        {method.label}
+                      </span>
 
-                        <span className="text-xs text-muted-foreground">
-                          {method.providers.length}{" "}
-                          {method.providers.length ===
-                          1
-                            ? "provider"
-                            : "providers"}
-                        </span>
-                      </div>
-                    ),
-                  )}
+                      <span className="text-[11px] text-muted-foreground sm:text-xs">
+                        {method.providers.length}{" "}
+                        {method.providers.length === 1
+                          ? "provider"
+                          : "providers"}
+                      </span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -1015,36 +961,34 @@ const Account = ({
         </section>
 
         {/* Account Overview */}
-        <section className="mt-8 rounded-2xl border-custom2 bg-background p-5 sm:p-6">
-
+        <section className="mt-7 rounded-xl border-custom2 bg-background p-5 sm:p-6">
           <div>
-            <h2 className="text-xl font-semibold tracking-tight text-foreground">
+            <h2 className="text-lg font-semibold tracking-tight text-foreground sm:text-xl">
               {t("overview.title")}
             </h2>
 
-            <p className="mt-1 text-sm text-muted-foreground">
+            <p className="mt-1 text-xs leading-5 text-muted-foreground sm:text-sm sm:leading-6">
               {t("overview.description")}
             </p>
           </div>
 
-          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-
+          <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {/* Trading Status */}
-            <div className="rounded-xl border-custom bg-muted/20 p-4">
-              <span className="text-xs text-muted-foreground">
+            <div className="rounded-lg border-custom bg-muted/20 p-3.5">
+              <span className="text-[11px] text-muted-foreground sm:text-xs">
                 {t("overview.tradingStatus")}
               </span>
 
               <div className="mt-2 flex items-center gap-2">
                 <span
-                  className={`h-2 w-2 rounded-full ${
+                  className={`h-1.5 w-1.5 rounded-full ${
                     isTradingActive
                       ? "bg-primary"
                       : "bg-muted-foreground"
                   }`}
                 />
 
-                <span className="text-sm font-medium text-foreground">
+                <span className="text-xs font-medium text-foreground sm:text-sm">
                   {isTradingActive
                     ? t("overview.active")
                     : t("overview.inactive")}
@@ -1053,45 +997,45 @@ const Account = ({
             </div>
 
             {/* Email */}
-            <div className="rounded-xl border-custom bg-muted/20 p-4">
-              <span className="text-xs text-muted-foreground">
+            <div className="rounded-lg border-custom bg-muted/20 p-3.5">
+              <span className="text-[11px] text-muted-foreground sm:text-xs">
                 {t("overview.email")}
               </span>
 
-              <p className="mt-2 truncate text-sm font-medium text-foreground">
+              <p className="mt-2 truncate text-xs font-medium text-foreground sm:text-sm">
                 {currentUser?.email ||
                   t("overview.notProvided")}
               </p>
             </div>
 
             {/* Phone Number */}
-            <div className="rounded-xl border-custom bg-muted/20 p-4">
-              <span className="text-xs text-muted-foreground">
+            <div className="rounded-lg border-custom bg-muted/20 p-3.5">
+              <span className="text-[11px] text-muted-foreground sm:text-xs">
                 {t("overview.phoneNumber")}
               </span>
 
-              <p className="mt-2 text-sm font-medium text-foreground">
+              <p className="mt-2 text-xs font-medium text-foreground sm:text-sm">
                 {currentUser?.number ||
                   t("overview.notProvided")}
               </p>
             </div>
 
             {/* Clearance Status */}
-            <div className="rounded-xl border-custom bg-muted/20 p-4">
-              <span className="text-xs text-muted-foreground">
+            <div className="rounded-lg border-custom bg-muted/20 p-3.5">
+              <span className="text-[11px] text-muted-foreground sm:text-xs">
                 {t("overview.clearanceStatus")}
               </span>
 
               <div className="mt-2 flex items-center gap-2">
                 <span
-                  className={`h-2 w-2 rounded-full ${
+                  className={`h-1.5 w-1.5 rounded-full ${
                     isClearanceApproved
                       ? "bg-primary"
                       : "bg-muted-foreground"
                   }`}
                 />
 
-                <span className="text-sm font-medium text-foreground">
+                <span className="text-xs font-medium text-foreground sm:text-sm">
                   {isClearanceApproved
                     ? t("overview.approved")
                     : t("overview.notApproved")}
@@ -1102,7 +1046,7 @@ const Account = ({
         </section>
 
         {/* Withdrawal History */}
-        <section className="mt-8">
+        <section className="mt-7">
           <WithdrawalHistory
             withdrawals={withdrawals}
           />
@@ -1112,38 +1056,38 @@ const Account = ({
       {/* Withdrawal Confirmation Modal */}
       {showConfirmation && (
         <div className="fixed inset-0 z-[200] flex items-center justify-center bg-black/50 px-5 py-8 backdrop-blur-sm">
-
-          <div className="w-full max-w-md rounded-2xl border border-border bg-background p-6 shadow-2xl">
-
+          <div className="w-full max-w-md rounded-xl border border-border bg-background p-5 shadow-2xl sm:p-6">
             <div className="flex items-start justify-between gap-4">
               <div>
-                <h2 className="text-xl font-semibold tracking-tight text-foreground">
+                <h2 className="text-lg font-semibold tracking-tight text-foreground sm:text-xl">
                   Confirm Withdrawal
                 </h2>
 
-                <p className="mt-1 text-sm leading-6 text-muted-foreground">
+                <p className="mt-1 text-xs leading-5 text-muted-foreground sm:text-sm sm:leading-6">
                   Please review your withdrawal
                   details before confirming.
                 </p>
               </div>
 
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
-                <FiShield size={19} />
+              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                <FiShield
+                  size={18}
+                  aria-hidden="true"
+                />
               </div>
             </div>
 
-            <div className="mt-6 overflow-hidden rounded-xl border border-border">
-
+            <div className="mt-5 overflow-hidden rounded-lg border border-border">
               {/* Amount */}
-              <div className="flex items-center justify-between gap-4 border-b border-border px-4 py-3">
-                <span className="text-sm text-muted-foreground">
+              <div className="flex items-center justify-between gap-4 border-b border-border px-3.5 py-3">
+                <span className="text-xs text-muted-foreground sm:text-sm">
                   Amount
                 </span>
 
                 <div className="text-right">
                   <span className="block text-sm font-semibold text-foreground">
                     {formatPrice(
-                      withdrawalAmount,
+                      withdrawalAmount
                     )}
                   </span>
 
@@ -1155,23 +1099,23 @@ const Account = ({
               </div>
 
               {/* Method */}
-              <div className="flex items-center justify-between gap-4 border-b border-border px-4 py-3">
-                <span className="text-sm text-muted-foreground">
+              <div className="flex items-center justify-between gap-4 border-b border-border px-3.5 py-3">
+                <span className="text-xs text-muted-foreground sm:text-sm">
                   Method
                 </span>
 
-                <span className="text-right text-sm font-semibold text-foreground">
+                <span className="text-right text-xs font-semibold text-foreground sm:text-sm">
                   {methodLabel}
                 </span>
               </div>
 
               {/* Provider */}
-              <div className="flex items-center justify-between gap-4 border-b border-border px-4 py-3">
-                <span className="text-sm text-muted-foreground">
+              <div className="flex items-center justify-between gap-4 border-b border-border px-3.5 py-3">
+                <span className="text-xs text-muted-foreground sm:text-sm">
                   Provider
                 </span>
 
-                <span className="text-right text-sm font-semibold text-foreground">
+                <span className="text-right text-xs font-semibold text-foreground sm:text-sm">
                   {providerLabel}
                 </span>
               </div>
@@ -1180,20 +1124,20 @@ const Account = ({
               {withdrawalMethod ===
                 "CRYPTO" &&
                 network && (
-                  <div className="flex items-center justify-between gap-4 border-b border-border px-4 py-3">
-                    <span className="text-sm text-muted-foreground">
+                  <div className="flex items-center justify-between gap-4 border-b border-border px-3.5 py-3">
+                    <span className="text-xs text-muted-foreground sm:text-sm">
                       Network
                     </span>
 
-                    <span className="text-sm font-semibold text-foreground">
+                    <span className="text-xs font-semibold text-foreground sm:text-sm">
                       {network}
                     </span>
                   </div>
                 )}
 
               {/* Destination */}
-              <div className="px-4 py-3">
-                <span className="text-xs text-muted-foreground">
+              <div className="px-3.5 py-3">
+                <span className="text-[11px] text-muted-foreground sm:text-xs">
                   {withdrawalMethod ===
                   "MOBILE_MONEY"
                     ? "Mobile Money Number"
@@ -1206,34 +1150,35 @@ const Account = ({
                         : "Payout Reference"}
                 </span>
 
-                <p className="mt-1 break-all text-sm font-semibold text-foreground">
+                <p className="mt-1 break-all text-xs font-semibold text-foreground sm:text-sm">
                   {destination}
                 </p>
               </div>
             </div>
 
-            <div className="mt-4 rounded-xl border border-border bg-muted/30 p-4">
-              <div className="flex items-start gap-3">
+            <div className="mt-3 rounded-lg border border-border bg-muted/30 p-3">
+              <div className="flex items-start gap-2.5">
                 <FiInfo
-                  size={18}
+                  size={16}
                   className="mt-0.5 shrink-0 text-primary"
+                  aria-hidden="true"
                 />
 
-                <p className="text-xs leading-5 text-muted-foreground">
+                <p className="text-[11px] leading-5 text-muted-foreground sm:text-xs">
                   Your withdrawal will be submitted
                   for processing after confirmation.
                 </p>
               </div>
             </div>
 
-            <div className="mt-6 grid grid-cols-2 gap-3">
+            <div className="mt-5 grid grid-cols-2 gap-2.5">
               <button
                 type="button"
                 onClick={() =>
                   setShowConfirmation(false)
                 }
                 disabled={isWithdrawing}
-                className="h-11 rounded-xl border-custom px-4 text-sm font-medium text-foreground transition-colors hover:bg-muted disabled:cursor-not-allowed disabled:opacity-50"
+                className="h-10 rounded-lg border-custom px-4 text-sm font-medium text-foreground transition-colors hover:bg-muted disabled:cursor-not-allowed disabled:opacity-50"
               >
                 Cancel
               </button>
@@ -1244,7 +1189,7 @@ const Account = ({
                   handleConfirmWithdrawal
                 }
                 disabled={isWithdrawing}
-                className="h-11 rounded-xl bg-primary px-4 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-50"
+                className="h-10 rounded-lg bg-primary px-4 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-50"
               >
                 {isWithdrawing
                   ? "Processing..."
@@ -1259,35 +1204,35 @@ const Account = ({
       {withdrawalComplete &&
         completedWithdrawal && (
           <div className="fixed inset-0 z-[200] flex items-center justify-center bg-black/50 px-5 py-8 backdrop-blur-sm">
-
-            <div className="w-full max-w-md rounded-2xl border border-border bg-background p-6 text-center shadow-2xl">
-
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
-                <FiCheckCircle size={31} />
+            <div className="w-full max-w-md rounded-xl border border-border bg-background p-5 text-center shadow-2xl sm:p-6">
+              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
+                <FiCheckCircle
+                  size={28}
+                  aria-hidden="true"
+                />
               </div>
 
-              <h2 className="mt-5 text-xl font-semibold tracking-tight text-foreground">
+              <h2 className="mt-4 text-lg font-semibold tracking-tight text-foreground sm:text-xl">
                 Withdrawal Submitted
               </h2>
 
-              <p className="mx-auto mt-2 max-w-sm text-sm leading-6 text-muted-foreground">
+              <p className="mx-auto mt-2 max-w-sm text-xs leading-5 text-muted-foreground sm:text-sm sm:leading-6">
                 Your withdrawal request has been
                 submitted successfully and is now
                 pending processing.
               </p>
 
-              <div className="mt-6 overflow-hidden rounded-xl border border-border text-left">
-
+              <div className="mt-5 overflow-hidden rounded-lg border border-border text-left">
                 {/* Amount */}
-                <div className="flex items-center justify-between gap-4 border-b border-border px-4 py-3">
-                  <span className="text-sm text-muted-foreground">
+                <div className="flex items-center justify-between gap-4 border-b border-border px-3.5 py-3">
+                  <span className="text-xs text-muted-foreground sm:text-sm">
                     Amount
                   </span>
 
                   <div className="text-right">
                     <span className="block text-sm font-semibold text-foreground">
                       {formatPrice(
-                        completedWithdrawal.amount,
+                        completedWithdrawal.amount
                       )}
                     </span>
 
@@ -1303,12 +1248,12 @@ const Account = ({
                 </div>
 
                 {/* Method */}
-                <div className="flex items-center justify-between gap-4 border-b border-border px-4 py-3">
-                  <span className="text-sm text-muted-foreground">
+                <div className="flex items-center justify-between gap-4 border-b border-border px-3.5 py-3">
+                  <span className="text-xs text-muted-foreground sm:text-sm">
                     Method
                   </span>
 
-                  <span className="text-right text-sm font-semibold text-foreground">
+                  <span className="text-right text-xs font-semibold text-foreground sm:text-sm">
                     {completedWithdrawal.method
                       ? withdrawalMethods[
                           completedWithdrawal
@@ -1320,12 +1265,12 @@ const Account = ({
                 </div>
 
                 {/* Provider */}
-                <div className="flex items-center justify-between gap-4 border-b border-border px-4 py-3">
-                  <span className="text-sm text-muted-foreground">
+                <div className="flex items-center justify-between gap-4 border-b border-border px-3.5 py-3">
+                  <span className="text-xs text-muted-foreground sm:text-sm">
                     Provider
                   </span>
 
-                  <span className="text-right text-sm font-semibold text-foreground">
+                  <span className="text-right text-xs font-semibold text-foreground sm:text-sm">
                     {completedWithdrawal.provider ??
                       "-"}
                   </span>
@@ -1333,34 +1278,32 @@ const Account = ({
 
                 {/* Network */}
                 {completedWithdrawal.network && (
-                  <div className="flex items-center justify-between gap-4 border-b border-border px-4 py-3">
-                    <span className="text-sm text-muted-foreground">
+                  <div className="flex items-center justify-between gap-4 border-b border-border px-3.5 py-3">
+                    <span className="text-xs text-muted-foreground sm:text-sm">
                       Network
                     </span>
 
-                    <span className="text-sm font-semibold text-foreground">
-                      {
-                        completedWithdrawal.network
-                      }
+                    <span className="text-xs font-semibold text-foreground sm:text-sm">
+                      {completedWithdrawal.network}
                     </span>
                   </div>
                 )}
 
                 {/* Destination */}
-                <div className="px-4 py-3">
-                  <span className="text-xs text-muted-foreground">
+                <div className="px-3.5 py-3">
+                  <span className="text-[11px] text-muted-foreground sm:text-xs">
                     Destination
                   </span>
 
-                  <p className="mt-1 break-all text-sm font-semibold text-foreground">
+                  <p className="mt-1 break-all text-xs font-semibold text-foreground sm:text-sm">
                     {completedWithdrawal.destination ??
                       "-"}
                   </p>
                 </div>
 
                 {/* Remaining Balance */}
-                <div className="flex items-center justify-between gap-4 border-t border-border px-4 py-3">
-                  <span className="text-sm text-muted-foreground">
+                <div className="flex items-center justify-between gap-4 border-t border-border px-3.5 py-3">
+                  <span className="text-xs text-muted-foreground sm:text-sm">
                     Remaining Balance
                   </span>
 
@@ -1370,8 +1313,8 @@ const Account = ({
                         Math.max(
                           0,
                           balance -
-                            completedWithdrawal.amount,
-                        ),
+                            completedWithdrawal.amount
+                        )
                       )}
                     </span>
 
@@ -1379,7 +1322,7 @@ const Account = ({
                       amount={Math.max(
                         0,
                         balance -
-                          completedWithdrawal.amount,
+                          completedWithdrawal.amount
                       )}
                       country={
                         currentUser?.country
@@ -1389,14 +1332,15 @@ const Account = ({
                 </div>
               </div>
 
-              <div className="mt-4 rounded-xl border border-primary/20 bg-primary/5 p-3">
+              <div className="mt-3 rounded-lg border border-primary/20 bg-primary/5 p-3">
                 <div className="flex items-start gap-2 text-left">
                   <FiInfo
-                    size={16}
+                    size={15}
                     className="mt-0.5 shrink-0 text-primary"
+                    aria-hidden="true"
                   />
 
-                  <p className="text-xs leading-5 text-muted-foreground">
+                  <p className="text-[11px] leading-5 text-muted-foreground sm:text-xs">
                     Your withdrawal is currently
                     pending and will be processed
                     after review.
@@ -1407,7 +1351,7 @@ const Account = ({
               <button
                 type="button"
                 onClick={handleCloseSuccess}
-                className="mt-6 h-11 w-full rounded-xl bg-primary px-5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+                className="mt-5 h-10 w-full rounded-lg bg-primary px-5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
               >
                 Done
               </button>

@@ -1,8 +1,10 @@
 "use client";
 
 import { useState } from "react";
+
 import axios from "axios";
 import toast from "react-hot-toast";
+
 import { useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/button";
@@ -31,7 +33,6 @@ const ResendVerificationForm = () => {
     } catch (error) {
       if (axios.isAxiosError(error)) {
         const message = error.response?.data?.message;
-
         toast.error(message || t("somethingWentWrong"));
       } else {
         toast.error(t("somethingWentWrong"));
@@ -42,35 +43,37 @@ const ResendVerificationForm = () => {
   };
 
   return (
-    <div className="space-y-3 pt-4">
-      <p className="text-sm text-muted-foreground">
-        {t("didntReceive")}
-      </p>
+    <div className="flex flex-col gap-4">
+      <div className="space-y-3">
+        <p className="text-xs leading-5 text-muted-foreground sm:text-sm sm:leading-6">
+          {t("didntReceive")}
+        </p>
 
-      <div className="space-y-2">
-        <label
-          htmlFor="resend-email"
-          className="block text-sm font-medium text-secondary-foreground"
-        >
-          {t("email")}
-        </label>
+        <div className="space-y-2">
+          <label
+            htmlFor="resend-email"
+            className="block text-xs font-medium text-secondary-foreground sm:text-sm"
+          >
+            {t("email")}
+          </label>
 
-        <input
-          id="resend-email"
-          type="email"
-          value={email}
-          onChange={(event) => setEmail(event.target.value)}
-          disabled={isLoading}
-          placeholder={t("emailPlaceholder")}
-          className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-ring focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
-        />
+          <input
+            id="resend-email"
+            type="email"
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
+            disabled={isLoading}
+            placeholder={t("emailPlaceholder")}
+            className="h-10 w-full rounded-lg border border-input bg-background px-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-ring focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+          />
+        </div>
       </div>
 
       <Button
         type="button"
         onClick={handleResend}
         disabled={isLoading}
-        className="w-full border-custom"
+        className="h-10 w-full border-custom text-sm font-medium"
       >
         {isLoading ? t("sending") : t("resend")}
       </Button>

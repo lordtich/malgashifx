@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import axios from "axios";
-
 import { TruncateText } from "../../TruncateText";
 
 interface Exchange {
@@ -48,23 +47,25 @@ const Couresel = () => {
           "https://api.coingecko.com/api/v3/exchanges"
         );
 
-        if (mounted) {
-          const validExchanges = response.data
-            .filter(
-              (exchange): exchange is Exchange & {
-                trade_volume_24h_btc: number;
-              } =>
-                Boolean(exchange.name) &&
-                typeof exchange.trade_volume_24h_btc === "number"
-            )
-            .map((exchange) => ({
-              id: exchange.id,
-              name: exchange.name,
-              volume: exchange.trade_volume_24h_btc,
-            }));
+        if (!mounted) return;
 
-          setExchanges(validExchanges);
-        }
+        const validExchanges = response.data
+          .filter(
+            (
+              exchange
+            ): exchange is Exchange & {
+              trade_volume_24h_btc: number;
+            } =>
+              Boolean(exchange.name) &&
+              typeof exchange.trade_volume_24h_btc === "number"
+          )
+          .map((exchange) => ({
+            id: exchange.id,
+            name: exchange.name,
+            volume: exchange.trade_volume_24h_btc,
+          }));
+
+        setExchanges(validExchanges);
       } catch {
         if (mounted) {
           setExchanges([]);
@@ -86,22 +87,23 @@ const Couresel = () => {
   return (
     <div
       ref={emblaRef}
+      aria-label="Exchange market volumes"
       className="overflow-hidden rounded-xl border border-border bg-background"
     >
       <div className="flex">
         {exchanges.map((exchange) => (
           <div
             key={exchange.id}
-            className="min-w-0 shrink-0 grow-0 basis-auto"
+            className="min-w-0 shrink-0 basis-auto"
           >
-            <div className="flex items-center gap-3 px-5 py-3">
-              <span className="text-xs font-medium text-muted-foreground sm:text-sm">
+            <div className="flex items-center gap-3 px-4 py-2.5 sm:px-5 sm:py-3">
+              <span className="text-[11px] font-medium text-muted-foreground sm:text-xs">
                 {TruncateText(exchange.name)}
               </span>
 
-              <span className="h-1 w-1 shrink-0 rounded-full bg-primary/40" />
+              <span className="h-1 w-1 shrink-0 rounded-full bg-primary/20" />
 
-              <span className="text-xs font-semibold text-primary sm:text-sm">
+              <span className="text-[11px] font-semibold text-primary sm:text-xs">
                 {exchange.volume.toFixed(2)} BTC
               </span>
             </div>

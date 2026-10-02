@@ -7,28 +7,29 @@ interface AvatarProps {
 
 const Avatar = ({ src }: AvatarProps) => {
   return (
-    <div className="avatar-shell">
-      <div className="relative h-8 w-8 overflow-hidden rounded-full bg-muted">
-        {src ? (
-          <Image
-            src={src}
-            alt="Profile avatar"
-            fill
-            sizes="32px"
-            className="object-cover"
+    <div className="relative h-8 w-8 shrink-0 overflow-hidden rounded-full border border-border bg-muted">
+      {src ? (
+        <Image
+          src={src}
+          alt="Profile avatar"
+          fill
+          sizes="32px"
+          className="object-cover"
+        />
+      ) : (
+        <div className="flex h-full w-full items-center justify-center">
+          <RxAvatar
+            size={20}
+            className="text-muted-foreground"
+            aria-hidden="true"
           />
-        ) : (
-          <div className="flex h-full w-full items-center justify-center">
-            <RxAvatar
-              size={22}
-              className="text-muted-foreground"
-              aria-hidden="true"
-            />
-          </div>
-        )}
-      </div>
+        </div>
+      )}
 
-      <span className="avatar-status" aria-hidden="true" />
+      <span
+        className="absolute bottom-0 right-0 h-2 w-2 rounded-full border-2 border-background bg-primary"
+        aria-hidden="true"
+      />
     </div>
   );
 };

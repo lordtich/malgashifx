@@ -1,298 +1,270 @@
 {
   "Navbar": {
-    "aboutCompany": "À propos",
+    "aboutCompany": "À propos d’InvestorHub",
     "faqs": "FAQ",
     "notifications": "Notifications",
-    "signIn": "Connexion",
-    "signUp": "Inscription",
-    "signOut": "Déconnexion",
+    "signIn": "Se connecter",
+    "signUp": "S’inscrire",
+    "signOut": "Se déconnecter",
     "account": "Compte",
     "adminPanel": "Admin",
-    "dashboard": "Accueil",
+    "dashboard": "Tableau de bord",
     "users": "Utilisateurs",
     "withdrawals": "Retraits",
-    "openMenu": "Ouvrir",
-    "closeMenu": "Fermer"
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu"
   },
   "Home": {
     "hero": {
-      "badge": "Investissement réel",
-      "titleLine1": "N'attendez pas,",
-      "titleLine2": "commencez à investir et",
-      "titleHighlight": "faites fructifier.",
-      "description": "Découvrez des moyens plus intelligents d'investir et de faire fructifier votre portefeuille grâce à des opportunités flexibles conçues pour les nouveaux investisseurs comme pour les investisseurs expérimentés.",
+      "badge": "Portail d’investissement",
+      "titleLine1": "Gérez vos",
+      "titleLine2": "investissements en",
+      "titleHighlight": "un seul endroit.",
+      "description": "Suivez vos investissements, gérez votre compte et consultez votre portefeuille depuis une plateforme simple.",
       "cta": "Commencer",
-      "imageAlt": "Technologie d'investissement et de trading"
+      "imageAlt": "Plateforme de gestion des investissements"
     },
-
     "stats": {
       "investors": "Investisseurs",
-      "paidOut": "Montants versés",
+      "paidOut": "Versé",
       "successRate": "Taux de réussite",
-      "customerSupport": "Service client"
+      "customerSupport": "Support client"
     },
-
     "about": {
-      "label": "À propos de nous",
-      "title": "Pourquoi nous choisir ?",
-      "description": "Nous proposons une plateforme transparente et économique, soutenue par une technologie moderne et un service client dédié. Notre objectif est de créer un environnement fiable où les traders et les investisseurs de tous niveaux d'expérience peuvent accéder à des opportunités financières modernes.",
+      "label": "À propos d’InvestorHub",
+      "title": "Tout au même endroit",
+      "description": "InvestorHub vous permet de gérer votre compte, consulter votre portefeuille, suivre votre activité et accéder aux services disponibles.",
       "tradingProducts": "Produits de trading",
-      "accountMaintenanceFees": "Frais de gestion du compte",
+      "accountMaintenanceFees": "Frais de gestion",
       "leverage": "Effet de levier",
       "tradingPlatform": "Plateforme de trading"
     },
-
     "markets": {
       "label": "Marchés",
-      "title": "Paires de devises"
+      "title": "Aperçu du marché"
     },
-
     "accountOpening": {
       "label": "Commencer",
-      "title": "Ouvrons votre compte",
-      "description": "Commencez en quelques minutes grâce à un processus d'inscription simple et sécurisé. Créez votre compte, choisissez votre plan d'investissement et faites le premier pas vers vos objectifs financiers.",
-      "stepOne": "Tout d'abord, créez votre compte et choisissez le plan d'investissement qui vous convient.",
-      "stepTwo": "Ensuite, effectuez votre paiement pour activer votre investissement.",
-      "stepThree": "Une fois votre dépôt confirmé, votre investissement peut commencer.",
-      "imageAlt": "Créer un compte d'investissement"
+      "title": "Ouvrez votre compte",
+      "description": "Créez votre compte en quelques étapes et gérez vos investissements depuis une plateforme sécurisée.",
+      "stepOne": "Créez votre compte et complétez vos informations.",
+      "stepTwo": "Choisissez un service ou une option d’investissement disponible.",
+      "stepThree": "Une fois votre compte prêt, gérez votre activité depuis votre tableau de bord.",
+      "imageAlt": "Créer un compte d’investissement"
     },
-
     "finalCta": {
       "label": "Commencer",
-      "title": "Prêt à commencer à investir ?",
-      "description": "L'ouverture d'un compte prend moins de 3 minutes. Créez votre compte aujourd'hui et faites le prochain pas dans votre parcours d'investissement.",
+      "title": "Prêt à commencer ?",
+      "description": "Créez votre compte et gérez vos investissements depuis une plateforme simple.",
       "button": "Créer un compte",
-      "imageAlt": "Prêt à commencer à investir"
+      "imageAlt": "Gérer vos investissements"
     }
   },
-
   "Terms": {
-    "legal": "Mentions légales",
+    "legal": "Juridique",
     "title": "Conditions générales",
-    "intro": "Veuillez lire attentivement ces conditions avant d'utiliser la plateforme Somalia Malgashi et ses services.",
+    "intro": "Veuillez lire attentivement ces conditions avant d’utiliser la plateforme InvestorHub et ses services.",
     "lastUpdated": "Dernière mise à jour : 14/09/2026",
-
     "terms": {
       "introduction": {
         "title": "1. Introduction",
-        "content": "Bienvenue sur Somalia Malgashi. En accédant à notre site web ou à nos services, ou en les utilisant, vous acceptez d'être lié par les présentes Conditions générales. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser nos services."
+        "content": "Bienvenue sur InvestorHub. En accédant à notre site ou en utilisant nos services, vous acceptez ces Conditions générales. Si vous n’êtes pas d’accord, veuillez ne pas utiliser nos services."
       },
       "accountRegistration": {
         "title": "2. Création du compte",
-        "content": "Vous devrez peut-être créer un compte pour accéder à certains services. Vous êtes responsable de fournir des informations exactes et de garder vos identifiants de compte sécurisés."
+        "content": "Vous devrez peut-être créer un compte pour accéder à certains services. Vous devez fournir des informations exactes et protéger vos données de compte."
       },
       "investmentTrading": {
         "title": "3. Investissement et trading",
-        "content": "Toutes les activités d'investissement et de trading comportent des risques. Les informations affichées sur notre plateforme sont fournies à titre purement informatif et ne doivent pas être considérées comme une garantie de profit ou comme un conseil financier."
+        "content": "Les activités d’investissement et de trading comportent des risques. Les informations présentées sont générales et ne garantissent aucun profit ni résultat financier."
       },
       "paymentsWithdrawals": {
         "title": "4. Paiements et retraits",
-        "content": "Vous êtes responsable de l'exactitude des informations de paiement et de retrait que vous fournissez. Les délais de traitement et les exigences applicables peuvent varier selon le service utilisé."
+        "content": "Vous êtes responsable de l’exactitude de vos informations de paiement et de retrait. Les délais et conditions peuvent varier selon le service utilisé."
       },
       "userResponsibilities": {
-        "title": "5. Responsabilités de l'utilisateur",
-        "content": "Vous acceptez d'utiliser la plateforme de manière légale et responsable. Vous ne devez pas tenter d'interférer avec le fonctionnement de la plateforme, d'accéder au compte d'un autre utilisateur ou d'utiliser le service à des fins frauduleuses ou non autorisées."
+        "title": "5. Responsabilités de l’utilisateur",
+        "content": "Vous acceptez d’utiliser la plateforme légalement et de manière responsable. Vous ne devez pas perturber la plateforme, accéder au compte d’un autre utilisateur ou effectuer des activités frauduleuses ou non autorisées."
       },
       "limitationOfLiability": {
         "title": "6. Limitation de responsabilité",
-        "content": "Dans la mesure permise par la législation applicable, Somalia Malgashi ne pourra être tenue responsable des pertes résultant des conditions du marché, d'interruptions techniques ou d'autres circonstances échappant raisonnablement à notre contrôle."
+        "content": "Dans la mesure permise par la loi, InvestorHub n’est pas responsable des pertes liées aux conditions du marché, aux interruptions techniques ou à des événements hors de notre contrôle raisonnable."
       },
       "changesToTerms": {
-        "title": "7. Modifications des présentes conditions",
-        "content": "Nous pouvons mettre à jour ces Conditions générales de temps à autre. Toute modification prendra effet dès sa publication sur cette page. La poursuite de l'utilisation de la plateforme après la publication des modifications constitue une acceptation des conditions mises à jour."
+        "title": "7. Modifications des conditions",
+        "content": "Nous pouvons modifier ces Conditions générales à tout moment. Les changements prennent effet dès leur publication sur cette page. L’utilisation continue de la plateforme vaut acceptation des conditions mises à jour."
       }
     },
-
     "privacy": {
       "label": "Confidentialité",
       "title": "Politique de confidentialité",
-      "intro": "Cette section explique comment Somalia Malgashi peut collecter, utiliser et protéger les informations fournies via notre plateforme.",
-
+      "intro": "Cette section explique comment InvestorHub peut collecter, utiliser et protéger les informations fournies sur la plateforme.",
       "informationWeCollect": {
-        "title": "1. Informations que nous collectons",
-        "content": "Nous pouvons collecter les informations que vous fournissez lors de la création d'un compte, lorsque vous nous contactez ou lorsque vous utilisez nos services. Cela peut inclure votre nom, vos coordonnées, les informations de votre compte et d'autres informations nécessaires à la fourniture de nos services."
+        "title": "1. Informations collectées",
+        "content": "Nous pouvons collecter les informations fournies lors de la création d’un compte, d’un contact ou de l’utilisation de nos services. Cela peut inclure votre nom, vos coordonnées, les données de votre compte et d’autres informations nécessaires à nos services."
       },
       "howWeUseInformation": {
-        "title": "2. Comment nous utilisons les informations",
-        "content": "Les informations peuvent être utilisées pour fournir et améliorer nos services, communiquer avec les utilisateurs, assurer la sécurité des comptes, traiter les demandes et respecter les exigences légales ou opérationnelles applicables."
+        "title": "2. Utilisation des informations",
+        "content": "Les informations peuvent être utilisées pour fournir et améliorer nos services, communiquer avec les utilisateurs, protéger les comptes, traiter les demandes et respecter les obligations légales ou opérationnelles."
       },
       "informationProtection": {
         "title": "3. Protection des informations",
-        "content": "Nous prenons des mesures raisonnables pour protéger les informations collectées via notre plateforme. Toutefois, aucune méthode de transmission ou de stockage électronique ne peut être garantie comme étant totalement sécurisée."
+        "content": "Nous utilisons des mesures raisonnables pour protéger les informations collectées. Toutefois, aucun système de transmission ou de stockage électronique ne peut être totalement sécurisé."
       },
       "cookies": {
         "title": "4. Cookies",
-        "content": "Notre site web peut utiliser des cookies ou des technologies similaires pour maintenir les sessions, améliorer les fonctionnalités et comprendre comment les utilisateurs interagissent avec la plateforme."
+        "content": "Notre site peut utiliser des cookies ou technologies similaires pour maintenir les sessions, améliorer les fonctionnalités et comprendre l’utilisation de la plateforme."
       },
       "thirdPartyServices": {
         "title": "5. Services tiers",
-        "content": "Notre plateforme peut utiliser des services tiers pour prendre en charge les paiements, l'authentification, l'analyse, l'hébergement ou d'autres fonctionnalités. Ces services peuvent traiter les informations conformément à leurs propres politiques de confidentialité."
+        "content": "La plateforme peut utiliser des services tiers pour les paiements, l’authentification, l’analyse, l’hébergement ou d’autres fonctionnalités. Ces services peuvent traiter les informations selon leurs propres politiques de confidentialité."
       },
       "yourRights": {
         "title": "6. Vos droits",
-        "content": "Selon les lois applicables, vous pouvez disposer de droits concernant les informations que nous détenons à votre sujet, notamment demander l'accès, la rectification ou la suppression de certaines informations."
+        "content": "Selon les lois applicables, vous pouvez disposer de droits concernant les informations que nous détenons, notamment demander l’accès, la correction ou la suppression de certaines données."
       },
       "contact": {
         "title": "7. Contact",
-        "content": "Si vous avez des questions concernant ces Conditions générales ou cette Politique de confidentialité, veuillez contacter notre équipe d'assistance."
+        "content": "Pour toute question concernant ces Conditions générales ou cette Politique de confidentialité, contactez notre équipe support."
       }
     }
   },
-
   "AboutCompany": {
     "about": {
-      "label": "À propos de nous",
-      "description": "Nous nous efforçons de rendre l'investissement et le trading simples, accessibles et transparents. Notre plateforme est conçue pour les nouveaux investisseurs comme pour les investisseurs expérimentés, offrant un environnement simple pour explorer les opportunités financières et progresser en toute confiance.",
+      "label": "À propos d’InvestorHub",
+      "description": "InvestorHub est un portail d’investissement numérique conçu pour simplifier la gestion des investissements. Les utilisateurs peuvent gérer leur compte, consulter leurs investissements, suivre leur activité et accéder aux services disponibles depuis un seul endroit.",
       "learnMore": "En savoir plus",
-      "imageAlt": "À propos de Somalia Malgashi"
+      "imageAlt": "À propos d’InvestorHub"
     },
     "leadership": {
-      "label": "Direction",
-      "title": "Message du PDG",
-      "message": "Ne vous inquiétez pas si vous ne savez pas encore tout. Commencez là où vous êtes, continuez à apprendre et progressez au fil du temps. Chaque pas que vous faites vers l'investissement peut vous aider à développer vos connaissances, votre expérience et votre confiance dans votre parcours financier.",
-      "name": "Tebo",
-      "role": "PDG et fondateur",
-      "imageAlt": "Fondateur de Somalia Malgashi"
+      "label": "Notre approche",
+      "title": "Une gestion simple des investissements",
+      "message": "Investir peut sembler complexe. Notre objectif est de simplifier l’expérience en vous offrant un espace clair pour gérer votre compte, suivre votre activité et rester informé.",
+      "name": "InvestorHub",
+      "role": "Portail d’investissement",
+      "imageAlt": "Plateforme InvestorHub"
     }
   },
-
   "Faqs": {
-    "title": "Foire aux questions",
+    "title": "Questions fréquentes",
     "items": {
       "whatIsInvesting": {
-        "title": "Qu'est-ce que l'investissement ?",
-        "description": "Investir consiste à placer de l'argent ou des actifs dans quelque chose dans l'espoir de générer un profit ou d'augmenter sa valeur au fil du temps. Cela peut inclure des investissements dans des actions, des obligations, l'immobilier ou des entreprises afin de réaliser une croissance financière à l'avenir."
+        "title": "Qu’est-ce que l’investissement ?",
+        "description": "Investir consiste à placer de l’argent dans un actif ou une opportunité afin de générer un rendement au fil du temps. Cela peut inclure des actions, obligations, fonds, biens immobiliers, entreprises et autres actifs."
       },
       "investmentTypes": {
-        "title": "Quels sont les différents types d'investissements ?",
-        "description": "Les types d'investissements courants comprennent les actions, les obligations, les fonds communs de placement, l'immobilier, les matières premières et d'autres investissements tels que les cryptomonnaies. Chaque type présente son propre niveau de risque et son potentiel de rendement, et un portefeuille diversifié peut combiner plusieurs de ces actifs."
+        "title": "Quels investissements sont disponibles ?",
+        "description": "Les options peuvent inclure des actions, obligations, fonds, immobilier, matières premières, actifs numériques et autres opportunités. Les options disponibles dépendent des services proposés sur la plateforme."
       },
       "howToStart": {
-        "title": "Comment commencer à investir ?",
-        "description": "Commencez par créer un compte sur la plateforme. Choisissez ensuite le plan d'investissement souhaité et effectuez votre paiement pour commencer votre investissement."
+        "title": "Comment commencer ?",
+        "description": "Créez un compte, complétez vos informations et consultez les services d’investissement disponibles. Vous pourrez ensuite gérer votre activité depuis votre compte."
       }
     }
   },
-
   "Footer": {
-    "description": "Des solutions d'investissement simples et accessibles, conçues pour les personnes qui souhaitent construire leur avenir financier.",
-    "tagline": "Investissez aujourd'hui. Construisez demain.",
+    "description": "Une plateforme simple pour gérer vos investissements, suivre votre activité et rester connecté à vos objectifs financiers.",
+    "tagline": "Gérez. Suivez. Progressez.",
     "company": "Entreprise",
     "terms": "Conditions générales",
     "privacy": "Politique de confidentialité",
     "contact": "Nous contacter",
-    "contactDescription": "Vous avez une question ou besoin d'aide ? Contactez directement notre équipe d'assistance.",
-    "telegramSupport": "Assistance Telegram",
-    "homeAriaLabel": "Accueil de Somalia Malgashi",
-    "logoAlt": "Somalia Malgashi",
-    "copyright": "Somalia Malgashi. Tous droits réservés.",
+    "contactDescription": "Une question ou besoin d’aide ? Contactez notre équipe support.",
+    "telegramSupport": "Support Telegram",
+    "homeAriaLabel": "Accueil InvestorHub",
+    "logoAlt": "InvestorHub",
+    "copyright": "InvestorHub. Tous droits réservés.",
     "riskNotice": "Investir comporte des risques. Les performances passées ne garantissent pas les résultats futurs."
   },
-
   "Notifications": {
     "label": "Notifications",
     "title": "Vous êtes à jour",
-    "description": "Il n'y a aucune nouvelle notification pour le moment. Nous vous informerons lorsqu'un élément important nécessitera votre attention.",
+    "description": "Aucune nouvelle notification pour le moment. Nous vous informerons lorsqu’une action importante sera nécessaire.",
     "accountLink": "Accéder à votre compte"
   },
-
   "Account": {
     "welcome": "Bienvenue 😎",
-    "goodToSeeYou": "Heureux de vous revoir, {name}.",
-
+    "goodToSeeYou": "Ravi de vous revoir, {name}.",
     "balance": {
-      "total": "Solde Total",
-      "leverage": "Effet de Levier",
-      "investedValue": "Valeur Investie",
-      "targetProfit": "Profit Cible"
+      "total": "Solde total",
+      "leverage": "Effet de levier",
+      "investedValue": "Valeur investie",
+      "targetProfit": "Profit cible"
     },
     "wallets": {
-      "EVC": "Mobile-Wallet",
-      "Telesom": "Card",
-      "Golis": "cryptocurrency"
+      "EVC": "Portefeuille mobile",
+      "Telesom": "Moyen de paiement",
+      "Golis": "Portefeuille numérique"
     },
-
     "withdrawal": {
-      "title": "Retirer des Fonds",
-      "description": "Retirez vos fonds disponibles directement vers votre portefeuille mobile.",
-
+      "title": "Retirer des fonds",
+      "description": "Retirez vos fonds disponibles avec un moyen de paiement disponible.",
       "unavailable": "Retrait indisponible",
-      "clearanceRestriction": "Votre compte est actuellement soumis à une restriction de retrait. Les retraits seront disponibles après l'approbation de votre compte.",
-
-      "noBalance": "Aucun solde disponible",
+      "clearanceRestriction": "Votre compte est soumis à une restriction de validation. Les retraits seront disponibles après approbation de votre compte.",
+      "noBalance": "Solde disponible insuffisant",
       "noBalanceDescription": "Vous devez avoir un solde disponible pour effectuer un retrait.",
-
-      "amount": "Montant du Retrait",
+      "amount": "Montant du retrait",
       "available": "Disponible : {amount}",
-      "placeholder": "0,00",
+      "placeholder": "0.00",
       "minimum": "Minimum 5 $",
       "maximum": "Maximum 600 $",
-
-      "mobileNumber": "Numéro de Téléphone",
-      "mobilePlaceholder": "Entrez le numéro",
-      "walletDetected": "Portefeuille {network} détecté",
-      "supportedWallets": "Les numéros EVC, Telesom et Golis sont acceptés.",
-
-      "button": "Retirer",
-
+      "mobileNumber": "Numéro de paiement",
+      "mobilePlaceholder": "Saisissez le numéro",
+      "walletDetected": "Moyen de paiement {network} détecté",
+      "supportedWallets": "Les moyens de paiement disponibles sont affichés lorsque possible.",
+      "button": "Retirer les fonds",
       "information": {
-        "title": "Informations sur le Retrait",
+        "title": "Informations sur le retrait",
         "description": "Vérifiez vos informations de retrait pour éviter les retards.",
-        "availableBalance": "Solde Disponible",
+        "availableBalance": "Solde disponible",
         "minimum": "Minimum",
         "maximum": "Maximum",
-        "supportedWallets": "Portefeuilles Acceptés"
+        "supportedWallets": "Méthodes disponibles"
       },
-
       "validation": {
-        "invalidAmount": "Entrez un montant valide",
+        "invalidAmount": "Saisissez un montant valide",
         "minimum": "Le retrait minimum est de 5 $",
         "maximum": "Le retrait maximum est de 600 $",
         "exceedsBalance": "Le montant dépasse votre solde disponible",
-        "invalidPhone": "Entrez un numéro EVC, Telesom ou Golis valide"
+        "invalidPhone": "Saisissez un numéro de paiement valide"
       },
-
       "confirmation": {
         "title": "Confirmer le retrait",
-        "description": "Vérifiez les informations de votre retrait avant de confirmer.",
+        "description": "Vérifiez les informations avant de confirmer.",
         "amount": "Montant",
-        "mobileNumber": "Numéro de Téléphone",
-        "wallet": "Portefeuille",
-        "warning": "Assurez-vous que le numéro de téléphone appartient à votre portefeuille avant de confirmer.",
+        "mobileNumber": "Numéro de paiement",
+        "wallet": "Moyen de paiement",
+        "warning": "Vérifiez les informations de paiement avant de confirmer.",
         "cancel": "Annuler",
         "processing": "Traitement...",
         "confirm": "Confirmer"
       },
-
       "success": {
         "title": "Retrait envoyé",
         "description": "Votre demande de retrait a été envoyée avec succès.",
         "amount": "Montant du retrait",
-        "remainingBalance": "Solde Restant",
+        "remainingBalance": "Solde restant",
         "done": "Terminé"
       },
-
       "errors": {
-        "generic": "Une erreur s'est produite. Veuillez réessayer."
+        "generic": "Une erreur s’est produite. Réessayez."
       }
     },
-
     "overview": {
-      "title": "Aperçu du Compte",
-      "description": "État de votre compte et de vos opérations",
-      "tradingStatus": "État des Opérations",
+      "title": "Aperçu du compte",
+      "description": "État de votre compte et de vos investissements",
+      "tradingStatus": "Statut du trading",
       "active": "Actif",
       "inactive": "Inactif",
-      "email": "Email",
-      "phoneNumber": "Numéro de Téléphone",
-      "clearanceStatus": "État de l'Approbation",
+      "email": "E-mail",
+      "phoneNumber": "Numéro de téléphone",
+      "clearanceStatus": "Statut de validation",
       "approved": "Approuvé",
-      "notApproved": "Non Approuvé",
-      "notProvided": "Non renseigné"
+      "notApproved": "Non approuvé",
+      "notProvided": "Non fourni"
     },
-
     "history": {
-      "title": "Historique des Retraits",
+      "title": "Historique des retraits",
       "description": "Consultez vos demandes de retrait récentes et leur statut.",
       "emptyTitle": "Aucun retrait",
       "emptyDescription": "Vos demandes de retrait apparaîtront ici après votre premier retrait.",
@@ -303,33 +275,31 @@
       }
     }
   },
-
   "SignIn": {
     "title": "Connectez-vous à votre compte",
-    "description": "Entrez votre e-mail et votre mot de passe ci-dessous pour accéder à votre compte.",
+    "description": "Saisissez votre e-mail et votre mot de passe pour accéder à votre compte.",
     "continueWithGoogle": "Continuer avec Google",
-    "email": "Entrez votre e-mail",
-    "password": "Entrez votre mot de passe",
-    "noAccount": "Vous n'avez pas de compte ?",
-    "signUp": "Créer un compte",
-    "signingIn": "Connexion en cours...",
+    "email": "Saisissez votre e-mail",
+    "password": "Saisissez votre mot de passe",
+    "noAccount": "Vous n’avez pas de compte ?",
+    "signUp": "S’inscrire",
+    "signingIn": "Connexion...",
     "signIn": "Se connecter",
-    "forgotPassword": "Mot de passe oublié ?",
     "welcomeBack": "Bon retour ! ☺️",
-    "somethingWentWrong": "Une erreur s'est produite. Veuillez réessayer.",
+    "forgotPassword": "Mot de passe oublié ?",
+    "somethingWentWrong": "Une erreur s’est produite. Réessayez.",
     "validation": {
-      "invalidEmail": "Veuillez saisir une adresse e-mail valide",
-      "passwordRequired": "Le mot de passe est obligatoire"
+      "invalidEmail": "Saisissez une adresse e-mail valide",
+      "passwordRequired": "Le mot de passe est requis"
     }
   },
-
   "SignUp": {
     "title": "Créez votre compte",
-    "description": "Entrez vos informations ci-dessous pour créer votre compte.",
+    "description": "Saisissez vos informations pour créer votre compte.",
     "continueWithGoogle": "Continuer avec Google",
-    "name": "Entrez votre nom",
-    "email": "Entrez votre e-mail",
-    "password": "Entrez votre mot de passe",
+    "name": "Saisissez votre nom",
+    "email": "Saisissez votre e-mail",
+    "password": "Saisissez votre mot de passe",
     "country": "Pays",
     "number": "Numéro de téléphone",
     "alreadyHaveAccount": "Vous avez déjà un compte ?",
@@ -338,54 +308,54 @@
     "createAccount": "Créer un compte",
     "accountCreated": "Compte créé avec succès",
     "welcome": "Bienvenue ! ☺️",
-    "somethingWentWrong": "Une erreur s'est produite. Veuillez réessayer.",
+    "somethingWentWrong": "Une erreur s’est produite. Réessayez.",
     "validation": {
       "nameTooShort": "Le nom est trop court",
       "nameTooLong": "Le nom est trop long",
       "nameLettersOnly": "Le nom doit contenir uniquement des lettres",
-      "invalidEmail": "Veuillez saisir une adresse e-mail valide",
-      "passwordTooShort": "Le mot de passe doit comporter au moins 6 caractères",
-      "countryRequired": "Veuillez sélectionner votre pays",
-      "numberRequired": "Veuillez saisir un numéro de téléphone valide"
+      "invalidEmail": "Saisissez une adresse e-mail valide",
+      "passwordTooShort": "Le mot de passe doit contenir au moins 6 caractères",
+      "countryRequired": "Sélectionnez votre pays",
+      "numberRequired": "Saisissez un numéro de téléphone valide"
     }
   },
   "ForgotPassword": {
     "title": "Mot de passe oublié ?",
-    "description": "Entrez votre adresse e-mail et nous vous enverrons un lien pour réinitialiser votre mot de passe.",
-    "email": "Entrez votre e-mail",
-    "sendResetLink": "Envoyer le lien de réinitialisation",
-    "sending": "Envoi en cours...",
-    "success": "Si un compte existe avec cette adresse e-mail, un lien de réinitialisation du mot de passe a été envoyé.",
+    "description": "Saisissez votre e-mail et nous vous enverrons un lien pour réinitialiser votre mot de passe.",
+    "email": "Saisissez votre e-mail",
+    "sendResetLink": "Envoyer le lien",
+    "sending": "Envoi...",
+    "success": "Si un compte existe pour cet e-mail, un lien de réinitialisation a été envoyé.",
     "rememberPassword": "Vous vous souvenez de votre mot de passe ?",
     "signIn": "Se connecter",
-    "somethingWentWrong": "Une erreur s'est produite. Veuillez réessayer."
+    "somethingWentWrong": "Une erreur s’est produite. Réessayez."
   },
   "ResetPassword": {
     "title": "Réinitialiser votre mot de passe",
     "description": "Créez un nouveau mot de passe pour votre compte.",
-    "password": "Entrez votre nouveau mot de passe",
+    "password": "Saisissez votre nouveau mot de passe",
     "confirmPassword": "Confirmez votre nouveau mot de passe",
-    "resetPassword": "Réinitialiser le mot de passe",
+    "resetPassword": "Réinitialiser",
     "resetting": "Réinitialisation...",
     "success": "Votre mot de passe a été réinitialisé avec succès.",
-    "invalidLink": "Ce lien de réinitialisation du mot de passe est invalide ou a expiré.",
-    "passwordTooShort": "Le mot de passe doit comporter au moins 6 caractères",
+    "invalidLink": "Ce lien de réinitialisation est invalide ou expiré.",
+    "passwordTooShort": "Le mot de passe doit contenir au moins 6 caractères",
     "passwordsDoNotMatch": "Les mots de passe ne correspondent pas",
-    "somethingWentWrong": "Une erreur s'est produite. Veuillez réessayer."
+    "somethingWentWrong": "Une erreur s’est produite. Réessayez."
   },
   "VerifyEmail": {
-    "title": "Vérifiez votre adresse e-mail",
-    "checkEmail": "Nous avons envoyé un lien de vérification à votre adresse e-mail. Veuillez consulter votre boîte de réception. Si vous ne le voyez pas, vérifiez votre dossier Spam ou Courrier indésirable.",
-    "success": "Votre adresse e-mail a été vérifiée avec succès. Vous pouvez maintenant vous connecter.",
-    "invalidLink": "Ce lien de vérification est invalide ou a expiré. Veuillez demander un nouvel e-mail de vérification.",
-    "alreadyVerified": "Votre adresse e-mail est déjà vérifiée. Vous pouvez vous connecter à votre compte.",
-    "somethingWentWrong": "Une erreur s'est produite lors de la vérification de votre adresse e-mail. Veuillez réessayer.",
+    "title": "Vérifiez votre e-mail",
+    "checkEmail": "Nous avons envoyé un lien de vérification à votre adresse e-mail. Consultez votre boîte de réception. Si vous ne le voyez pas, vérifiez vos dossiers Spam ou Courrier indésirable.",
+    "success": "Votre e-mail a été vérifié. Vous pouvez maintenant vous connecter.",
+    "invalidLink": "Ce lien de vérification est invalide ou expiré. Demandez un nouvel e-mail de vérification.",
+    "alreadyVerified": "Votre e-mail est déjà vérifié. Vous pouvez vous connecter.",
+    "somethingWentWrong": "Une erreur s’est produite lors de la vérification. Réessayez.",
     "signIn": "Se connecter",
-    "didntReceive": "Vous n'avez pas reçu l'e-mail ?",
+    "didntReceive": "Vous n’avez pas reçu l’e-mail ?",
     "email": "E-mail",
-    "emailPlaceholder": "Entrez votre adresse e-mail",
+    "emailPlaceholder": "Saisissez votre adresse e-mail",
     "emailRequired": "Veuillez saisir votre adresse e-mail.",
-    "resend": "Renvoyer l'e-mail de vérification",
+    "resend": "Renvoyer l’e-mail",
     "sending": "Envoi..."
   },
   "ThemeToggle": {
@@ -393,8 +363,8 @@
     "lightMode": "Mode clair",
     "dark": "Sombre",
     "light": "Clair",
-    "switchToDark": "Passer au mode sombre",
-    "switchToLight": "Passer au mode clair",
+    "switchToDark": "Passer en mode sombre",
+    "switchToLight": "Passer en mode clair",
     "theme": "Thème"
   }
 }

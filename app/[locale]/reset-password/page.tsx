@@ -11,20 +11,23 @@ type ResetPasswordPageProps = {
   }>;
 };
 
-const ResetPasswordPage = async ({ searchParams }: ResetPasswordPageProps) => {
+const ResetPasswordPage = async ({
+  searchParams,
+}: ResetPasswordPageProps) => {
   const { token } = await searchParams;
+
   const t = await getTranslations("ResetPassword");
 
   return (
     <Container>
-      <div className="flex min-h-full w-full justify-center py-10">
-        <div className="w-full max-w-[400px] rounded-md border-custom2 bg-card p-8">
-          <div className="mb-8 space-y-1">
-            <h1 className="text-base font-medium text-secondary-foreground">
+      <div className="flex w-full justify-center py-8 sm:py-10">
+        <div className="w-full max-w-[400px] rounded-xl border-custom2 bg-card p-6 sm:p-7">
+          <div className="mb-6 space-y-1">
+            <h1 className="text-lg font-semibold leading-tight tracking-tight text-secondary-foreground">
               {t("title")}
             </h1>
 
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm leading-6 text-muted-foreground">
               {t("description")}
             </p>
           </div>
@@ -37,5 +40,5 @@ const ResetPasswordPage = async ({ searchParams }: ResetPasswordPageProps) => {
     </Container>
   );
 };
- 
+
 export default ResetPasswordPage;

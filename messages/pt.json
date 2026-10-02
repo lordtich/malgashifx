@@ -1,302 +1,273 @@
 {
   "Navbar": {
-    "aboutCompany": "Sobre Nós",
-    "faqs": "FAQ",
+    "aboutCompany": "Sobre a InvestorHub",
+    "faqs": "Perguntas",
     "notifications": "Notificações",
     "signIn": "Entrar",
-    "signUp": "Criar Conta",
+    "signUp": "Criar conta",
     "signOut": "Sair",
     "account": "Conta",
     "adminPanel": "Admin",
-    "dashboard": "Início",
-    "users": "Utilizadores",
-    "withdrawals": "Levantamentos",
-    "openMenu": "Abrir",
-    "closeMenu": "Fechar"
+    "dashboard": "Painel",
+    "users": "Usuários",
+    "withdrawals": "Saques",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu"
   },
-
   "Home": {
     "hero": {
-      "badge": "Investimento Real",
-      "titleLine1": "Não espere,",
-      "titleLine2": "comece a investir e",
-      "titleHighlight": "cresça.",
-      "description": "Descubra formas mais inteligentes de investir e aumentar o seu portfólio com oportunidades flexíveis, desenvolvidas tanto para novos investidores como para investidores experientes.",
+      "badge": "Portal de Investimentos",
+      "titleLine1": "Gerencie seus",
+      "titleLine2": "investimentos em",
+      "titleHighlight": "um só lugar.",
+      "description": "Acompanhe seus investimentos, gerencie sua conta e veja seu portfólio em uma plataforma simples.",
       "cta": "Começar",
-      "imageAlt": "Tecnologia de investimento e negociação"
+      "imageAlt": "Plataforma de gestão de investimentos"
     },
-
     "stats": {
       "investors": "Investidores",
-      "paidOut": "Valores Pagos",
-      "successRate": "Taxa de Sucesso",
-      "customerSupport": "Suporte ao Cliente"
+      "paidOut": "Pago",
+      "successRate": "Taxa de sucesso",
+      "customerSupport": "Suporte ao cliente"
     },
-
     "about": {
-      "label": "Sobre Nós",
-      "title": "Por Que Escolher-nos?",
-      "description": "Oferecemos uma plataforma transparente e económica, apoiada por tecnologia moderna e suporte dedicado ao cliente. O nosso objetivo é criar um ambiente confiável onde traders e investidores de todos os níveis de experiência possam ter acesso a oportunidades financeiras modernas.",
-      "tradingProducts": "Produtos de Negociação",
-      "accountMaintenanceFees": "Taxas de Manutenção da Conta",
+      "label": "Sobre a InvestorHub",
+      "title": "Tudo em um só lugar",
+      "description": "A InvestorHub permite gerenciar sua conta, ver seu portfólio, acompanhar atividades e acessar serviços de investimento.",
+      "tradingProducts": "Produtos de trading",
+      "accountMaintenanceFees": "Taxas de manutenção",
       "leverage": "Alavancagem",
-      "tradingPlatform": "Plataforma de Negociação"
+      "tradingPlatform": "Plataforma de trading"
     },
-
     "markets": {
       "label": "Mercados",
-      "title": "Pares de Moedas"
+      "title": "Visão do mercado"
     },
-
     "accountOpening": {
       "label": "Começar",
-      "title": "Vamos Abrir a Sua Conta",
-      "description": "Comece em apenas alguns minutos com um processo de registo simples e seguro. Crie a sua conta, escolha o seu plano de investimento e dê o primeiro passo em direção aos seus objetivos financeiros.",
-      "stepOne": "Primeiro, crie a sua conta e escolha o plano de investimento que melhor se adapta às suas necessidades.",
-      "stepTwo": "Em seguida, efetue o seu pagamento para ativar o seu investimento.",
-      "stepThree": "Assim que o seu depósito for confirmado, o seu investimento poderá começar.",
+      "title": "Abra sua conta",
+      "description": "Crie sua conta em poucos passos e gerencie seus investimentos em uma plataforma segura.",
+      "stepOne": "Crie sua conta e complete seus dados.",
+      "stepTwo": "Escolha um serviço ou opção de investimento disponível.",
+      "stepThree": "Com sua conta pronta, gerencie suas atividades pelo painel.",
       "imageAlt": "Criar uma conta de investimento"
     },
-
     "finalCta": {
       "label": "Começar",
-      "title": "Pronto para Começar a Investir?",
-      "description": "Abrir uma conta demora menos de 3 minutos. Crie a sua conta hoje e dê o próximo passo na sua jornada de investimento.",
-      "button": "Criar Conta",
-      "imageAlt": "Pronto para começar a investir"
+      "title": "Pronto para começar?",
+      "description": "Crie sua conta e gerencie seus investimentos em uma plataforma simples.",
+      "button": "Criar conta",
+      "imageAlt": "Gerencie seus investimentos"
     }
   },
-
   "Terms": {
     "legal": "Legal",
     "title": "Termos e Condições",
-    "intro": "Leia atentamente estes termos antes de utilizar a plataforma Somalia Malgashi e os seus serviços.",
+    "intro": "Leia estes termos com atenção antes de usar a plataforma InvestorHub e seus serviços.",
     "lastUpdated": "Última atualização: 14/09/2026",
-
     "terms": {
       "introduction": {
         "title": "1. Introdução",
-        "content": "Bem-vindo à Somalia Malgashi. Ao aceder ou utilizar o nosso website e os nossos serviços, concorda em ficar vinculado a estes Termos e Condições. Se não concordar com estes termos, não utilize os nossos serviços."
+        "content": "Bem-vindo à InvestorHub. Ao acessar nosso site ou usar nossos serviços, você concorda com estes Termos e Condições. Se não concordar, não use nossos serviços."
       },
       "accountRegistration": {
-        "title": "2. Registo da Conta",
-        "content": "Poderá ser necessário criar uma conta para aceder a determinados serviços. É responsável por fornecer informações precisas e por manter as credenciais da sua conta seguras."
+        "title": "2. Cadastro da conta",
+        "content": "Pode ser necessário criar uma conta para acessar alguns serviços. Você deve fornecer dados corretos e manter suas informações seguras."
       },
       "investmentTrading": {
-        "title": "3. Investimento e Negociação",
-        "content": "Todas as atividades de investimento e negociação envolvem riscos. As informações apresentadas na nossa plataforma são fornecidas apenas para fins informativos gerais e não devem ser consideradas uma garantia de lucro ou aconselhamento financeiro."
+        "title": "3. Investimento e trading",
+        "content": "Investimentos e trading envolvem riscos. As informações da plataforma são gerais e não garantem lucros ou resultados financeiros."
       },
       "paymentsWithdrawals": {
-        "title": "4. Pagamentos e Levantamentos",
-        "content": "É responsável por garantir que as informações de pagamento e levantamento fornecidas por si estão corretas. Os tempos de processamento e os requisitos aplicáveis podem variar dependendo do serviço utilizado."
+        "title": "4. Pagamentos e saques",
+        "content": "Você é responsável por fornecer dados corretos de pagamento e saque. Prazos e requisitos podem variar conforme o serviço."
       },
       "userResponsibilities": {
-        "title": "5. Responsabilidades do Utilizador",
-        "content": "Concorda em utilizar a plataforma de forma legal e responsável. Não deve tentar interferir com o funcionamento da plataforma, aceder à conta de outro utilizador ou utilizar o serviço para atividades fraudulentas ou não autorizadas."
+        "title": "5. Responsabilidades do usuário",
+        "content": "Você concorda em usar a plataforma de forma legal e responsável. Não deve interferir na plataforma, acessar contas de outros usuários ou realizar atividades fraudulentas ou não autorizadas."
       },
       "limitationOfLiability": {
-        "title": "6. Limitação de Responsabilidade",
-        "content": "Na medida permitida pela legislação aplicável, a Somalia Malgashi não será responsável por perdas resultantes de condições de mercado, interrupções técnicas ou outras circunstâncias fora do nosso controlo razoável."
+        "title": "6. Limitação de responsabilidade",
+        "content": "Na medida permitida pela lei, a InvestorHub não é responsável por perdas causadas por condições de mercado, falhas técnicas ou situações fora de nosso controle razoável."
       },
       "changesToTerms": {
-        "title": "7. Alterações a Estes Termos",
-        "content": "Podemos atualizar estes Termos e Condições periodicamente. Quaisquer alterações entrarão em vigor quando forem publicadas nesta página. A utilização continuada da plataforma após a publicação das alterações constitui aceitação dos termos atualizados."
+        "title": "7. Alterações nos termos",
+        "content": "Podemos atualizar estes Termos e Condições periodicamente. As alterações entram em vigor quando publicadas nesta página. Continuar usando a plataforma significa aceitar os termos atualizados."
       }
     },
-
     "privacy": {
       "label": "Privacidade",
       "title": "Política de Privacidade",
-      "intro": "Esta secção explica como a Somalia Malgashi pode recolher, utilizar e proteger as informações fornecidas através da nossa plataforma.",
-
+      "intro": "Esta seção explica como a InvestorHub pode coletar, usar e proteger informações fornecidas pela plataforma.",
       "informationWeCollect": {
-        "title": "1. Informações que Recolhemos",
-        "content": "Podemos recolher informações fornecidas por si ao criar uma conta, contactar-nos ou utilizar os nossos serviços. Isto pode incluir o seu nome, informações de contacto, dados da conta e outras informações necessárias para prestar os nossos serviços."
+        "title": "1. Informações coletadas",
+        "content": "Podemos coletar informações fornecidas ao criar uma conta, entrar em contato conosco ou usar nossos serviços. Isso pode incluir nome, contato, dados da conta e outras informações necessárias."
       },
       "howWeUseInformation": {
-        "title": "2. Como Utilizamos as Informações",
-        "content": "As informações podem ser utilizadas para fornecer e melhorar os nossos serviços, comunicar com os utilizadores, manter a segurança das contas, processar pedidos e cumprir requisitos legais ou operacionais aplicáveis."
+        "title": "2. Uso das informações",
+        "content": "As informações podem ser usadas para fornecer e melhorar nossos serviços, comunicar com usuários, proteger contas, processar solicitações e cumprir requisitos legais ou operacionais."
       },
       "informationProtection": {
-        "title": "3. Proteção das Informações",
-        "content": "Tomamos medidas razoáveis para proteger as informações recolhidas através da nossa plataforma. No entanto, nenhum método de transmissão ou armazenamento eletrónico pode ser garantido como totalmente seguro."
+        "title": "3. Proteção das informações",
+        "content": "Usamos medidas razoáveis para proteger as informações coletadas. Porém, nenhum sistema eletrônico de transmissão ou armazenamento é totalmente seguro."
       },
       "cookies": {
         "title": "4. Cookies",
-        "content": "O nosso website pode utilizar cookies ou tecnologias semelhantes para manter sessões, melhorar a funcionalidade e compreender como os utilizadores interagem com a plataforma."
+        "content": "Nosso site pode usar cookies ou tecnologias semelhantes para manter sessões, melhorar funções e entender como os usuários usam a plataforma."
       },
       "thirdPartyServices": {
-        "title": "5. Serviços de Terceiros",
-        "content": "A nossa plataforma pode utilizar serviços de terceiros para apoiar pagamentos, autenticação, análise, alojamento ou outras funcionalidades. Estes serviços podem processar informações de acordo com as suas próprias políticas de privacidade."
+        "title": "5. Serviços de terceiros",
+        "content": "A plataforma pode usar serviços de terceiros para pagamentos, autenticação, análise, hospedagem ou outras funções. Esses serviços podem tratar informações conforme suas próprias políticas."
       },
       "yourRights": {
-        "title": "6. Os Seus Direitos",
-        "content": "Dependendo das leis aplicáveis, poderá ter direitos relativamente às informações que mantemos sobre si, incluindo solicitar acesso, correção ou eliminação de determinadas informações."
+        "title": "6. Seus direitos",
+        "content": "Dependendo das leis aplicáveis, você pode ter direitos sobre as informações que mantemos, incluindo solicitar acesso, correção ou exclusão de determinados dados."
       },
       "contact": {
-        "title": "7. Contacto",
-        "content": "Se tiver dúvidas sobre estes Termos e Condições ou sobre esta Política de Privacidade, contacte a nossa equipa de suporte."
+        "title": "7. Contato",
+        "content": "Se tiver dúvidas sobre estes Termos e Condições ou esta Política de Privacidade, entre em contato com nossa equipe de suporte."
       }
     }
   },
-
   "AboutCompany": {
     "about": {
-      "label": "Sobre Nós",
-      "description": "Estamos focados em tornar o investimento e a negociação simples, acessíveis e transparentes. A nossa plataforma foi concebida tanto para novos investidores como para investidores experientes, proporcionando um ambiente simples para explorar oportunidades financeiras e crescer com confiança.",
-      "learnMore": "Saiba Mais",
-      "imageAlt": "Sobre a Somalia Malgashi"
+      "label": "Sobre a InvestorHub",
+      "description": "A InvestorHub é um portal digital criado para simplificar a gestão de investimentos. Os usuários podem gerenciar contas, ver investimentos, acompanhar atividades e acessar serviços em um só lugar.",
+      "learnMore": "Saiba mais",
+      "imageAlt": "Sobre a InvestorHub"
     },
     "leadership": {
-      "label": "Liderança",
-      "title": "Mensagem do CEO",
-      "message": "Não se preocupe se ainda não sabe tudo. Comece onde está, continue a aprender e cresça ao longo do caminho. Cada passo que dá em direção ao investimento pode ajudá-lo a desenvolver conhecimento, experiência e confiança na sua jornada financeira.",
-      "name": "Tebo",
-      "role": "CEO e Fundador",
-      "imageAlt": "Fundador da Somalia Malgashi"
+      "label": "Nossa abordagem",
+      "title": "Uma forma simples de gerenciar investimentos",
+      "message": "Investir pode parecer complexo. Nosso objetivo é simplificar a experiência, oferecendo um espaço claro para gerenciar sua conta, acompanhar atividades e se manter informado.",
+      "name": "InvestorHub",
+      "role": "Portal de Investimentos",
+      "imageAlt": "Plataforma InvestorHub"
     }
   },
-
   "Faqs": {
-    "title": "Perguntas Frequentes",
+    "title": "Perguntas frequentes",
     "items": {
       "whatIsInvesting": {
         "title": "O que é investir?",
-        "description": "Investir é o ato de colocar dinheiro ou ativos em algo com a expectativa de que isso gere lucro ou aumente de valor ao longo do tempo. Isto pode incluir investimentos em ações, obrigações, imóveis ou empresas para alcançar crescimento financeiro no futuro."
+        "description": "Investir significa colocar dinheiro em um ativo ou oportunidade com o objetivo de obter retorno ao longo do tempo. Isso pode incluir ações, títulos, fundos, imóveis, empresas e outros ativos."
       },
       "investmentTypes": {
-        "title": "Quais são os diferentes tipos de investimentos?",
-        "description": "Os tipos comuns de investimentos incluem ações, obrigações, fundos de investimento, imóveis, matérias-primas e outros investimentos, como criptomoedas. Cada tipo apresenta o seu próprio nível de risco e potencial de retorno, e uma carteira diversificada pode combinar vários destes ativos."
+        "title": "Quais investimentos estão disponíveis?",
+        "description": "As opções podem incluir ações, títulos, fundos, imóveis, commodities, ativos digitais e outras oportunidades. As opções dependem dos serviços oferecidos pela plataforma."
       },
       "howToStart": {
-        "title": "Como começo a investir?",
-        "description": "Primeiro, crie uma conta na plataforma. Depois, escolha o plano de investimento que pretende e efetue o pagamento para iniciar o seu investimento."
+        "title": "Como começar?",
+        "description": "Crie uma conta, complete seus dados e veja os serviços de investimento disponíveis. Depois, você poderá gerenciar suas atividades pela sua conta."
       }
     }
   },
-
   "Footer": {
-    "description": "Soluções de investimento simples e acessíveis, criadas para pessoas que procuram construir um futuro financeiro melhor.",
-    "tagline": "Invista hoje. Construa o amanhã.",
+    "description": "Uma plataforma simples para gerenciar investimentos, acompanhar atividades e manter o foco em seus objetivos financeiros.",
+    "tagline": "Gerencie. Acompanhe. Cresça.",
     "company": "Empresa",
     "terms": "Termos e Condições",
     "privacy": "Política de Privacidade",
-    "contact": "Entre em Contacto",
-    "contactDescription": "Tem alguma dúvida ou precisa de assistência? Contacte diretamente a nossa equipa de suporte.",
-    "telegramSupport": "Suporte via Telegram",
-    "homeAriaLabel": "Página inicial da Somalia Malgashi",
-    "logoAlt": "Somalia Malgashi",
-    "copyright": "Somalia Malgashi. Todos os direitos reservados.",
-    "riskNotice": "Investir envolve riscos. O desempenho passado não garante resultados futuros."
+    "contact": "Fale conosco",
+    "contactDescription": "Tem uma dúvida ou precisa de ajuda? Fale com nossa equipe de suporte.",
+    "telegramSupport": "Suporte no Telegram",
+    "homeAriaLabel": "Página inicial da InvestorHub",
+    "logoAlt": "InvestorHub",
+    "copyright": "InvestorHub. Todos os direitos reservados.",
+    "riskNotice": "Investimentos envolvem riscos. Resultados passados não garantem resultados futuros."
   },
-
   "Notifications": {
     "label": "Notificações",
-    "title": "Está tudo em dia",
-    "description": "Não existem novas notificações neste momento. Avisaremos quando houver algo importante que precise da sua atenção.",
-    "accountLink": "Ir para a sua conta"
+    "title": "Tudo em dia",
+    "description": "Não há novas notificações no momento. Avisaremos quando algo importante precisar da sua atenção.",
+    "accountLink": "Ir para sua conta"
   },
-
   "Account": {
     "welcome": "Bem-vindo 😎",
-    "goodToSeeYou": "É bom vê-lo, {name}.",
-
+    "goodToSeeYou": "Bom ter você de volta, {name}.",
     "balance": {
-      "total": "Saldo Total",
+      "total": "Saldo total",
       "leverage": "Alavancagem",
-      "investedValue": "Valor Investido",
-      "targetProfit": "Lucro Alvo"
+      "investedValue": "Valor investido",
+      "targetProfit": "Lucro alvo"
     },
     "wallets": {
-      "EVC": "Mobile-Wallet",
-      "Telesom": "Card",
-      "Golis": "cryptocurrency"
+      "EVC": "Carteira móvel",
+      "Telesom": "Meio de pagamento",
+      "Golis": "Carteira digital"
     },
-
     "withdrawal": {
-      "title": "Levantar Fundos",
-      "description": "Levante fundos disponíveis diretamente para a sua carteira móvel.",
-
-      "unavailable": "Levantamento indisponível",
-      "clearanceRestriction": "A sua conta tem atualmente uma restrição de levantamento. Os levantamentos ficarão disponíveis após a aprovação da sua conta.",
-
+      "title": "Sacar fundos",
+      "description": "Saque fundos disponíveis usando um meio de pagamento disponível.",
+      "unavailable": "Saque indisponível",
+      "clearanceRestriction": "Sua conta possui uma restrição de aprovação. Os saques ficarão disponíveis após a aprovação da conta.",
       "noBalance": "Sem saldo disponível",
-      "noBalanceDescription": "Precisa de saldo disponível para efetuar um levantamento.",
-
-      "amount": "Valor do Levantamento",
+      "noBalanceDescription": "Você precisa ter saldo disponível para fazer um saque.",
+      "amount": "Valor do saque",
       "available": "Disponível: {amount}",
-      "placeholder": "0,00",
-      "minimum": "Mínimo 5 $",
-      "maximum": "Máximo 600 $",
-
-      "mobileNumber": "Número de Telemóvel",
-      "mobilePlaceholder": "Introduza o número",
-      "walletDetected": "Carteira {network} detetada",
-      "supportedWallets": "São aceites números EVC, Telesom e Golis.",
-
-      "button": "Levantar",
-
+      "placeholder": "0.00",
+      "minimum": "Mínimo $5",
+      "maximum": "Máximo $600",
+      "mobileNumber": "Número de pagamento",
+      "mobilePlaceholder": "Digite o número",
+      "walletDetected": "Meio de pagamento {network} detectado",
+      "supportedWallets": "Os meios de pagamento disponíveis serão mostrados quando possível.",
+      "button": "Sacar fundos",
       "information": {
-        "title": "Informações do Levantamento",
-        "description": "Mantenha os seus dados de levantamento corretos para evitar atrasos.",
-        "availableBalance": "Saldo Disponível",
+        "title": "Informações do saque",
+        "description": "Mantenha seus dados corretos para evitar atrasos.",
+        "availableBalance": "Saldo disponível",
         "minimum": "Mínimo",
         "maximum": "Máximo",
-        "supportedWallets": "Carteiras Aceites"
+        "supportedWallets": "Métodos disponíveis"
       },
-
       "validation": {
-        "invalidAmount": "Introduza um valor válido",
-        "minimum": "O levantamento mínimo é de 5 $",
-        "maximum": "O levantamento máximo é de 600 $",
-        "exceedsBalance": "O valor excede o saldo disponível",
-        "invalidPhone": "Introduza um número EVC, Telesom ou Golis válido"
+        "invalidAmount": "Digite um valor válido",
+        "minimum": "O saque mínimo é $5",
+        "maximum": "O saque máximo é $600",
+        "exceedsBalance": "O valor excede seu saldo disponível",
+        "invalidPhone": "Digite um número de pagamento válido"
       },
-
       "confirmation": {
-        "title": "Confirmar levantamento",
-        "description": "Verifique os dados do levantamento antes de confirmar.",
+        "title": "Confirmar saque",
+        "description": "Revise os dados do saque antes de confirmar.",
         "amount": "Valor",
-        "mobileNumber": "Número de Telemóvel",
-        "wallet": "Carteira",
-        "warning": "Certifique-se de que o número de telemóvel pertence à sua carteira antes de confirmar.",
+        "mobileNumber": "Número de pagamento",
+        "wallet": "Meio de pagamento",
+        "warning": "Verifique os dados de pagamento antes de confirmar.",
         "cancel": "Cancelar",
-        "processing": "A processar...",
+        "processing": "Processando...",
         "confirm": "Confirmar"
       },
-
       "success": {
-        "title": "Levantamento enviado",
-        "description": "O seu pedido de levantamento foi enviado com sucesso.",
-        "amount": "Valor do levantamento",
-        "remainingBalance": "Saldo Restante",
+        "title": "Saque enviado",
+        "description": "Sua solicitação de saque foi enviada com sucesso.",
+        "amount": "Valor do saque",
+        "remainingBalance": "Saldo restante",
         "done": "Concluído"
       },
-
       "errors": {
-        "generic": "Algo correu mal. Tente novamente."
+        "generic": "Algo deu errado. Tente novamente."
       }
     },
-
     "overview": {
-      "title": "Visão Geral da Conta",
-      "description": "Estado da sua conta e negociação",
-      "tradingStatus": "Estado da Negociação",
-      "active": "Ativa",
-      "inactive": "Inativa",
-      "email": "Email",
-      "phoneNumber": "Número de Telemóvel",
-      "clearanceStatus": "Estado da Aprovação",
-      "approved": "Aprovada",
-      "notApproved": "Não Aprovada",
-      "notProvided": "Não indicado"
+      "title": "Visão geral da conta",
+      "description": "Status da sua conta e investimentos",
+      "tradingStatus": "Status do trading",
+      "active": "Ativo",
+      "inactive": "Inativo",
+      "email": "E-mail",
+      "phoneNumber": "Número de telefone",
+      "clearanceStatus": "Status de aprovação",
+      "approved": "Aprovado",
+      "notApproved": "Não aprovado",
+      "notProvided": "Não informado"
     },
-
     "history": {
-      "title": "Histórico de Levantamentos",
-      "description": "Veja os seus pedidos de levantamento recentes e o respetivo estado.",
-      "emptyTitle": "Ainda sem levantamentos",
-      "emptyDescription": "Os seus pedidos de levantamento aparecerão aqui quando efetuar um levantamento.",
+      "title": "Histórico de saques",
+      "description": "Veja suas solicitações recentes de saque e seus status.",
+      "emptyTitle": "Nenhum saque ainda",
+      "emptyDescription": "Suas solicitações de saque aparecerão aqui após o primeiro saque.",
       "status": {
         "pending": "Pendente",
         "approved": "Aprovado",
@@ -304,60 +275,58 @@
       }
     }
   },
-
   "SignIn": {
-    "title": "Entrar na Sua Conta",
-    "description": "Introduza o seu email e palavra-passe abaixo para aceder à sua conta.",
+    "title": "Entre na sua conta",
+    "description": "Digite seu e-mail e senha para acessar sua conta.",
     "continueWithGoogle": "Continuar com Google",
-    "email": "Introduza o seu email",
-    "password": "Introduza a sua palavra-passe",
-    "noAccount": "Ainda não tem uma conta?",
-    "signUp": "Criar Conta",
-    "signingIn": "A entrar...",
+    "email": "Digite seu e-mail",
+    "password": "Digite sua senha",
+    "noAccount": "Não tem uma conta?",
+    "signUp": "Criar conta",
+    "signingIn": "Entrando...",
     "signIn": "Entrar",
-    "forgotPassword": "Esqueceu sua senha?",
     "welcomeBack": "Bem-vindo de volta! ☺️",
-    "somethingWentWrong": "Algo correu mal. Tente novamente.",
+    "forgotPassword": "Esqueceu a senha?",
+    "somethingWentWrong": "Algo deu errado. Tente novamente.",
     "validation": {
-      "invalidEmail": "Introduza um endereço de email válido",
-      "passwordRequired": "A palavra-passe é obrigatória"
+      "invalidEmail": "Digite um e-mail válido",
+      "passwordRequired": "A senha é obrigatória"
     }
   },
-
   "SignUp": {
-    "title": "Crie a Sua Conta",
-    "description": "Introduza os seus dados abaixo para criar a sua conta.",
+    "title": "Crie sua conta",
+    "description": "Digite seus dados para criar sua conta.",
     "continueWithGoogle": "Continuar com Google",
-    "name": "Introduza o seu nome",
-    "email": "Introduza o seu email",
-    "password": "Introduza a sua palavra-passe",
+    "name": "Digite seu nome",
+    "email": "Digite seu e-mail",
+    "password": "Digite sua senha",
     "country": "País",
     "number": "Número de telefone",
     "alreadyHaveAccount": "Já tem uma conta?",
     "signIn": "Entrar",
-    "creatingAccount": "A criar conta...",
-    "createAccount": "Criar Conta",
+    "creatingAccount": "Criando conta...",
+    "createAccount": "Criar conta",
     "accountCreated": "Conta criada com sucesso",
     "welcome": "Bem-vindo! ☺️",
-    "somethingWentWrong": "Algo correu mal. Tente novamente.",
+    "somethingWentWrong": "Algo deu errado. Tente novamente.",
     "validation": {
-      "nameTooShort": "O nome é demasiado curto",
-      "nameTooLong": "O nome é demasiado longo",
+      "nameTooShort": "O nome é muito curto",
+      "nameTooLong": "O nome é muito longo",
       "nameLettersOnly": "O nome deve conter apenas letras",
-      "invalidEmail": "Introduza um endereço de email válido",
-      "passwordTooShort": "A palavra-passe deve ter pelo menos 6 caracteres",
-      "countryRequired": "Selecione o seu país",
-      "numberRequired": "Insira um número de telefone válido"
+      "invalidEmail": "Digite um e-mail válido",
+      "passwordTooShort": "A senha deve ter pelo menos 6 caracteres",
+      "countryRequired": "Selecione seu país",
+      "numberRequired": "Digite um número de telefone válido"
     }
   },
   "ForgotPassword": {
     "title": "Esqueceu sua senha?",
     "description": "Digite seu e-mail e enviaremos um link para redefinir sua senha.",
     "email": "Digite seu e-mail",
-    "sendResetLink": "Enviar Link de Redefinição",
+    "sendResetLink": "Enviar link",
     "sending": "Enviando...",
-    "success": "Se existir uma conta com este e-mail, um link para redefinir sua senha foi enviado.",
-    "rememberPassword": "Lembra da sua senha?",
+    "success": "Se existir uma conta com este e-mail, um link de redefinição foi enviado.",
+    "rememberPassword": "Lembra sua senha?",
     "signIn": "Entrar",
     "somethingWentWrong": "Algo deu errado. Tente novamente."
   },
@@ -369,24 +338,24 @@
     "resetPassword": "Redefinir senha",
     "resetting": "Redefinindo...",
     "success": "Sua senha foi redefinida com sucesso.",
-    "invalidLink": "Este link de redefinição de senha é inválido ou expirou.",
+    "invalidLink": "Este link é inválido ou expirou.",
     "passwordTooShort": "A senha deve ter pelo menos 6 caracteres",
     "passwordsDoNotMatch": "As senhas não coincidem",
     "somethingWentWrong": "Algo deu errado. Tente novamente."
   },
   "VerifyEmail": {
     "title": "Verifique seu e-mail",
-    "checkEmail": "Enviamos um link de verificação para o seu endereço de e-mail. Verifique sua caixa de entrada. Se não encontrar, verifique a pasta de Spam ou Lixo eletrônico.",
+    "checkEmail": "Enviamos um link de verificação para seu e-mail. Verifique sua caixa de entrada. Se não encontrar, confira a pasta Spam ou Lixo eletrônico.",
     "success": "Seu e-mail foi verificado com sucesso. Agora você pode entrar.",
-    "invalidLink": "Este link de verificação é inválido ou expirou. Solicite um novo e-mail de verificação.",
+    "invalidLink": "Este link de verificação é inválido ou expirou. Solicite um novo e-mail.",
     "alreadyVerified": "Seu e-mail já foi verificado. Você pode entrar na sua conta.",
-    "somethingWentWrong": "Algo deu errado ao verificar seu e-mail. Tente novamente.",
+    "somethingWentWrong": "Algo deu errado durante a verificação. Tente novamente.",
     "signIn": "Entrar",
     "didntReceive": "Não recebeu o e-mail?",
     "email": "E-mail",
     "emailPlaceholder": "Digite seu endereço de e-mail",
     "emailRequired": "Digite seu endereço de e-mail.",
-    "resend": "Reenviar e-mail de verificação",
+    "resend": "Reenviar e-mail",
     "sending": "Enviando..."
   },
   "ThemeToggle": {
@@ -394,8 +363,8 @@
     "lightMode": "Modo claro",
     "dark": "Escuro",
     "light": "Claro",
-    "switchToDark": "Mudar para o modo escuro",
-    "switchToLight": "Mudar para o modo claro",
+    "switchToDark": "Mudar para modo escuro",
+    "switchToLight": "Mudar para modo claro",
     "theme": "Tema"
   }
 }

@@ -1,11 +1,12 @@
 import { redirect } from "next/navigation";
 
 import { requireAdmin } from "@/actions/Admin";
+
 import Container from "@/components/Container";
+
 import prisma from "@/lib/prismadb";
+
 import UserManagement from "./UserManagement";
-
-
 
 const UsersPage = async () => {
   const admin = await requireAdmin();
@@ -39,7 +40,7 @@ const UsersPage = async () => {
 
   return (
     <Container>
-      <main className="py-8 sm:py-10">
+      <main className="py-7 sm:py-9 lg:py-10">
         <UserManagement users={serializedUsers} />
       </main>
     </Container>

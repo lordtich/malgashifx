@@ -1,6 +1,6 @@
 {
   "Navbar": {
-    "aboutCompany": "About Company",
+    "aboutCompany": "About InvestorHub",
     "faqs": "FAQs",
     "notifications": "Notifications",
     "signIn": "Sign In",
@@ -17,13 +17,13 @@
 
   "Home": {
     "hero": {
-      "badge": "Real Investment",
-      "titleLine1": "Don't wait,",
-      "titleLine2": "start investing and",
-      "titleHighlight": "grow.",
-      "description": "Discover smarter ways to invest and grow your portfolio with flexible opportunities designed for both new and experienced investors.",
+      "badge": "Investment Portal",
+      "titleLine1": "Manage your",
+      "titleLine2": "investments in",
+      "titleHighlight": "one place.",
+      "description": "Track your investments, manage your account, and stay up to date with your portfolio from one simple platform.",
       "cta": "Get Started",
-      "imageAlt": "Investment and trading technology"
+      "imageAlt": "Investment management platform"
     },
 
     "stats": {
@@ -34,9 +34,9 @@
     },
 
     "about": {
-      "label": "About Us",
-      "title": "Why Choose Us?",
-      "description": "We provide a transparent and cost-effective platform powered by modern technology and dedicated customer support. Our goal is to create a reliable environment where traders and investors of all experience levels can access modern financial opportunities.",
+      "label": "About InvestorHub",
+      "title": "Everything in One Place",
+      "description": "InvestorHub gives you one place to manage your investment account, view your portfolio, track activity, and access available investment services.",
       "tradingProducts": "Trading Products",
       "accountMaintenanceFees": "Account Maintenance Fees",
       "leverage": "Leverage",
@@ -45,81 +45,81 @@
 
     "markets": {
       "label": "Markets",
-      "title": "Currency Pairs"
+      "title": "Market Overview"
     },
 
     "accountOpening": {
       "label": "Get Started",
-      "title": "Let's Open Your Account",
-      "description": "Get started in just a few minutes with a simple and secure registration process. Create your account, choose your investment plan, and take the first step toward your financial goals.",
-      "stepOne": "First, create your account and choose the investment plan that suits you.",
-      "stepTwo": "Next, make your payment to activate your investment.",
-      "stepThree": "Once your deposit is confirmed, your investment can begin.",
+      "title": "Open Your Account",
+      "description": "Create your account in a few simple steps and start managing your investments from one secure platform.",
+      "stepOne": "Create your account and complete your details.",
+      "stepTwo": "Choose a service or investment option available to you.",
+      "stepThree": "Once your account is ready, you can manage your investment activity from your dashboard.",
       "imageAlt": "Create an investment account"
     },
 
     "finalCta": {
       "label": "Get Started",
-      "title": "Ready to Start Investing?",
-      "description": "Opening an account takes less than 3 minutes. Create your account today and take the next step in your investment journey.",
+      "title": "Ready to Get Started?",
+      "description": "Create your account and manage your investments from one simple platform.",
       "button": "Create Account",
-      "imageAlt": "Ready to start investing"
+      "imageAlt": "Manage your investments"
     }
   },
 
   "Terms": {
     "legal": "Legal",
     "title": "Terms & Conditions",
-    "intro": "Please read these terms carefully before using the Somalia Malgashi platform and its services.",
+    "intro": "Please read these terms carefully before using the InvestorHub platform and its services.",
     "lastUpdated": "Last updated: 14/09/2026",
 
     "terms": {
       "introduction": {
         "title": "1. Introduction",
-        "content": "Welcome to Somalia Malgashi. By accessing or using our website and services, you agree to be bound by these Terms & Conditions. If you do not agree with these terms, please do not use our services."
+        "content": "Welcome to InvestorHub. By accessing or using our website and services, you agree to be bound by these Terms & Conditions. If you do not agree with these terms, please do not use our services."
       },
       "accountRegistration": {
         "title": "2. Account Registration",
-        "content": "You may be required to create an account to access certain services. You are responsible for providing accurate information and keeping your account credentials secure."
+        "content": "You may need to create an account to access certain services. You are responsible for providing accurate information and keeping your account details secure."
       },
       "investmentTrading": {
         "title": "3. Investment & Trading",
-        "content": "All investment and trading activities involve risk. Information displayed on our platform is provided for general informational purposes and should not be considered a guarantee of profit or financial advice."
+        "content": "Investment and trading activities involve risk. Information shown on the platform is provided for general information and does not guarantee profits or financial results."
       },
       "paymentsWithdrawals": {
         "title": "4. Payments & Withdrawals",
-        "content": "You are responsible for ensuring that the payment and withdrawal information you provide is accurate. Processing times and applicable requirements may vary depending on the service used."
+        "content": "You are responsible for providing accurate payment and withdrawal information. Processing times and requirements may vary depending on the service used."
       },
       "userResponsibilities": {
         "title": "5. User Responsibilities",
-        "content": "You agree to use the platform lawfully and responsibly. You must not attempt to interfere with the operation of the platform, access another user's account, or use the service for fraudulent or unauthorized activities."
+        "content": "You agree to use the platform lawfully and responsibly. You must not interfere with the platform, access another user's account, or use the service for fraudulent or unauthorized activities."
       },
       "limitationOfLiability": {
         "title": "6. Limitation of Liability",
-        "content": "To the extent permitted by applicable law, Somalia Malgashi shall not be responsible for losses resulting from market conditions, technical interruptions, or other circumstances beyond our reasonable control."
+        "content": "To the extent permitted by applicable law, InvestorHub is not responsible for losses caused by market conditions, technical interruptions, or circumstances beyond our reasonable control."
       },
       "changesToTerms": {
         "title": "7. Changes to These Terms",
-        "content": "We may update these Terms & Conditions from time to time. Any changes will become effective when posted on this page. Continued use of the platform after changes are posted constitutes acceptance of the updated terms."
+        "content": "We may update these Terms & Conditions from time to time. Changes become effective when posted on this page. Continued use of the platform after changes are posted means you accept the updated terms."
       }
     },
 
     "privacy": {
       "label": "Privacy",
       "title": "Privacy Policy",
-      "intro": "This section explains how Somalia Malgashi may collect, use, and protect information provided through our platform.",
+      "intro": "This section explains how InvestorHub may collect, use, and protect information provided through the platform.",
 
       "informationWeCollect": {
         "title": "1. Information We Collect",
-        "content": "We may collect information that you provide when creating an account, contacting us, or using our services. This may include your name, contact information, account details, and other information necessary to provide our services."
+        "content": "We may collect information you provide when creating an account, contacting us, or using our services. This may include your name, contact information, account details, and other information needed to provide our services."
       },
       "howWeUseInformation": {
         "title": "2. How We Use Information",
-        "content": "Information may be used to provide and improve our services, communicate with users, maintain account security, process requests, and meet applicable legal or operational requirements."
+        "content": "Information may be used to provide and improve our services, communicate with users, protect accounts, process requests, and meet applicable legal or operational requirements."
       },
       "informationProtection": {
         "title": "3. Information Protection",
-        "content": "We take reasonable measures to protect information collected through our platform. However, no method of electronic transmission or storage can be guaranteed to be completely secure."
+        "content": "We use reasonable measures to protect information collected through the platform. However, no electronic transmission or storage system can be guaranteed to be completely secure."
       },
       "cookies": {
         "title": "4. Cookies",
@@ -127,7 +127,7 @@
       },
       "thirdPartyServices": {
         "title": "5. Third-Party Services",
-        "content": "Our platform may use third-party services to support payments, authentication, analytics, hosting, or other functionality. These services may process information in accordance with their own privacy policies."
+        "content": "The platform may use third-party services for payments, authentication, analytics, hosting, or other features. These services may process information under their own privacy policies."
       },
       "yourRights": {
         "title": "6. Your Rights",
@@ -142,18 +142,18 @@
 
   "AboutCompany": {
     "about": {
-      "label": "About Us",
-      "description": "We are focused on making investing and trading simple, accessible, and transparent. Our platform is designed for both new and experienced investors, providing a straightforward environment to explore financial opportunities and grow with confidence.",
+      "label": "About InvestorHub",
+      "description": "InvestorHub is a digital investment portal built to make investment management simple and accessible. Users can manage their accounts, view investment information, track activity, and access available services from one place.",
       "learnMore": "Learn More",
-      "imageAlt": "About Somalia Malgashi"
+      "imageAlt": "About InvestorHub"
     },
     "leadership": {
-      "label": "Leadership",
-      "title": "Message from the CEO",
-      "message": "Don't worry if you don't know everything yet. Start where you are, keep learning, and grow along the way. Every step you take toward investing can help you build knowledge, experience, and confidence in your financial journey.",
-      "name": "Tebo",
-      "role": "CEO & Founder",
-      "imageAlt": "Somalia Malgashi founder"
+      "label": "Our Approach",
+      "title": "A Simple Way to Manage Investments",
+      "message": "Investing can feel complex. Our goal is to keep the experience simple by giving you a clear place to manage your account, view your investment activity, and stay informed.",
+      "name": "InvestorHub",
+      "role": "Investment Portal",
+      "imageAlt": "InvestorHub platform"
     }
   },
 
@@ -162,31 +162,31 @@
     "items": {
       "whatIsInvesting": {
         "title": "What is investing?",
-        "description": "Investing is the act of putting money or assets into something with the expectation that it will generate profit or increase in value over time. This can include investing in stocks, bonds, real estate, or businesses to achieve financial growth in the future."
+        "description": "Investing means putting money into an asset or opportunity with the goal of generating a return over time. Investments can include stocks, bonds, funds, real estate, businesses, and other assets."
       },
       "investmentTypes": {
-        "title": "What are the different types of investments?",
-        "description": "Common types of investments include stocks, bonds, mutual funds, real estate, commodities, and other investments such as cryptocurrency. Each type has its own level of risk and potential return, and a diversified portfolio may combine several of these assets."
+        "title": "What types of investments are available?",
+        "description": "Investment options can include stocks, bonds, funds, real estate, commodities, digital assets, and other opportunities. Available options depend on the services offered through the platform."
       },
       "howToStart": {
-        "title": "How do I start investing?",
-        "description": "First, create an account on the platform. Then choose the investment plan you want and make your payment to begin your investment."
+        "title": "How do I get started?",
+        "description": "Create an account, complete your details, and review the investment services available to you. You can then manage your investment activity through your account."
       }
     }
   },
 
   "Footer": {
-    "description": "Simple, accessible investment solutions built for people looking to grow their financial future.",
-    "tagline": "Invest today. Build tomorrow.",
+    "description": "A simple platform for managing investments, tracking activity, and staying connected to your financial goals.",
+    "tagline": "Manage. Track. Grow.",
     "company": "Company",
     "terms": "Terms & Conditions",
     "privacy": "Privacy Policy",
     "contact": "Get in touch",
-    "contactDescription": "Have a question or need assistance? Reach out to our support team directly.",
+    "contactDescription": "Have a question or need help? Contact our support team.",
     "telegramSupport": "Telegram Support",
-    "homeAriaLabel": "Somalia Malgashi home",
-    "logoAlt": "Somalia Malgashi",
-    "copyright": "Somalia Malgashi. All rights reserved.",
+    "homeAriaLabel": "InvestorHub home",
+    "logoAlt": "InvestorHub",
+    "copyright": "InvestorHub. All rights reserved.",
     "riskNotice": "Investment involves risk. Past performance does not guarantee future results."
   },
 
@@ -196,6 +196,7 @@
     "description": "There are no new notifications right now. We'll let you know when something important needs your attention.",
     "accountLink": "Go to your account"
   },
+
   "Account": {
     "welcome": "Welcome 😎",
     "goodToSeeYou": "Good to see you, {name}.",
@@ -208,14 +209,14 @@
     },
 
     "wallets": {
-      "EVC": "Mobile-Wallet",
-      "Telesom": "Cards",
-      "Golis": "Cryptocurrency"
+      "EVC": "Mobile Wallet",
+      "Telesom": "Payment Method",
+      "Golis": "Digital Wallet"
     },
 
     "withdrawal": {
       "title": "Withdraw Funds",
-      "description": "Withdraw available funds directly to your mobile wallet.",
+      "description": "Withdraw available funds using an available payment method.",
 
       "unavailable": "Withdrawal unavailable",
       "clearanceRestriction": "Your account currently has a clearance restriction. Withdrawals will become available once your account is approved.",
@@ -229,10 +230,10 @@
       "minimum": "Minimum $5",
       "maximum": "Maximum $600",
 
-      "mobileNumber": "Mobile Number",
-      "mobilePlaceholder": "Enter mobile number",
-      "walletDetected": "{network} mobile wallet detected",
-      "supportedWallets": "EVC, Telesom, and Golis numbers are supported.",
+      "mobileNumber": "Payment Number",
+      "mobilePlaceholder": "Enter payment number",
+      "walletDetected": "{network} payment method detected",
+      "supportedWallets": "Supported payment methods are shown when available.",
 
       "button": "Withdraw Funds",
 
@@ -242,7 +243,7 @@
         "availableBalance": "Available Balance",
         "minimum": "Minimum",
         "maximum": "Maximum",
-        "supportedWallets": "Supported wallets"
+        "supportedWallets": "Supported Methods"
       },
 
       "validation": {
@@ -250,23 +251,23 @@
         "minimum": "Minimum withdrawal is $5",
         "maximum": "Maximum withdrawal is $600",
         "exceedsBalance": "Amount exceeds your available balance",
-        "invalidPhone": "Enter a valid EVC, Telesom, or Golis number"
+        "invalidPhone": "Enter a valid payment number"
       },
 
       "confirmation": {
-        "title": "Confirm withdrawal",
+        "title": "Confirm Withdrawal",
         "description": "Please review your withdrawal details before confirming.",
         "amount": "Amount",
-        "mobileNumber": "Mobile number",
-        "wallet": "Wallet",
-        "warning": "Make sure the mobile number belongs to your wallet before confirming this withdrawal.",
+        "mobileNumber": "Payment number",
+        "wallet": "Payment method",
+        "warning": "Make sure the payment details are correct before confirming this withdrawal.",
         "cancel": "Cancel",
         "processing": "Processing...",
         "confirm": "Confirm"
       },
 
       "success": {
-        "title": "Withdrawal submitted",
+        "title": "Withdrawal Submitted",
         "description": "Your withdrawal request has been submitted successfully.",
         "amount": "Withdrawal amount",
         "remainingBalance": "Remaining balance",
@@ -280,7 +281,7 @@
 
     "overview": {
       "title": "Account Overview",
-      "description": "Your account and trading status",
+      "description": "Your account and investment status",
       "tradingStatus": "Trading Status",
       "active": "Active",
       "inactive": "Inactive",
@@ -307,7 +308,7 @@
 
   "SignIn": {
     "title": "Sign In to Your Account",
-    "description": "Enter your email and password below to access your account.",
+    "description": "Enter your email and password to access your account.",
     "continueWithGoogle": "Continue with Google",
     "email": "Enter your email",
     "password": "Enter your password",
@@ -326,7 +327,7 @@
 
   "SignUp": {
     "title": "Create Your Account",
-    "description": "Enter your details below to create your account.",
+    "description": "Enter your details to create your account.",
     "continueWithGoogle": "Continue with Google",
     "name": "Enter your name",
     "email": "Enter your email",
@@ -350,9 +351,10 @@
       "numberRequired": "Please enter a valid phone number"
     }
   },
+
   "ForgotPassword": {
     "title": "Forgot Your Password?",
-    "description": "Enter your email address and we'll send you a link to reset your password.",
+    "description": "Enter your email and we'll send you a link to reset your password.",
     "email": "Enter your email",
     "sendResetLink": "Send Reset Link",
     "sending": "Sending...",
@@ -361,6 +363,7 @@
     "signIn": "Sign In",
     "somethingWentWrong": "Something went wrong. Please try again."
   },
+
   "ResetPassword": {
     "title": "Reset Your Password",
     "description": "Create a new password for your account.",
@@ -374,21 +377,23 @@
     "passwordsDoNotMatch": "Passwords do not match",
     "somethingWentWrong": "Something went wrong. Please try again."
   },
+
   "VerifyEmail": {
-    "title": "Verify your email",
-    "checkEmail": "We've sent a verification link to your email address. Please check your inbox. If you don't see it, check your Spam or Junk folder.",
+    "title": "Verify Your Email",
+    "checkEmail": "We've sent a verification link to your email address. Check your inbox. If you don't see it, check your Spam or Junk folder.",
     "success": "Your email has been verified successfully. You can now sign in.",
     "invalidLink": "This verification link is invalid or has expired. Please request a new verification email.",
     "alreadyVerified": "Your email is already verified. You can sign in to your account.",
     "somethingWentWrong": "Something went wrong while verifying your email. Please try again.",
-    "signIn": "Sign in",
+    "signIn": "Sign In",
     "didntReceive": "Didn't receive the email?",
     "email": "Email",
     "emailPlaceholder": "Enter your email address",
     "emailRequired": "Please enter your email address.",
-    "resend": "Resend verification email",
+    "resend": "Resend Verification Email",
     "sending": "Sending..."
   },
+
   "ThemeToggle": {
     "darkMode": "Dark Mode",
     "lightMode": "Light Mode",

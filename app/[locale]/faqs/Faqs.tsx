@@ -29,11 +29,11 @@ const Faqs = () => {
 
   return (
     <>
-      <span className="text-xl font-medium capitalize text-foreground">
+      <h2 className="text-lg font-semibold tracking-tight text-foreground sm:text-xl">
         {t("title")}
-      </span>
+      </h2>
 
-      <div className="mt-8 flex flex-col gap-4 py-4">
+      <div className="mt-5 flex flex-col gap-3">
         {faqData.map((item) => (
           <FaqItem data={item} key={item.title} />
         ))}

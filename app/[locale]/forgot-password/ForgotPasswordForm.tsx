@@ -1,14 +1,19 @@
 "use client";
 
 import { useState } from "react";
+
 import { useTranslations } from "next-intl";
 import { useRouter } from "@/i18n/navigation";
+
 import { useForm, type SubmitHandler } from "react-hook-form";
+
 import toast from "react-hot-toast";
 import axios from "axios";
 
 import Input from "@/components/inputs/Input";
+
 import { Button } from "@/components/ui/button";
+
 import { Link } from "@/i18n/navigation";
 
 type FormData = {
@@ -46,7 +51,6 @@ const ForgotPasswordForm = () => {
     } catch (error) {
       if (axios.isAxiosError(error)) {
         const message = error.response?.data?.message;
-
         toast.error(message || t("somethingWentWrong"));
       } else {
         toast.error(t("somethingWentWrong"));
@@ -57,7 +61,7 @@ const ForgotPasswordForm = () => {
   };
 
   return (
-    <>
+    <div className="flex flex-col gap-4">
       <Input
         id="email"
         label={t("email")}
@@ -72,20 +76,23 @@ const ForgotPasswordForm = () => {
         type="button"
         onClick={handleSubmit(onSubmit)}
         disabled={isLoading}
-        className="w-full border-custom"
+        className="h-10 w-full border-custom text-sm font-medium"
       >
         {isLoading ? t("sending") : t("sendResetLink")}
       </Button>
 
-      <p className="mr-auto text-sm text-muted-foreground">
+      <p className="-mt-1 text-xs leading-5 text-muted-foreground sm:text-sm">
         {t("rememberPassword")}
-
-        <Link href="/sign-in" className="ml-1 underline">
+        <Link
+          href="/sign-in"
+          className="ml-1 font-medium text-foreground underline underline-offset-4 transition-colors hover:text-primary"
+        >
           {t("signIn")}
         </Link>
       </p>
-    </>
+    </div>
   );
 };
 
 export default ForgotPasswordForm;
+

@@ -1,8 +1,11 @@
 import { getTranslations } from "next-intl/server";
+
 import { FiArrowRight } from "react-icons/fi";
 
 import prisma from "@/lib/prismadb";
+
 import Container from "@/components/Container";
+
 import { Link } from "@/i18n/navigation";
 
 import ResendVerificationForm from "./ResendVerificationForm";
@@ -17,6 +20,7 @@ const VerifyEmailPage = async ({
   searchParams,
 }: VerifyEmailPageProps) => {
   const { token } = await searchParams;
+
   const t = await getTranslations("VerifyEmail");
 
   let message = t("checkEmail");
@@ -80,33 +84,34 @@ const VerifyEmailPage = async ({
 
   return (
     <Container>
-      <div className="flex min-h-full w-full justify-center py-10">
-        <div className="w-full max-w-[400px] rounded-md border-custom2 bg-card p-8">
-          <div className="space-y-2">
-            <h1 className="text-base font-medium text-secondary-foreground">
+      <div className="flex w-full justify-center py-8 sm:py-10">
+        <div className="w-full max-w-[400px] rounded-xl border-custom2 bg-card p-6 sm:p-7">
+          <div className="space-y-1">
+            <h1 className="text-lg font-semibold leading-tight tracking-tight text-secondary-foreground">
               {t("title")}
             </h1>
 
             <p className="text-sm leading-6 text-muted-foreground">
               {message}
             </p>
-
-            <ResendVerificationForm />
-
-            {showSignIn && (
-              <Link
-                href="/sign-in"
-                className="group mt-4 flex w-full items-center justify-center gap-2 rounded-md border-custom2 bg-background px-4 py-3 text-sm font-medium text-primary transition-all hover:bg-muted"
-              >
-                <span>{t("signIn")}</span>
-
-                <FiArrowRight
-                  size={17}
-                  className="transition-transform duration-200 group-hover:translate-x-1"
-                />
-              </Link>
-            )}
           </div>
+
+          <div className="mt-6">
+            <ResendVerificationForm />
+          </div>
+
+          {showSignIn && (
+            <Link
+              href="/sign-in"
+              className="mt-4 flex h-10 w-full items-center justify-center gap-2 rounded-xl border border-border bg-background px-4 text-sm font-medium text-primary transition-colors hover:bg-muted"
+            >
+              <span>{t("signIn")}</span>
+              <FiArrowRight
+                size={15}
+                aria-hidden="true"
+              />
+            </Link>
+          )}
         </div>
       </div>
     </Container>

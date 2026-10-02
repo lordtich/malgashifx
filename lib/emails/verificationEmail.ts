@@ -17,7 +17,10 @@ export const verificationEmail = ({
       <html lang="en">
         <head>
           <meta charset="UTF-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
           <title>Verify your email</title>
         </head>
 
@@ -35,7 +38,10 @@ export const verificationEmail = ({
             cellpadding="0"
             cellspacing="0"
             border="0"
-            style="background-color: #f4f7f5; padding: 40px 16px;"
+            style="
+              background-color: #f4f7f5;
+              padding: 32px 16px;
+            "
           >
             <tr>
               <td align="center">
@@ -50,17 +56,17 @@ export const verificationEmail = ({
                     max-width: 560px;
                     background-color: #ffffff;
                     border: 1px solid #e5e9e6;
-                    border-radius: 16px;
+                    border-radius: 14px;
                     overflow: hidden;
                   "
                 >
 
-                  <!-- Brand header -->
+                  <!-- Header -->
                   <tr>
                     <td
                       align="center"
                       style="
-                        padding: 32px 32px 28px;
+                        padding: 26px 24px 24px;
                         border-bottom: 1px solid #edf0ee;
                       "
                     >
@@ -82,18 +88,18 @@ export const verificationEmail = ({
                     </td>
                   </tr>
 
-                  <!-- Main content -->
+                  <!-- Content -->
                   <tr>
-                    <td style="padding: 42px 40px 38px;">
+                    <td style="padding: 34px 32px 32px;">
 
                       <!-- Label -->
                       <p
                         style="
-                          margin: 0 0 14px;
+                          margin: 0 0 10px;
                           font-size: 11px;
                           line-height: 1.4;
                           font-weight: 700;
-                          letter-spacing: 1.4px;
+                          letter-spacing: 1.2px;
                           text-transform: uppercase;
                           color: ${site.primaryColor};
                         "
@@ -104,11 +110,11 @@ export const verificationEmail = ({
                       <!-- Heading -->
                       <h1
                         style="
-                          margin: 0 0 18px;
-                          font-size: 30px;
-                          line-height: 1.25;
+                          margin: 0 0 14px;
+                          font-size: 26px;
+                          line-height: 1.3;
                           font-weight: 700;
-                          letter-spacing: -0.5px;
+                          letter-spacing: -0.3px;
                           color: #171717;
                         "
                       >
@@ -118,15 +124,15 @@ export const verificationEmail = ({
                       <!-- Intro -->
                       <p
                         style="
-                          margin: 0 0 16px;
-                          font-size: 15px;
-                          line-height: 1.75;
+                          margin: 0 0 22px;
+                          font-size: 14px;
+                          line-height: 1.7;
                           color: #555b57;
                         "
                       >
-                        Welcome to ${site.name}.
-                        Please confirm your email address to complete your
-                        account registration and secure your account.
+                        Welcome to ${site.name}. Please confirm your email
+                        address to complete your account registration and
+                        secure your account.
                       </p>
 
                       <!-- CTA -->
@@ -134,7 +140,7 @@ export const verificationEmail = ({
                         cellpadding="0"
                         cellspacing="0"
                         border="0"
-                        style="margin: 30px 0;"
+                        style="margin: 0 0 24px;"
                       >
                         <tr>
                           <td
@@ -148,11 +154,11 @@ export const verificationEmail = ({
                               href="${verificationUrl}"
                               style="
                                 display: inline-block;
-                                padding: 14px 26px;
+                                padding: 13px 24px;
                                 border-radius: 8px;
                                 background-color: ${site.primaryColor};
                                 color: #ffffff;
-                                font-size: 14px;
+                                font-size: 13px;
                                 line-height: 1;
                                 font-weight: 700;
                                 text-decoration: none;
@@ -171,18 +177,18 @@ export const verificationEmail = ({
                         cellspacing="0"
                         border="0"
                         style="
-                          margin: 0 0 28px;
+                          margin: 0 0 24px;
                           background-color: #f7f9f7;
                           border: 1px solid #e7ebe8;
-                          border-radius: 10px;
+                          border-radius: 9px;
                         "
                       >
                         <tr>
-                          <td style="padding: 16px 18px;">
+                          <td style="padding: 14px 16px;">
                             <p
                               style="
                                 margin: 0;
-                                font-size: 13px;
+                                font-size: 12px;
                                 line-height: 1.6;
                                 color: #555b57;
                               "
@@ -199,8 +205,8 @@ export const verificationEmail = ({
                       <!-- Fallback link -->
                       <p
                         style="
-                          margin: 0 0 9px;
-                          font-size: 12px;
+                          margin: 0 0 7px;
+                          font-size: 11px;
                           line-height: 1.5;
                           color: #777d79;
                         "
@@ -211,8 +217,8 @@ export const verificationEmail = ({
 
                       <p
                         style="
-                          margin: 0 0 28px;
-                          font-size: 12px;
+                          margin: 0 0 24px;
+                          font-size: 11px;
                           line-height: 1.6;
                           word-break: break-all;
                         "
@@ -237,15 +243,15 @@ export const verificationEmail = ({
                         style="
                           background-color: #fffaf0;
                           border: 1px solid #f1e6c9;
-                          border-radius: 10px;
+                          border-radius: 9px;
                         "
                       >
                         <tr>
-                          <td style="padding: 16px 18px;">
+                          <td style="padding: 14px 16px;">
                             <p
                               style="
-                                margin: 0 0 5px;
-                                font-size: 13px;
+                                margin: 0 0 4px;
+                                font-size: 12px;
                                 line-height: 1.5;
                                 font-weight: 700;
                                 color: #4b4433;
@@ -257,7 +263,7 @@ export const verificationEmail = ({
                             <p
                               style="
                                 margin: 0;
-                                font-size: 13px;
+                                font-size: 12px;
                                 line-height: 1.6;
                                 color: #6d6654;
                               "
@@ -278,15 +284,15 @@ export const verificationEmail = ({
                     <td
                       align="center"
                       style="
-                        padding: 26px 32px 30px;
+                        padding: 22px 24px 24px;
                         border-top: 1px solid #edf0ee;
                         background-color: #fafbfa;
                       "
                     >
                       <p
                         style="
-                          margin: 0 0 7px;
-                          font-size: 13px;
+                          margin: 0 0 5px;
+                          font-size: 12px;
                           line-height: 1.5;
                           font-weight: 700;
                           color: #333733;
@@ -298,7 +304,7 @@ export const verificationEmail = ({
                       <p
                         style="
                           margin: 0;
-                          font-size: 11px;
+                          font-size: 10px;
                           line-height: 1.6;
                           color: #8a908c;
                         "
@@ -311,7 +317,7 @@ export const verificationEmail = ({
 
                 </table>
 
-                <!-- Bottom text -->
+                <!-- Copyright -->
                 <table
                   width="100%"
                   cellpadding="0"
@@ -322,7 +328,7 @@ export const verificationEmail = ({
                   <tr>
                     <td
                       align="center"
-                      style="padding: 18px 20px 0;"
+                      style="padding: 14px 20px 0;"
                     >
                       <p
                         style="
@@ -356,11 +362,15 @@ ${verificationUrl}
 This verification link expires in 24 hours.
 
 Can't find the email?
+
 Please check your Spam or Junk folder. If you still can't find it, you can request another verification email.
 
 ${site.name}
+
 This is an automated security email.
 Please do not reply to this message.
+
+© ${new Date().getFullYear()} ${site.name}
     `.trim(),
   };
 };
