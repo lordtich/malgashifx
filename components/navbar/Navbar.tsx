@@ -32,7 +32,7 @@ const Navbar = async () => {
 
           {/* Desktop Navigation */}
           <nav className="absolute left-1/2 hidden -translate-x-1/2 lg:block">
-            <ul className="flex items-center gap-6 text-sm font-medium text-muted-foreground">
+            <ul className="flex items-center gap-6 text-xs font-medium text-muted-foreground">
               <li>
                 <Link
                   href="/aboutcompany"

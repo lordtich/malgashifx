@@ -1,13 +1,11 @@
-import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { FaTelegramPlane } from "react-icons/fa";
 import { FiArrowUpRight } from "react-icons/fi";
-
 import { Link } from "@/i18n/navigation";
 
-
 import Container from "../Container";
-import { siteConfig } from "@/config/config";
+
+import BrandLogo from "../BrandLogo";
 
 const Footer = () => {
   const t = useTranslations("Footer");
@@ -25,14 +23,8 @@ const Footer = () => {
                 className="inline-flex items-center"
                 aria-label={t("homeAriaLabel")}
               >
-                <div className="relative w-[145px] sm:w-[160px]">
-                  <Image
-                    src={siteConfig.logo}
-                    alt={t("logoAlt")}
-                    width={1200}
-                    height={300}
-                    className="h-auto w-full"
-                  />
+                <div className="relative w-[155px] sm:w-[175px] lg:w-[190px]">
+                  <BrandLogo />
                 </div>
               </Link>
 
@@ -79,7 +71,7 @@ const Footer = () => {
               </p>
 
               <a
-                href="https://t.me/malgashiadmin"
+                href="https://t.me/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-3 inline-flex items-center gap-2 rounded-lg border border-border px-3 py-2 text-xs font-medium text-foreground transition-colors hover:bg-muted sm:text-sm"
@@ -92,10 +84,7 @@ const Footer = () => {
 
                 {t("telegramSupport")}
 
-                <FiArrowUpRight
-                  size={14}
-                  aria-hidden="true"
-                />
+                <FiArrowUpRight size={14} aria-hidden="true" />
               </a>
             </div>
           </div>
@@ -109,9 +98,7 @@ const Footer = () => {
               &copy; {new Date().getFullYear()} {t("copyright")}
             </span>
 
-            <span className="max-w-xl sm:text-right">
-              {t("riskNotice")}
-            </span>
+            <span className="max-w-xl sm:text-right">{t("riskNotice")}</span>
           </div>
         </div>
       </Container>

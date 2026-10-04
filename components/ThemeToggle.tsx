@@ -91,7 +91,7 @@ const ThemeToggle = ({ compact = false }: ThemeToggleProps) => {
           />
         )}
 
-        <span>{isDark ? t("lightMode") : t("darkMode")}</span>
+        <span className="text-xs">{isDark ? t("lightMode") : t("darkMode")}</span>
       </span>
 
       <span className="text-xs text-muted-foreground">

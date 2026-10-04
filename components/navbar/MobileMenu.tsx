@@ -12,7 +12,6 @@ import { BsPatchQuestion } from "react-icons/bs";
 import { IoChevronDown } from "react-icons/io5";
 
 import { SafeUser } from "@/types";
-
 import MenuItem from "./MenuItem";
 import { Button, buttonVariants } from "../ui/button";
 import ThemeToggle from "../ThemeToggle";
@@ -46,15 +45,20 @@ const MobileMenu = ({ currentUser }: MobileProps) => {
   };
 
   useEffect(() => {
-    if (!menuOpen) {
-      document.body.style.overflow = "";
-      return;
-    }
+    if (!menuOpen) return;
+
+    const previousOverflow = document.body.style.overflow;
+    const previousOverscroll = document.body.style.overscrollBehavior;
+    const previousTouchAction = document.body.style.touchAction;
 
     document.body.style.overflow = "hidden";
+    document.body.style.overscrollBehavior = "none";
+    document.body.style.touchAction = "none";
 
     return () => {
-      document.body.style.overflow = "";
+      document.body.style.overflow = previousOverflow;
+      document.body.style.overscrollBehavior = previousOverscroll;
+      document.body.style.touchAction = previousTouchAction;
     };
   }, [menuOpen]);
 
@@ -66,6 +70,7 @@ const MobileMenu = ({ currentUser }: MobileProps) => {
         onClick={toggleMenu}
         aria-label={menuOpen ? t("closeMenu") : t("openMenu")}
         aria-expanded={menuOpen}
+        aria-controls="mobile-navigation-panel"
         className="relative z-[70] flex h-9 w-9 items-center justify-center rounded-full transition-colors hover:bg-muted/60 active:scale-95 lg:hidden"
       >
         <span className="relative flex h-5 w-5 items-center justify-center">
@@ -74,7 +79,6 @@ const MobileMenu = ({ currentUser }: MobileProps) => {
               menuOpen ? "rotate-45" : "-translate-y-[4px]"
             }`}
           />
-
           <span
             className={`absolute h-[2px] w-5 rounded-full bg-foreground transition-all duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] ${
               menuOpen ? "-rotate-45" : "translate-y-[4px]"
@@ -83,30 +87,38 @@ const MobileMenu = ({ currentUser }: MobileProps) => {
         </span>
       </button>
 
-      {/* Mobile drawer */}
+      {/* Mobile menu overlay */}
       <div
+        aria-hidden={!menuOpen}
         className={`absolute left-1/2 top-full z-40 h-[calc(100dvh-4rem)] w-screen -translate-x-1/2 overflow-hidden lg:hidden ${
           menuOpen ? "pointer-events-auto" : "pointer-events-none"
         }`}
       >
-        {/* Backdrop */}
+        {/* Blurred backdrop */}
         <button
           type="button"
           aria-label={t("closeMenu")}
           onClick={closeMenu}
-          className={`absolute inset-0 bg-black/20 backdrop-blur-md transition-opacity duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${
-            menuOpen ? "opacity-100" : "opacity-0"
+          tabIndex={menuOpen ? 0 : -1}
+          className={`absolute inset-0 z-0 bg-black/25 backdrop-blur-md transition-opacity duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+            menuOpen
+              ? "pointer-events-auto opacity-100"
+              : "pointer-events-none opacity-0"
           }`}
         />
 
-        {/* Drawer panel */}
+        {/* Top-to-bottom animated panel */}
         <aside
-          className={`absolute bottom-0 right-0 top-0 flex w-[82%] max-w-[420px] flex-col border-l border-border bg-background shadow-2xl transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${
-            menuOpen ? "translate-x-0" : "translate-x-full"
+          id="mobile-navigation-panel"
+          inert={!menuOpen}
+          className={`absolute inset-x-0 top-0 z-10 flex h-full origin-top flex-col overflow-hidden border-t border-border bg-background shadow-2xl transition-[opacity,transform,clip-path] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+            menuOpen
+              ? "translate-y-0 scale-y-100 opacity-100 [clip-path:inset(0_0_0_0_round_0_0_20px_20px)]"
+              : "-translate-y-3 scale-y-[0.96] opacity-0 [clip-path:inset(0_0_100%_0_round_0_0_20px_20px)]"
           }`}
         >
           {/* Navigation */}
-          <div className="flex-1 overflow-y-auto px-4 py-5">
+          <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 py-5 [touch-action:pan-y]">
             <div className="flex flex-col gap-1">
               {currentUser && (
                 <>
@@ -134,7 +146,6 @@ const MobileMenu = ({ currentUser }: MobileProps) => {
                             className="shrink-0"
                             aria-hidden="true"
                           />
-
                           <span>{t("adminPanel")}</span>
                         </span>
 
@@ -217,7 +228,7 @@ const MobileMenu = ({ currentUser }: MobileProps) => {
           </div>
 
           {/* Bottom actions */}
-          <div className="border-t border-border bg-background px-4 pb-5 pt-4">
+          <div className="shrink-0 border-t border-border bg-background px-4 pb-[max(1.25rem,env(safe-area-inset-bottom))] pt-4">
             {currentUser ? (
               <Button
                 type="button"
