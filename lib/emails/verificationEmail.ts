@@ -7,7 +7,7 @@ interface VerificationEmailProps {
 export const verificationEmail = ({
   verificationUrl,
 }: VerificationEmailProps) => {
-  const logoUrl = `${site.url}/logo-image/logo.png`;
+  const logoUrl = `${site.url}/images/logo-full.svg`;
 
   return {
     subject: `Verify your ${site.name} email`,
