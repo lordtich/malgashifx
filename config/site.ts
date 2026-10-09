@@ -1,5 +1,5 @@
 const site = {
-  name: "Somalia Malgashi",
+  name: "Investor Hub",
   email: "noreply@malgashitraders.xyz",
   url: "https://malgashitraders.xyz",
   primaryColor: "#175f22",
