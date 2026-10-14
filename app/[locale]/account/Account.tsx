@@ -50,7 +50,7 @@ interface AccountProps {
 }
 
 const MIN_WITHDRAWAL = 5;
-const MAX_WITHDRAWAL = 600;
+const MAX_WITHDRAWAL = 2000;
 
 const Account = ({
   currentUser,
