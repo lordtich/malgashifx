@@ -913,7 +913,7 @@ const Account = ({
 
                 <div className="text-right">
                   <span className="block text-sm font-semibold text-foreground">
-                    $600
+                    $2000
                   </span>
 
                   <CurrencyDisplay
