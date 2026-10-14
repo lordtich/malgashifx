@@ -6,7 +6,7 @@ import { authOptions } from "@/pages/api/auth/[...nextauth]";
 import prisma from "@/lib/prismadb";
 
 const MIN_WITHDRAWAL = 5;
-const MAX_WITHDRAWAL = 600;
+const MAX_WITHDRAWAL = 2000;
 
 export type WithdrawalMethod =
   | "MOBILE_MONEY"
